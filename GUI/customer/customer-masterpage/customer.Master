@@ -1,0 +1,832 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="customer.master.cs" Inherits="GUI.customer.customer_masterpage.customer" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>House Color</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0. 1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous" /> 
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous" />
+    <link rel="stylesheet" href="../MDB/css/people.css" /> 
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet' />
+    
+        <style>
+           
+        .menu ul{
+            list-style: none;
+            text-align: center;
+            background: #E1E8ED;
+            height: 50px;
+        }
+        .top_p{
+        }
+        .menu li{
+            color: rgb(29, 240, 47);
+            display: inline-block;
+            width: 120px;
+            height: 40px;
+            line-height: 40px;
+            margin-left: -5px;
+        }
+        .menu a{
+            text-decoration: none;
+            color: #1B9CFC;
+            display: block;
+            font-weight: 700;
+        }
+        .menu a:hover{
+            color: #55E6C1;
+            border-radius: 25px;
+        }
+        .site-padding{
+	        padding:70px 0;
+        }
+
+        .btn.btn-read-more {
+          background: #00bcd4 none repeat scroll 0 0;
+          border-radius: 50px;
+          -moz-border-radius:50px;
+          -webkit-border-radius:50px;
+          color: #fff;
+          font-size: 16px;
+          font-weight: 600;
+          padding: 9px 21px;
+        }
+
+        .about-text{
+	        margin-top:70px;
+        }
+        .about-image img{
+            margin-top: 30px;
+        }
+        .card_group{
+            display: flex;        
+            position: relative;
+            width: 50%;
+        }
+        .card{
+            width: 250px;
+            height: 250px;
+            background: red;
+        }
+        .mid-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 80px;
+    background-color: #fff;
+}
+
+.logo {
+    font-size: 40px;
+    font-weight: 700;
+}
+
+.mb-logo {
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.search {
+    width: 600px;
+    height: 40px;
+    position: relative;
+}
+
+.search input {
+    height: 100%;
+    width: 100%;
+    font-size: 16px;
+    outline: 0;
+    padding: 0 20px;
+    border-radius: 10px;
+    border: 0;
+    background-color: #f5f5f5;
+}
+
+.search i {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 20px;
+    cursor: pointer;
+    font-size: 25px;
+}
+.user-menu {
+    display: flex;
+}
+
+.user-menu > li > a {
+    font-size: 30px;
+    margin-left: 15px;
+}
+
+.bottom-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-menu {
+    display: flex;
+    height: 45px;
+}
+
+.main-menu > li > a {
+    display: flex;
+    align-items: center;
+    margin: 0 20px;
+    font-weight: 600;
+    height: 100%;
+    text-transform: uppercase;
+}
+
+.main-menu > li {
+    border-bottom: 2px solid transparent;
+    border-top: 2px solid transparent;
+}
+
+.main-menu > li:hover {
+    border-bottom: 2px solid red;
+}
+.user-menu {
+    display: flex;
+}
+.user-menu li{
+    list-style: none;
+}
+.user-menu > li > a {
+    font-size: 30px;
+    margin-left: 15px;
+   
+}
+.logo {
+        font-size: 30px;
+    }
+/*footer*/
+        .ftb_ter {
+             background-color: #022739;
+             margin-top: 90px;
+             border-top-left-radius: 20px;
+             border-top-right-radius: 20px;
+        }
+        .ftb_ter .Follow {
+             margin-bottom: 27px;
+        }
+        .ftb_ter .Follow h3 {
+             color: #fff;
+             font-size: 25px;
+             line-height: 30px;
+             font-weight: 600;
+             text-transform: uppercase;
+             border-width: 1px;
+             display: inline-block;
+             padding-bottom: 2px;
+             padding-bottom: 27px;
+        }
+        .ftb_ter span {
+             font-size: 17px;
+             display: block;
+             color: #fff;
+        }
+        ul.link li a {
+             color: #fff;
+             font-size: 17px;
+        }
+        ul.link li a:hover {
+             color: #878686;
+        }
+        .footer .Newsletter {
+             padding: 13px 26px;
+             padding-top: 10px;
+             padding-right: 26px;
+             padding-bottom: 10px;
+             padding-left: 15px;
+             border: #fff solid 1px;
+             width: 100%;
+             margin-bottom: 15px;
+        }
+        .footer .Subscribe {
+             padding: 10px 30px;
+             border: #0e0c0c solid 1px;
+             background: #0e0c0c;
+             color: #fff;
+             float: right;
+        }
+        .footer .Subscribe:hover {
+             color: #fff;
+             background-color: #15cfe5;
+        }
+        .pdn-top-30 {
+             padding-top: 35px;
+        }
+        ul.location_icon {
+             list-style: none;
+             margin: 0;
+             padding: 0;
+             width: 100%;
+             float: left;
+        }
+        ul.location_icon li {
+             float: left;
+             height: 70px;
+             color: #fff;
+             display: flex;
+             flex-wrap: wrap;
+             align-items: center;
+             padding-right: 20px;
+        }
+        ul.location_icon li:last-child {
+             padding-right: 0px;
+        }
+        ul.location_icon li a {
+             margin-bottom: 23px;
+        }
+        ul.location_icon span {
+             font-size: 17px;
+             font-weight: 400;
+        }
+        .copyright {
+             padding: 10px 0px 30px 0;
+        }
+        .copyright p {
+             color: #fff;
+             font-size: 16px;
+             text-align: center;
+             max-width: 594px;
+             text-align: center;
+             margin: 0 auto;
+             width: 100%;
+             padding-top: 10px;
+             border-top: #807d7d solid 1px;
+        }
+        .copyright a {
+             color: #fff;
+        }
+        .copyright a:hover {
+             color: #15cfe5;
+        }
+         @import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+        .container-fluid img{
+            height: 80px;
+            width: 150px;
+        }
+        .header_group{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 30px 10%;
+    
+        }
+        .logo{
+            cursor: pointer;
+            height: 70px;
+            width: 100px;
+        }
+        .nav__links{
+            list-style: none;
+        }
+        .nav__links li{
+            display: inline-block;
+            padding: 0px 20px;
+        }
+        .nav__links li a{
+            transition: all 0.3s ease 0s;
+            text-decoration: none;
+        }
+        .nav__links li a:hover{
+           color: red;
+        }
+        .nav_icons{
+            padding: 9px 25px;
+            transition: all 0.3s ease 0s;
+   
+        }
+        .flex-fill ul li a{
+            font-weight: 600;
+            color: black !important;
+        }
+        .flex-fill ul li a:hover{
+            background-color: #00a8ff;
+            color: white !important;
+        }
+        .d-flex a:hover{
+            color: red;
+        }
+        .nav-link{
+            color: #00A8FF;
+        }
+        /*footer-icon*/
+        .social {
+          text-align: center;
+          margin-bottom: 2rem;
+          font-size: 25px;
+        }
+        .social a i{
+          color: #fff;
+        }
+        .social a i:hover{
+            color: #3742fa;
+        }
+        .social .face i:hover{
+            color: red;
+        }
+        /*back-to-top*/
+        .back-to-top{
+            background: #00a8ff;
+            position: fixed;
+            bottom: 16px;
+            right: 32px;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;font-size: 32px;
+            color: white;
+            text-decoration: none;
+            opacity: 0;
+            pointer-events: none;
+            transition: all .4s;
+
+        }
+        .back-to-top.active{
+             bottom: 32px;
+             pointer-events: auto;
+             opacity: 1;
+        }
+        #load_page{
+            background: #000 url(hinh/page1.gif) no-repeat center center;
+            height: 100vh;
+            width: 100%;
+            position: fixed;
+            z-index: 100;
+            background-size: 32%;
+
+        }
+        /*dark mode*/
+        .dark{
+            color: red;
+        }
+        .darkmode--activated p, .darkmode--activated li, .darkmode--activated h3, .darkmode--activated h2 {
+          color: #fff;
+        }
+        .darkmode--activated .ftb_ter{
+            background: #30336b !important;
+        }
+        .darkmode--activated .titlepage h2{
+            color: #fff;
+        }
+        .darkmode--activated iframe{
+            background: #ffffff;
+        }
+        .darkmode--activated .h2_video h2{
+            color: #fff;
+        }
+        .button {
+          isolation: isolate;
+        }
+
+        .darkmode--activated .logo {
+          mix-blend-mode: difference;
+        }
+        /*đổi màu nền menu*/
+        #main_nav{
+            background-color: #ffffff;
+
+        }
+        @media (max-width: 760px){
+            .col-sm-12 iframe{
+                width: 450px;
+                height: 350px;
+            }
+        }
+        /**/
+        .search {
+            width: 600px;
+            height: 40px;
+            position: relative;
+            margin: auto;
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+
+        .search input {
+            height: 100%;
+            width: 100%;
+            font-size: 16px;
+            outline: 0;
+            padding: 0 20px;
+            border-radius: 10px;
+            border: 0;
+            background-color: #f5f5f5;
+        }
+
+        .search i {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            right: 20px;
+            cursor: pointer;
+            font-size: 25px;
+        }
+.search-box{
+  position: relative;
+   height: 40px;
+  width: 40px;
+}
+.search-box i{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  line-height: 40px;
+  text-align: center;
+  font-size: 22px;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.search-box .input-box{
+  position: absolute;
+  right: calc(100% - 40px);
+  top: 80px;
+  height: 60px;
+  width: 300px;
+  background: #3E8DA8;
+  border-radius: 6px;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.4s ease;
+}
+.showInput .search-box .input-box{
+  top: 65px;
+  opacity: 1;
+  pointer-events: auto;
+  background: #3E8DA8;
+}
+.search-box .input-box::before{
+  content: '';
+  position: absolute;
+  height: 20px;
+  width: 20px;
+  background: #3E8DA8;
+  right: 10px;
+  top: -6px;
+  transform: rotate(45deg);
+}
+.search-box .input-box input{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-radius: 4px;
+  transform: translate(-50%, -50%);
+  height: 35px;
+  width: 280px;
+  outline: none;
+  padding: 0 15px;
+  font-size: 16px;
+  border: none;
+}
+        </style>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <% 
+            if (Session["success"] != null)
+            {
+        %>
+        <script>window.onload = function () { toastr.success('<% Response.Write(Session["success"]); %>') };</script>
+        <%
+                Session["success"] = null;
+            }
+        %>
+
+        <% 
+            if (Session["error"] != null)
+            {
+        %>
+        <script>window.onload = function () { toastr.error('<% Response.Write(Session["error"]); %>') };</script>
+        <%
+                Session["error"] = null;
+            }
+        %>
+        <!-- Mega menu -->
+        <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
+        <%--<div class="btn-mdb-color" style="box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);">
+            <div class="container ">
+
+                <!-- Navbar -->
+                <nav class="navbar navbar-expand-lg navbar-dark" style="box-shadow: none">
+
+                    <!-- Navbar brand -->
+                    <i class="fas fa-dragon"></i>
+                    <a class="font-weight-bold white-text mr-4" href="../trang-chu/">Store Laptop</a>
+
+                    <!-- Collapse button -->
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent1"
+                        aria-controls="navbarSupportedContent1" aria-expanded="false" aria-label="Toggle navigation">
+                        <span
+                            class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <!-- Collapsible content -->
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent1">
+
+                        <!-- Links -->
+                        <ul class="navbar-nav mr-auto">
+                            <li class="nav-item dropdown mega-dropdown">
+                                <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown"
+                                    aria-haspopup="true" aria-expanded="false">LOẠI</a>
+                                <div class="dropdown-menu mega-menu z-depth-1 dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
+                                    <asp:Repeater ID="rpt_danhMucSP" runat="server">
+                                        <HeaderTemplate>
+                                            <div class="mt-3 mb-2">
+                                                <ul class="pl-0 wrapper" style="list-style-type: none">
+                                        </HeaderTemplate>
+                                        <ItemTemplate>
+                                            <li><a class="dropdown-item" href="../danh-muc-san-pham/?maloai=<%# Eval("ma_loai") %>"><span class="badge badge-danger badge-pill"><%# Eval("slMaLoai") %></span> <%# Eval("ma_loai") %> - <%# Eval("ten_loai") %></a></li>
+                                        </ItemTemplate>
+                                        <FooterTemplate>
+                                                </ul>
+                                            </div>
+                                        </FooterTemplate>
+                                    </asp:Repeater>
+                                </div>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="../tat-ca-san-pham/">TẤT CẢ SẢN PHẨM</a>
+                            </li>
+
+                            <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">TRA CỨU
+                                    </a>
+                                    <div class="dropdown-menu ">
+                                        <!-- Search form -->
+                                        <div class="md-form text-center" style="width:300px;"> 
+                                            <asp:TextBox ID="txt_tuKhoa" runat="server" class="form-control" data-toggle="tooltip" data-placement="left" data-html="true" title="Từ khóa có thể là <strong>TÊN</strong> hoặc <strong>GIÁ</strong> sản phẩm"></asp:TextBox>
+                                            <label for="txt_tuKhoa">Từ khóa</label>
+                                            <asp:LinkButton ID="lbtn_timKiem" class="btn btn-outline-primary btn-sm" runat="server" style="width:130px;" OnClick="lbtn_timKiem_Click">Tìm kiếm</asp:LinkButton>
+                                        </div>
+                                    </div>
+                            </li>
+                            <li class="nav-item">
+                                    <a class="nav-link" href="../chinh-sach-bao-hanh/default.aspx">CHÍNH SÁCH BẢO HÀNH</a>
+
+                            </li>
+                        </ul>
+                        <ul class="navbar-nav">
+                            <%
+                                if (Session["taiKhoan"] == null)
+                                {
+                            %>
+                            <li class="nav-item mr-0">
+                                <asp:LinkButton class="nav-link" ID="lbtn_dangKy" runat="server" OnClick="lbtn_dangKy_Click"><i class="fas fa-user-plus"></i>Đăng ký</asp:LinkButton>
+                            </li>
+                            <li class="nav-item mr-0">
+                                <asp:LinkButton class="nav-link" ID="linkbtn_dangNhap" runat="server" OnClick="linkbtn_dangNhap_Click"><i class="fas fa-user-circle"></i>Đăng nhập</asp:LinkButton>
+                            </li>
+                            <%
+                                }
+                                else
+                                {
+                            %>
+                            <li class="nav-item">
+                                <asp:UpdatePanel ID="UpdatePanel2" runat="server">
+                                    <ContentTemplate>
+                                        <a href="../gio-hang/" class="nav-link waves-effect">
+                                            <%
+                                                if (Session["slSPtrongGioHang"] != null)
+                                                {
+                                            %>
+                                            <span class="badge red z-depth-1 mr-1">
+
+                                                <%= Session["slSPtrongGioHang"] %>
+                                                
+                                            </span>
+                                            <%
+                                                }
+                                            %>
+
+                                            <i id="navbar-static-cart" class="fas fa-shopping-cart"></i>
+                                        </a>
+                                    </ContentTemplate>
+                                </asp:UpdatePanel>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-4" data-toggle="dropdown"
+                                    aria-haspopup="true" aria-expanded="false">
+                                    <i class="fas fa-user"></i><%= Session["taiKhoan"] %> </a>
+                                <div class="dropdown-menu dropdown-menu-right dropdown-primary" aria-labelledby="navbarDropdownMenuLink-4">
+                                    <asp:LinkButton class="dropdown-item" ID="lbtn_thongTinCaNhan" runat="server" OnClick="lbtn_thongTinCaNhan_Click"><i class="fas fa-info"></i> Thông tin cá nhân</asp:LinkButton>
+                                    <asp:LinkButton class="dropdown-item" ID="lbtn_doiMK" runat="server" OnClick="lbtn_doiMK_Click"><i class="fas fa-key"></i> Đổi mật khẩu</asp:LinkButton>
+                                    <a class="dropdown-item" href="../lich-su-mua-hang/"><i class="fas fa-history"></i> Lịch sử mua hàng</a>
+                                    <a class="dropdown-item" href="../dang-nhap/logout.aspx"><i class="fas fa-sign-out-alt"></i> Đăng xuất</a>
+                                </div>
+                            </li>
+
+                            <%
+                                }
+                            %>
+                        </ul>
+                        <!-- Links -->
+
+                    </div>
+                    <!-- Collapsible content -->
+
+                </nav>
+                <!-- Navbar -->
+            </div>
+        </div>--%>
+        <!----header---->
+            <!-- mid header -->
+            <div class="bg-main">
+                <div class="mid-header container">
+                    <a href="#" class="logo"><i class='bx bx-buildings bx-sm text-dark'></i></a>
+                    <div class="search">
+                        <asp:TextBox ID="TextBox1" CssClass="input" runat="server" placeholder="Tìm kiếm"></asp:TextBox>
+                        <asp:LinkButton ID="LinkButton1" runat="server"><i class='bx bx-search-alt'></i></asp:LinkButton>
+                       
+                    </div>
+                    <ul class="user-menu">
+                        <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+                                    <ContentTemplate>
+                                        <a href="../gio-hang/">
+
+                                            <%
+                                                if (Session["slSPtrongGioHang"] != null)
+                                                {
+                                            %>
+                                            <span class="badge red z-depth-1 mr-1">
+
+                                                <%= Session["slSPtrongGioHang"] %>
+                                                
+                                            </span>
+                                            <%
+                                                }
+                                            %>
+
+                                            <i id="navbar-static-cart" class="bx bx-cart"></i>
+                                        </a>
+                                    </ContentTemplate>
+                                </asp:UpdatePanel>
+                        
+                    </ul>
+                </div>
+            </div>
+        <!--  menu -->
+        <nav id="main_nav" class="navbar navbar-expand-lg navbar-light bg-white shadow">
+        <div class="container d-flex justify-content-between align-items-center">
+            <a class="navbar-brand h1" href="../trang-chu/trangchu.aspx"> 
+                <span class="text-dark h4">House</span> <span class="text-primary h4">Color</span>
+            </a>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-toggler-success" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="align-self-center collapse navbar-collapse flex-fill  d-lg-flex justify-content-lg-between" id="navbar-toggler-success">
+                <div class="flex-fill mx-xl-5 mb-2">
+                    <ul class="nav navbar-nav d-flex justify-content-between mx-xl-5 text-center text-dark">
+                        <li class="nav-item">
+                            <a class="nav-link btn-outline-primary rounded-pill px-3" href="trangchu.aspx">Trang Chủ</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link btn-outline-primary rounded-pill px-3" href="../trang-chu/mausac.aspx">Màu Sắc</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link  btn-outline-primary rounded-pill px-3 " id="navbarDropdownMenuLink" href="../trang-chu/sanpham.aspx">Sản Phẩm</a>
+                               
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link btn-outline-primary rounded-pill px-3" href="../trang-chu/khampha.aspx">Mẫu Đẹp</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link btn-outline-primary rounded-pill px-3" href="../trang-chu/tintuc.aspx">Tin Tức</a>
+                        </li>
+                        
+                    </ul>
+                </div>
+                <div class="navbar align-self-center d-flex">
+                    <% if (Session["allow"] == null)
+                        {%>
+                            <a class="nav-link" href="login.aspx"><i class="fas fa-sign-in-alt"></i> Đăng Nhập</a> 
+                            <% }
+                        else
+                        {%>
+                            <a class="nav-link" href="logout.aspx"><i class="fas fa-sign-out-alt"></i>
+                                (<%Response.Write(Session["Username"].ToString());%>) Đăng xuất</a><%} %>
+                    
+                    
+                   <%-- <a class="nav-link" href="loginad.aspx"><i class="fas fa-user-cog"></i></a>--%>
+                    </div>  
+                  <div class="search-box">
+                        <i class="fas fa-search"></i>
+                        <div class="input-box">
+                         <input type="text" placeholder="Search..." />
+                  </div>
+                </div>
+                </div>  
+            </div>
+    </nav>
+        <!---banner slide--->
+    
+
+
+        <!---end--->
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+        <!-- Footer -->
+        <footer class="ftb_ter">
+         <div id="contact" class="footer_ter">
+            <div class="container">
+               <div class="row pdn-top-30">
+                  <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                     
+                  </div>
+                  <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
+                     <div class="Follow">
+                        <h3>Menu</h3>
+                        <ul class="link">
+                        <li><a href="#">Trang Chủ</a></li>
+                        <li><a href="#">Màu Sắc</a></li>
+                        <li><a href="#">Sản Phẩm</a></li>
+                        <li><a href="#">Khám Phá</a></li>
+                        <li><a href="#">Tin Tức</a></li>
+                        <li><a href="#">Liên Hệ</a></li>
+                        </ul>
+                     </div>
+                  </div>
+                  <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
+                     <div class="Follow">
+                        <h3>Về chúng tôi</h3>
+                        <ul class="link">
+                           <li> <a href="#">Thông Tin</a></li>
+                           <li> <a href="#">Chích Sách Bảo Mật</a></li>
+                           <li> <a href="#"> Chính Sách Sản Phẩm</a></li>
+                           <li> <a href="#">Tin Tức</a></li>
+                           <li> <a href="#lienhe"> Liên Hệ</a></li>
+                        </ul>
+                     </div>
+                  </div>
+                  <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15672.291575387353!2d106.73490933666062!3d10.882060400000006!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3174d80c5ea9940b%3A0xd5182c48773cd2eb!2sJotun%20Paints%20(Vietnam)%20Co.%2C%20Ltd.!5e0!3m2!1svi!2s!4v1622699368521!5m2!1svi!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                  </div>
+               </div>
+               <div class="copyright">
+                  <div class="container">
+                     <p>Copyright &copy; Bản quyền thuộc<a href="https://html.design/">HQB</a></p>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </footer>
+
+
+
+            <!-- Footer Links -->
+            
+        <a href="#" class="back-to-top">
+        <i class="fas fa-angle-up"></i>
+        </a>
+        <!-- Footer Links -->
+        <script>
+            // search-box open close js code
+            let navbar = document.querySelector(".navbar");
+            let searchBox = document.querySelector(".search-box .bx-search");
+            // let searchBoxCancel = document.querySelector(".search-box .bx-x");
+
+            searchBox.addEventListener("click", () => {
+                navbar.classList.toggle("showInput");
+                if (navbar.classList.contains("showInput")) {
+                    searchBox.classList.replace("bx-search", "bx-x");
+                } else {
+                    searchBox.classList.replace("bx-x", "bx-search");
+                }
+            });
+        </script>
+       <%-- <script type="text/javascript" src="../../public/js/carousel.js"></script>--%>
+        <!-- jQuery -->
+        <script type="text/javascript" src="../../MDB/js/jquery.min.js"></script>
+        <!-- Bootstrap tooltips -->
+        <script type="text/javascript" src="../../MDB/js/popper.min.js"></script>
+        <!-- Bootstrap core JavaScript -->
+        <script type="text/javascript" src="../../MDB/js/bootstrap.min.js"></script>
+        <!-- MDB core JavaScript -->
+         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>   
+        <!-- MDBootstrap Datatables  -->
+        <script type="text/javascript" src="../../MDB/js/datatables.min.js"></script>
+        <script type="text/javascript" src="../../public/js/customer.js"></script>
+        <script type="text/javascript" src="../../public/js/back-top.js"></script>
+        <script type="text/javascript" src="../../public/js/show.js"></script>
+    </form>
+</body>
+</html>
