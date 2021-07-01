@@ -192,3 +192,4 @@ $(document).ready(function () {
     $('#ContentPlaceHolder1_txt_nhapLaiMkMoi').togglePassword();
 })
 
+//form tt khách hàng

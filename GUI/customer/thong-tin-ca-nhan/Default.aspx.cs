@@ -22,9 +22,9 @@ namespace GUI.customer.thong_tin_ca_nhan
                 }
 
                 string tdn_email = "";
-                if (Session["email"] != null)
+                if (Session["Email"] != null)
                 {
-                    tdn_email = Session["email"].ToString();
+                    tdn_email = Session["Email"].ToString();
                 }
                 else
                 {
@@ -37,7 +37,7 @@ namespace GUI.customer.thong_tin_ca_nhan
                 foreach(var value in thongTinKH)
                 {
                     txt_hoTen.Text = value.HoTen;
-                    txt_email.Text = value.Email;
+                    txt_email1.Text = value.Email;
                   
                     txt_diaChi.Text = value.DiaChi;
                     txt_sdt.Text = value.SDT;
@@ -48,7 +48,7 @@ namespace GUI.customer.thong_tin_ca_nhan
         protected void btn_luu_Click(object sender, EventArgs e)
         {
             string tdn_email = "";
-            if (Session["email"] != null)
+            if (Session["Email"] != null)
             {
                 tdn_email = Session["email"].ToString();
                 if (bllCustomer.suaThongTinKH(tdn_email, txt_hoTen.Text, txt_diaChi.Text, tdn_email, txt_sdt.Text))

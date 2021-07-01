@@ -1,8 +1,41 @@
-﻿<%@ Page Title="" Language="C#" EnableEventValidation = "true" MasterPageFile="~/customer/customer-masterpage/customer.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="GUI.customer.dang_nhap.Default" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="GUI.login" %>
 
-<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-     <title>Đăng nhập</title>
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.6.0/mdb.min.css" rel="stylesheet"/>
+    <link
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+  rel="stylesheet"
+/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link  rel="stylesheet" href ="../css/main.css" />
+    <link  rel="stylesheet" href ="../css/util.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous" />
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+       body{
+            /*background-image: url(https://photo2.tinhte.vn/data/attachment-files/2021/06/5511558_img0.jpg);*/
+            background-repeat: no-repeat;
+            background-size: cover;
+            overflow: hidden;
+            opacity: 1;
+            background-color: #f4f4f4;
+        }
+        .card{
+            background: rgba( 255, 255, 255, 0.25 );
+            box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+            backdrop-filter: blur( 2.0px );
+            -webkit-backdrop-filter: blur( 2.0px );
+            border-radius: 10px;
+            border: 1px solid rgba( 255, 255, 255, 0.18 );
+            width: 550px;
+            height: 650px;
+            margin: auto;
+            margin-top: 5rem;
+        }
         #login-failed {
             display: none;
             color: red;
@@ -32,328 +65,227 @@
          .btn-login:hover{
              background-color: #4cd137;
          }
-    /*login*/
-           .fadeInDown {
-          -webkit-animation-name: fadeInDown;
-          animation-name: fadeInDown;
-          -webkit-animation-duration: 1s;
-          animation-duration: 1s;
-          -webkit-animation-fill-mode: both;
-          animation-fill-mode: both;
+         /*login*/
+        h2.inactive {
+          color: #cccccc;
         }
 
-        @-webkit-keyframes fadeInDown {
-          0% {
-            opacity: 0;
-            -webkit-transform: translate3d(0, -100%, 0);
-            transform: translate3d(0, -100%, 0);
-          }
-          100% {
-            opacity: 1;
-            -webkit-transform: none;
-            transform: none;
-          }
+        h2.active {
+          color: #0d0d0d;
+          border-bottom: 2px solid #5fbae9;
+        }
+        input[type=button], input[type=submit], input[type=reset]  {
+          background-color: #3742fa ;
+          border: none;
+          color: white;
+          padding: 15px 80px;
+          text-align: center;
+          margin-left: 3rem;
+          text-decoration: none;
+          display: inline-block;
+          text-transform: uppercase;
+          font-size: 16px;
+          -webkit-box-shadow: 0 10px 30px 0 rgba(95,186,233,0.4);
+          box-shadow: 0 10px 30px 0 rgba(95,186,233,0.4);
+          -webkit-border-radius: 5px 5px 5px 5px;
+          border-radius: 5px 5px 5px 5px;
+          margin: 5px 20px 40px 20px;
+          -webkit-transition: all 0.3s ease-in-out;
+          -moz-transition: all 0.3s ease-in-out;
+          -o-transition: all 0.3s ease-in-out;
+          transition: all 0.3s ease-in-out;
         }
 
-        @keyframes fadeInDown {
-          0% {
-            opacity: 0;
-            -webkit-transform: translate3d(0, -100%, 0);
-            transform: translate3d(0, -100%, 0);
-          }
-          100% {
-            opacity: 1;
-            -webkit-transform: none;
-            transform: none;
-          }
+        input[type=button]:hover, input[type=submit]:hover, input[type=reset]:hover  {
+          background-color: #48dbfb;
         }
 
-/* Simple CSS3 Fade-in Animation */
-@-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
-@-moz-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
-@keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
-
-        .fadeIn {
-          opacity:0;
-          -webkit-animation:fadeIn ease-in 1;
-          -moz-animation:fadeIn ease-in 1;
-          animation:fadeIn ease-in 1;
-          -webkit-animation-fill-mode:forwards;
-          -moz-animation-fill-mode:forwards;
-          animation-fill-mode:forwards;
-          -webkit-animation-duration:1s;
-          -moz-animation-duration:1s;
-          animation-duration:1s;
-        }
-        .fadeIn.first {
-          -webkit-animation-delay: 0.4s;
-          -moz-animation-delay: 0.4s;
-          animation-delay: 0.4s;
+        input[type=button]:active, input[type=submit]:active, input[type=reset]:active  {
+          -moz-transform: scale(0.95);
+          -webkit-transform: scale(0.95);
+          -o-transform: scale(0.95);
+          -ms-transform: scale(0.95);
+          transform: scale(0.95);
         }
 
-        .fadeIn.second {
-          -webkit-animation-delay: 0.6s;
-          -moz-animation-delay: 0.6s;
-          animation-delay: 0.6s;
+        input[type=text] {
+            font-family: sans-serif;
+          background-color: hsl(222, 20%, 95%);
+          border: 1px solid rgba(95,186,233,0.4);
+          color: #0d0d0d;
+          padding: 15px 32px;
+          text-align: center;
+          text-decoration: none;
+          display: inline-block;
+          font-size: 16px;
+          margin: 5px;
+          width: 85%;
+          border: 2px solid #f6f6f6;
+          -webkit-transition: all 0.5s ease-in-out;
+          -moz-transition: all 0.5s ease-in-out;
+          -o-transition: all 0.5s ease-in-out;
+          transition: all 0.5s ease-in-out;
+          -webkit-border-radius: 5px 5px 5px 5px;
+          border-radius: 5px 5px 5px 5px;
         }
 
-        .fadeIn.third {
-          -webkit-animation-delay: 0.8s;
-          -moz-animation-delay: 0.8s;
-          animation-delay: 0.8s;
+        input[type=text]:focus {
+          background-color: #fff;
+          border-bottom: 2px solid #5fbae9;
         }
-
-        .fadeIn.fourth {
-          -webkit-animation-delay: 1s;
-          -moz-animation-delay: 1s;
-          animation-delay: 1s;
+        .button{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 3rem;
         }
+        .btn-login{
+            width: 120px;
+            height: 50px;
+            border-radius: 15px;
+            background: #2ed573;
+            border: none;
+            font-weight: 700;
+            color: white;
+        }
+        .btn-login:hover{
+            background: #1e90ff;
+            color: white;
+        }
+        .dnfs{
+          background-color: #f2f2f2;
+          border: 1px solid rgba(95,186,233,0.4) !important;
+          color: #0d0d0d;
+          padding: 15px 32px;
+          text-align: center;
+          text-decoration: none;
+          outline: none;
+          display: inline-block;
+          font-size: 16px;
+          margin: 5px;
+          width: 85%;
+          border: 2px solid #f6f6f6;
+          -webkit-transition: all 0.5s ease-in-out;
+          -moz-transition: all 0.5s ease-in-out;
+          -o-transition: all 0.5s ease-in-out;
+          transition: all 0.5s ease-in-out;
+          -webkit-border-radius: 5px 5px 5px 5px;
+          border-radius: 5px 5px 5px 5px;
 
-/* Simple CSS3 Fade-in Animation */
-.underlineHover:after {
-  display: block;
-  left: 0;
-  bottom: -10px;
-  width: 0;
-  height: 2px;
-  background-color: #56baed;
-  content: "";
-  transition: width 0.2s;
 }
-
-.underlineHover:hover {
-  color: #0d0d0d;
+        .dnfs:focus{
+             background: #fff;
+             border-bottom: 2px solid #5fbae9;
+        }
+.first{
+    width: 100%;
+    margin-left: 2.5rem;
 }
-
-.underlineHover:hover:after{
-  width: 100%;
-}
-
 h1{
-    color:#60a0ff;
-}
-
-/* OTHERS */
-
-*:focus {
-    outline: none;
-} 
-
-#icon {
-  width:30%;
-}
-.dnfs{
-    background-color: #f6f6f6;
-  border: none;
-  color: #0d0d0d;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 5px;
-  width: 85%;
-  border: 2px solid #f6f6f6;
-  -webkit-transition: all 0.5s ease-in-out;
-  -moz-transition: all 0.5s ease-in-out;
-  -o-transition: all 0.5s ease-in-out;
-  transition: all 0.5s ease-in-out;
-  -webkit-border-radius: 5px 5px 5px 5px;
-  border-radius: 5px 5px 5px 5px;
-
-}
-.wrapper {
-  display: flex;
-  align-items: center;
-  flex-direction: column; 
-  justify-content: center;
-  width: 100%;
-  min-height: 100%;
-  padding: 20px;
-}
-
-#formContent {
-  -webkit-border-radius: 10px 10px 10px 10px;
-  border-radius: 10px 10px 10px 10px;
-  background: #fff;
-  padding: 30px;
-  width: 90%;
-  max-width: 450px;
-  position: relative;
-  padding: 0px;
-  -webkit-box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);
-  box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);
-  text-align: center;
-}
-
-#formFooter {
-  background-color: #f6f6f6;
-  border-top: 1px solid #dce8f1;
-  padding: 25px;
-  text-align: center;
-  -webkit-border-radius: 0 0 10px 10px;
-  border-radius: 0 0 10px 10px;
-}
-/* TABS */
-
-h2.inactive {
-  color: #cccccc;
-}
-
-h2.active {
-  color: #0d0d0d;
-  border-bottom: 2px solid #5fbae9;
-}
-input[type=button], input[type=submit], input[type=reset]  {
-  background-color: #3742fa ;
-  border: none;
-  color: white;
-  padding: 15px 80px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  text-transform: uppercase;
-  font-size: 16px;
-  -webkit-box-shadow: 0 10px 30px 0 rgba(95,186,233,0.4);
-  box-shadow: 0 10px 30px 0 rgba(95,186,233,0.4);
-  -webkit-border-radius: 5px 5px 5px 5px;
-  border-radius: 5px 5px 5px 5px;
-  margin: 5px 20px 40px 20px;
-  -webkit-transition: all 0.3s ease-in-out;
-  -moz-transition: all 0.3s ease-in-out;
-  -o-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
-}
-
-input[type=button]:hover, input[type=submit]:hover, input[type=reset]:hover  {
-  background-color: #48dbfb;
-}
-
-input[type=button]:active, input[type=submit]:active, input[type=reset]:active  {
-  -moz-transform: scale(0.95);
-  -webkit-transform: scale(0.95);
-  -o-transform: scale(0.95);
-  -ms-transform: scale(0.95);
-  transform: scale(0.95);
-}
-
-input[type=text] {
-    font-family: sans-serif;
-  background-color: #f6f6f6;
-  border: none;
-  color: #0d0d0d;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 5px;
-  width: 85%;
-  border: 2px solid #f6f6f6;
-  -webkit-transition: all 0.5s ease-in-out;
-  -moz-transition: all 0.5s ease-in-out;
-  -o-transition: all 0.5s ease-in-out;
-  transition: all 0.5s ease-in-out;
-  -webkit-border-radius: 5px 5px 5px 5px;
-  border-radius: 5px 5px 5px 5px;
-}
-
-input[type=text]:focus {
-  background-color: #fff;
-  border-bottom: 2px solid #5fbae9;
-}
-.btn-dk{
-    width: 120px;
-    height: 50px;
-    border-radius: 15px;
-    background: #2ed573;
-    border: none;
-    margin-left: 10px;
+    text-align: center;
+    margin-bottom: 2rem;
+    margin-top: 1rem;
+    font-size: 46px;
+    text-transform: uppercase;
     font-weight: 700;
-    color: white;
+    font-family: Playfair Display;
+    background-color: #51f794;
+    background-image: linear-gradient( 135deg, #72EDF2 10%, #5151E5 100%);
+
+   -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
 }
-.btn-dk:hover{
-    background: #1e90ff;
-    color: white;
+.btn-danger{
+    width: 50px;
+    height: 50px;
+    margin: auto;
+    font-size: 20px;
+    border-radius: 50%;
+
 }
-    .fadeIn #error_user,
-    .fadeIn #error_pass{
-        margin-top: 5px;
-        width: 300px;
-        font-size: 18px;
-        color: #c62828;
-        background: rgba(255,0,0,0.1);
-        margin: auto;
-        padding: 5px 8px;
-        border-radius: 3px;
-        display: none;
-    }
-    .bxs-lock-open{
-        font-size: 100px;
-        color: #279dfd;
-    }
+.dnfs:focus{
+    border-bottom: 2px solid blue !important;
+    border-radius: 2px;
+}
+
+/*back*/
+.bubble {
+    position: absolute;
+    border-radius: 50%;
+  }
+
+.pink-bubble {
+  width: 460px;
+  height: 460px;
+  right: 20px;
+  top: -110px;
+  background-color: #ec9fec;
+}
+
+.blue-bubble {
+  width: 520px;
+  height: 520px;
+  left: 48px;
+  top: 350px;
+  background-color: #bbe6f3;
+}
+
+.small-b-bubble {
+  width: 50px;
+  height: 50px;
+  right: 40px;
+  bottom: 65px;
+  background-color: #bae5f2;
+}
+
+.small-p-bubble {
+  width: 105px;
+  height: 105px;
+  left: -45px;
+  top: 100px;
+  background-color: #ebc7e5
+}
     </style>
-</asp:Content>
-<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <asp:GridView ID="GridView1" runat="server"></asp:GridView>
-    <%--<div class="container card mt-5 mb-5 pt-4 pb-4 hoverable" style="width: auto; max-width: 500px">
-        <h2 class="text-center"><strong>Đăng nhập</strong></h2>
-
-        <!-- Username -->
-        <div class="md-form">
-            <i class="fas fa-user prefix"></i>
-            <asp:TextBox ID="txt_tdn" runat="server" class="form-control" required="required"></asp:TextBox>
-            <label for="txt_tdn">Tên đăng nhập / Gmail</label>
-        </div>
-
-        <!-- Password -->
-        <div class="md-form mt-0">
-            <i class="fas fa-lock prefix"></i>
-            <asp:TextBox ID="txt_mk" type="password" runat="server" class="form-control mr-3" required="required"></asp:TextBox>
-            <label for="txt_mk">Mật khẩu</label>
-        </div>
-
-        <span id="login-failed" class="animated shake text-center">*Sai thông tin đăng nhập</span>
-
-        <!-- Sign in button -->
-        <div class="text-center">
-            <asp:Button ID="btn_login" runat="server" class="btn btn-outline-primary mt-3 mb-3" Text="Đăng nhập" Style="width: 300px;" OnClick="btn_login_Click" />
-            <!-- Social login -->
-            <p>hoặc</p>
-
-            <asp:LinkButton ID="btn_gg" runat="server" class="btn btn-danger" Style="width: 300px;" OnClick="btn_gg_Click"><i class="fab fa-google-plus-g pr-1"></i> đăng nhập với Google</asp:LinkButton>
-
-            <%--<asp:LinkButton ID="btn_fb" runat="server" class="btn btn-primary" Style="width: 200px;" OnClick="btn_fb_Click"><i class="fab fa-facebook-f"></i> Facebook</asp:LinkButton>--%>
-        <%--</div>
-        <asp:Literal ID="ltr_codeJS" runat="server"></asp:Literal>
-    </div>--%>
-    <div class="wrapper fadeInDown">
-            <div id="formContent">
-                <form class="login_form" method="post" name="form" onsubmit="return validated()"> 
-                <div class="fadeIn first">
-                  <i class='bx bxs-lock-open'></i>
-                    <h1>Đăng Nhập</h1>
+</head>
+<body>
+<form id="form1" runat="server">
+ <div class="container">
+    <div class="bubble pink-bubble"></div>
+    <div class="bubble blue-bubble"></div>
+    <div class="bubble small-p-bubble"></div>
+    <div class="bubble small-b-bubble"></div>   
+</div> 
+    <div class="card">
+        <h1>Đăng Nhập</h1>
+		<div class="fadeIn first">
+                  <i class='bx bxs-lock-open'></i>  
                     <label for="Username" class="form-label">Tên đăng nhập</label>
-                      <asp:TextBox ID="txt_tdn" name="user" placeholder="" runat="server" required=""></asp:TextBox>
-                        <div id="error_user">Vui lòng username!</div>
-                    <label for="password" class="form-label">Mật khẩu</label>
-                      <asp:TextBox ID="txt_mk" name="pass" runat="server" type="password" CssClass="dnfs" required="required"></asp:TextBox>
-                       <span id="login-failed" class="animated shake text-center">*Sai thông tin đăng nhập</span>
-                    <p>
-                        <asp:Button ID="btn_login" type="submit" runat="server" CssClass="fadeIn  fourth" Text="Đăng Nhập" />
-                    </p>
-                   
-                </div>
-
-                </form> 
-                <div id="formFooter">
-                  <p>Bạn chưa có tài khoản</p><a class="underlineHover" href="dangki.aspx">Đăng kí</a>
-              </div>
-                <div id="formFooter1">
-                    <asp:LinkButton ID="btn_gg" runat="server" class="btn btn-danger" Style="width: 300px;" OnClick="btn_gg_Click"><i class="fab fa-google-plus-g pr-1"></i> đăng nhập với Google</asp:LinkButton>
-                  <p>Đăng nhập tài khoản</p><a class="underlineHover" href="loginad.aspx">ADMIN</a>
-              </div>
-            </div> 
+                      <asp:TextBox ID="txt_tdn" name="user" placeholder="" CssClass="dnfs" runat="server" required=""></asp:TextBox><br />
+                    <label for="password" class="form-label">Mật khẩu</label><br />
+                      <asp:TextBox ID="txt_mk" name="pass" runat="server" type="password" CssClass="dnfs" required="required"></asp:TextBox>                
+             </div>
+        <span id="login-failed" class="animated shake text-center" style="color: white; font-size: 18px; background: red; width: 70%; margin: auto;">*Sai thông tin đăng nhập</span>  	
+             <div class="button">
+                  <asp:Button ID="btn_login" type="submit" runat="server" CssClass="btn_login" Text="Đăng Nhập" CausesValidation="false" OnClick="btn_login_Click1"/>
+             </div>
+        <div class="text-center">
+    <p style="font-size: 18px; color: blue;">Đăng nhập với:</p>
+        <asp:LinkButton ID="btn_gg" runat="server" class="btn btn-danger" OnClick="btn_gg_Click1"><i class="fab fa-google-plus-g pr-1"></i></asp:LinkButton>
+        <%--<asp:LinkButton ID="LinkButton1" runat="server" class="btn btn-primary" Width="35px" OnClick="LinkButton1_Click1"><i class="fab fa-facebook"></i></asp:LinkButton>--%>
+        <p style="font-size: 18px; color: red;">Đăng nhập tài khoản</p><a class="underlineHover" style="color: blue;" href="admin/Default.aspx">ADMIN</a>
+    </div>
         <asp:Literal ID="ltr_codeJS" runat="server"></asp:Literal>
-          </div> 
-</asp:Content>
+        </div>		
+    </form>
+    <script>
+
+    </script> 
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+<script
+  type="text/javascript"
+  src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.6.0/mdb.min.js"
+></script>
+    <script src="cutomer.js"></script>
+</body>
+</html>

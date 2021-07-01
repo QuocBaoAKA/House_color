@@ -10,8 +10,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous" />
     <link rel="stylesheet" href="../MDB/css/people.css" /> 
+    <link rel="stylesheet" href="../../MDB/css/default.css" />
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet' />
-    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.8.2/css/lightbox.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js" integrity="sha512-VEd+nq25CkR676O+pLBnDW09R7VQX9Mdiij052gVCp5yVH3jGtH70Ho/UUv4mJDsEdTvqRCFZg0NKGiojGnUCw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
         <style>
            
         .menu ul{
@@ -432,64 +434,66 @@
             cursor: pointer;
             font-size: 25px;
         }
-.search-box{
-  position: relative;
-   height: 40px;
-  width: 40px;
-}
-.search-box i{
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  line-height: 40px;
-  text-align: center;
-  font-size: 22px;
-  color: #fff;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-.search-box .input-box{
-  position: absolute;
-  right: calc(100% - 40px);
-  top: 80px;
-  height: 60px;
-  width: 300px;
-  background: #3E8DA8;
-  border-radius: 6px;
-  opacity: 0;
-  pointer-events: none;
-  transition: all 0.4s ease;
-}
-.showInput .search-box .input-box{
-  top: 65px;
-  opacity: 1;
-  pointer-events: auto;
-  background: #3E8DA8;
-}
-.search-box .input-box::before{
-  content: '';
-  position: absolute;
-  height: 20px;
-  width: 20px;
-  background: #3E8DA8;
-  right: 10px;
-  top: -6px;
-  transform: rotate(45deg);
-}
-.search-box .input-box input{
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  border-radius: 4px;
-  transform: translate(-50%, -50%);
-  height: 35px;
-  width: 280px;
-  outline: none;
-  padding: 0 15px;
-  font-size: 16px;
-  border: none;
-}
+        .search-box{
+          position: relative;
+           height: 40px;
+          width: 40px;
+        }
+        .search-box i{
+          position: absolute;
+          height: 100%;
+          width: 100%;
+          line-height: 40px;
+          text-align: center;
+          font-size: 22px;
+          color: #fff;
+          font-weight: 600;
+          cursor: pointer;
+          transition: all 0.3s ease;
+        }
+        .search-box .input-box{
+          position: absolute;
+          right: calc(100% - 40px);
+          top: 80px;
+          height: 60px;
+          width: 300px;
+          background: #3E8DA8;
+          border-radius: 6px;
+          opacity: 0;
+          pointer-events: none;
+          transition: all 0.4s ease;
+        }
+        .showInput .search-box .input-box{
+          top: 65px;
+          opacity: 1;
+          pointer-events: auto;
+          background: #3E8DA8;
+        }
+        .search-box .input-box::before{
+          content: '';
+          position: absolute;
+          height: 20px;
+          width: 20px;
+          background: #3E8DA8;
+          right: 10px;
+          top: -6px;
+          transform: rotate(45deg);
+        }
+        .search-box .input-box input{
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          border-radius: 4px;
+          transform: translate(-50%, -50%);
+          height: 35px;
+          width: 280px;
+          outline: none;
+          padding: 0 15px;
+          font-size: 16px;
+          border: none;
+        }
+        /*footer*/
+     
         </style>
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
@@ -693,7 +697,7 @@
                 <div class="flex-fill mx-xl-5 mb-2">
                     <ul class="nav navbar-nav d-flex justify-content-between mx-xl-5 text-center text-dark">
                         <li class="nav-item">
-                            <a class="nav-link btn-outline-primary rounded-pill px-3" href="trangchu.aspx">Trang Chủ</a>
+                            <a class="nav-link btn-outline-primary rounded-pill px-3" href="../trang-chu/">Trang Chủ</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link btn-outline-primary rounded-pill px-3" href="../trang-chu/mausac.aspx">Màu Sắc</a>
@@ -712,24 +716,22 @@
                     </ul>
                 </div>
                 <div class="navbar align-self-center d-flex">
-                    <% if (Session["allow"] == null)
-                        {%>
-                            <a class="nav-link" href="login.aspx"><i class="fas fa-sign-in-alt"></i> Đăng Nhập</a> 
+                    <%
+                                if (Session["taiKhoan"] == null)
+                                {
+                            %>
+                             <asp:LinkButton ID="linkbtn_dangNhap" class="nav-link" runat="server" OnClick="linkbtn_dangNhap_Click1"><i class="fas fa-sign-in-alt"></i></asp:LinkButton>
+                           <%-- <a  href="../trang-chu/login.aspx"><i class="fas fa-sign-in-alt"></i> Đăng Nhập</a> --%>
                             <% }
                         else
                         {%>
-                            <a class="nav-link" href="logout.aspx"><i class="fas fa-sign-out-alt"></i>
-                                (<%Response.Write(Session["Username"].ToString());%>) Đăng xuất</a><%} %>
+                            <a class="nav-link" href="../dang-nhap/caidattk.aspx"><i class="fas fa-user-alt"></i>
+                                (<%Response.Write(Session["taiKhoan"].ToString());%>)</a><%} %>
                     
                     
                    <%-- <a class="nav-link" href="loginad.aspx"><i class="fas fa-user-cog"></i></a>--%>
                     </div>  
-                  <div class="search-box">
-                        <i class="fas fa-search"></i>
-                        <div class="input-box">
-                         <input type="text" placeholder="Search..." />
-                  </div>
-                </div>
+                   
                 </div>  
             </div>
     </nav>
@@ -743,51 +745,26 @@
             </asp:ContentPlaceHolder>
         </div>
         <!-- Footer -->
-        <footer class="ftb_ter">
-         <div id="contact" class="footer_ter">
-            <div class="container">
-               <div class="row pdn-top-30">
-                  <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
-                     
-                  </div>
-                  <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
-                     <div class="Follow">
-                        <h3>Menu</h3>
-                        <ul class="link">
-                        <li><a href="#">Trang Chủ</a></li>
-                        <li><a href="#">Màu Sắc</a></li>
-                        <li><a href="#">Sản Phẩm</a></li>
-                        <li><a href="#">Khám Phá</a></li>
-                        <li><a href="#">Tin Tức</a></li>
-                        <li><a href="#">Liên Hệ</a></li>
-                        </ul>
-                     </div>
-                  </div>
-                  <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
-                     <div class="Follow">
-                        <h3>Về chúng tôi</h3>
-                        <ul class="link">
-                           <li> <a href="#">Thông Tin</a></li>
-                           <li> <a href="#">Chích Sách Bảo Mật</a></li>
-                           <li> <a href="#"> Chính Sách Sản Phẩm</a></li>
-                           <li> <a href="#">Tin Tức</a></li>
-                           <li> <a href="#lienhe"> Liên Hệ</a></li>
-                        </ul>
-                     </div>
-                  </div>
-                  <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
-                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15672.291575387353!2d106.73490933666062!3d10.882060400000006!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3174d80c5ea9940b%3A0xd5182c48773cd2eb!2sJotun%20Paints%20(Vietnam)%20Co.%2C%20Ltd.!5e0!3m2!1svi!2s!4v1622699368521!5m2!1svi!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-                  </div>
-               </div>
-               <div class="copyright">
-                  <div class="container">
-                     <p>Copyright &copy; Bản quyền thuộc<a href="https://html.design/">HQB</a></p>
-                  </div>
-               </div>
-            </div>
-         </div>
-      </footer>
+      <%--<footer class="footer">
+		<div class="container">
+            <ul class="foote_bottom_ul_amrc">
+            <li><a href="#">Trang Chủ</a></li>
+            <li><a href="#">Màu Sắc</a></li>
+            <li><a href="#">Sản Phẩm</a></li>
+            <li><a href="#">Mẫu Đẹp</a></li>
+            <li><a href="#">Tin Tức</a></li>
+            </ul>
+            <!--foote_bottom_ul_amrc ends here-->
+            <p class="text-center" style="color: #fff;">Copyright @2021 | Designed by <a href="#">HQB</a></p>
 
+            <ul class="social_footer_ul">
+            <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+            <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+            </ul>
+            <!--social_footer_ul ends here-->
+            </div>
+          </footer>--%>
 
 
             <!-- Footer Links -->
@@ -812,6 +789,7 @@
             });
         </script>
        <%-- <script type="text/javascript" src="../../public/js/carousel.js"></script>--%>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.8.2/js/lightbox.min.js"></script>
         <!-- jQuery -->
         <script type="text/javascript" src="../../MDB/js/jquery.min.js"></script>
         <!-- Bootstrap tooltips -->

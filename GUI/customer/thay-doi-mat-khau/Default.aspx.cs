@@ -71,7 +71,7 @@ namespace GUI.customer.thay_doi_mat_khau
             }
             else
             {
-                string mkCu = System.Web.Security.FormsAuthentication.HashPasswordForStoringInConfigFile(txt_mkCu.Text.Trim(), "SHA1");
+                string mkCu = txt_mkCu.Text.Trim();
                 if (bllCustomer.kiemTraMKCu(tdn_email, mkCu))
                 {
                     string mk = txt_mkMoi.Text.Trim();

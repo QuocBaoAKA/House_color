@@ -135,8 +135,9 @@
     <Content Include="css\util.css" />
     <Content Include="customer\chi-tiet-san-pham\chitietsp.aspx" />
     <Content Include="customer\chinh-sach-bao-hanh\default.aspx" />
+    <Content Include="customer\color\Default.aspx" />
     <Content Include="customer\dang-ky\Default.aspx" />
-    <Content Include="customer\dang-nhap\Default.aspx" />
+    <Content Include="customer\dang-nhap\caidattk.aspx" />
     <Content Include="customer\dang-nhap\logout.aspx" />
     <Content Include="customer\danh-muc-san-pham\Default.aspx" />
     <Content Include="customer\gio-hang\dat-hang-thanh-cong.aspx" />
@@ -148,14 +149,13 @@
     <Content Include="customer\thay-doi-mat-khau\Default.aspx" />
     <Content Include="customer\thong-tin-ca-nhan\Default.aspx" />
     <Content Include="customer\tim-kiem\Default.aspx" />
-    <Content Include="customer\trang-chu\Default.aspx" />
     <Content Include="customer\trang-chu\khampha.aspx" />
     <Content Include="customer\trang-chu\mausac.aspx" />
     <Content Include="customer\trang-chu\sanpham.aspx" />
     <Content Include="customer\trang-chu\t.aspx" />
     <Content Include="customer\trang-chu\test.aspx" />
     <Content Include="customer\trang-chu\tintuc.aspx" />
-    <Content Include="customer\trang-chu\trangchu.aspx" />
+    <Content Include="customer\trang-chu\Default.aspx" />
     <Content Include="cutomer.js" />
     <Content Include="Default.aspx" />
     <Content Include="hinh\1562139922_son-ngoai-that-dulux.png" />
@@ -163,6 +163,7 @@
     <Content Include="hinh\bn1.jpg" />
     <Content Include="hinh\bn2.jpg" />
     <Content Include="hinh\bn3.jpg" />
+    <Content Include="hinh\circle.png" />
     <Content Include="hinh\clll.jpg" />
     <Content Include="hinh\colors-featured.jpg" />
     <Content Include="hinh\CT1.jpg" />
@@ -173,6 +174,7 @@
     <Content Include="hinh\CT7.jpg" />
     <Content Include="hinh\dulux-logo.png" />
     <Content Include="hinh\grey.png" />
+    <Content Include="hinh\half-circle.png" />
     <Content Include="hinh\icon.png" />
     <Content Include="hinh\images.jpg" />
     <Content Include="hinh\k1.jpg" />
@@ -180,8 +182,10 @@
     <Content Include="hinh\k3.jpg" />
     <Content Include="hinh\k4.jpg" />
     <Content Include="hinh\k5.jpg" />
+    <Content Include="hinh\letters.png" />
     <Content Include="hinh\lo.jpg" />
     <Content Include="hinh\logo.jpg" />
+    <Content Include="hinh\logo.png" />
     <Content Include="hinh\Myplace.png" />
     <Content Include="hinh\n1.jpg" />
     <Content Include="hinh\n2.png" />
@@ -193,20 +197,30 @@
     <Content Include="hinh\nt3.jpg" />
     <Content Include="hinh\nt5.jpg" />
     <Content Include="hinh\page1.gif" />
+    <Content Include="hinh\points1.png" />
+    <Content Include="hinh\points2.png" />
+    <Content Include="hinh\points3.png" />
+    <Content Include="hinh\points4.png" />
     <Content Include="hinh\slide5.jpg" />
     <Content Include="hinh\sonnha.jpg" />
+    <Content Include="hinh\square.png" />
     <Content Include="hinh\thi-cong-son-my-thuat-thm.jpg" />
     <Content Include="hinh\thumbnail_large-1.jpg" />
     <Content Include="hinh\top.jpg" />
+    <Content Include="hinh\triangle.png" />
+    <Content Include="hinh\wave.png" />
+    <Content Include="hinh\wavy-shape.png" />
+    <Content Include="hinh\x.png" />
     <Content Include="hinh\x1.jpg" />
     <Content Include="hinh\x2.jpg" />
     <Content Include="hinh\x3.jpg" />
     <Content Include="hinh\x4.jpg" />
     <Content Include="hinh\x5.jpg" />
     <Content Include="hinh\yellow.jpg" />
-    <Content Include="customer\trang-chu\login.aspx" />
+    <Content Include="customer\dang-nhap\Default.aspx" />
     <Content Include="MDB\css\bootstrap.min.css" />
     <Content Include="MDB\css\datatables.min.css" />
+    <Content Include="MDB\css\default.css" />
     <Content Include="MDB\css\grid.css" />
     <Content Include="MDB\css\mdb.min.css" />
     <Content Include="MDB\css\people.css" />
@@ -516,6 +530,13 @@
     <Compile Include="customer\chinh-sach-bao-hanh\default.aspx.designer.cs">
       <DependentUpon>default.aspx</DependentUpon>
     </Compile>
+    <Compile Include="customer\color\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="customer\color\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
     <Compile Include="customer\customer-masterpage\customer.Master.cs">
       <DependentUpon>customer.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -530,12 +551,12 @@
     <Compile Include="customer\dang-ky\Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
-    <Compile Include="customer\dang-nhap\Default.aspx.cs">
-      <DependentUpon>Default.aspx</DependentUpon>
+    <Compile Include="customer\dang-nhap\caidattk.aspx.cs">
+      <DependentUpon>caidattk.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="customer\dang-nhap\Default.aspx.designer.cs">
-      <DependentUpon>Default.aspx</DependentUpon>
+    <Compile Include="customer\dang-nhap\caidattk.aspx.designer.cs">
+      <DependentUpon>caidattk.aspx</DependentUpon>
     </Compile>
     <Compile Include="customer\dang-nhap\logout.aspx.cs">
       <DependentUpon>logout.aspx</DependentUpon>
@@ -614,13 +635,6 @@
     <Compile Include="customer\tim-kiem\Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
-    <Compile Include="customer\trang-chu\Default.aspx.cs">
-      <DependentUpon>Default.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="customer\trang-chu\Default.aspx.designer.cs">
-      <DependentUpon>Default.aspx</DependentUpon>
-    </Compile>
     <Compile Include="customer\trang-chu\khampha.aspx.cs">
       <DependentUpon>khampha.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -663,12 +677,12 @@
     <Compile Include="customer\trang-chu\tintuc.aspx.designer.cs">
       <DependentUpon>tintuc.aspx</DependentUpon>
     </Compile>
-    <Compile Include="customer\trang-chu\trangchu.aspx.cs">
-      <DependentUpon>trangchu.aspx</DependentUpon>
+    <Compile Include="customer\trang-chu\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="customer\trang-chu\trangchu.aspx.designer.cs">
-      <DependentUpon>trangchu.aspx</DependentUpon>
+    <Compile Include="customer\trang-chu\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
@@ -678,12 +692,12 @@
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
     <Compile Include="ketnoi.cs" />
-    <Compile Include="customer\trang-chu\login.aspx.cs">
-      <DependentUpon>login.aspx</DependentUpon>
+    <Compile Include="customer\dang-nhap\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="customer\trang-chu\login.aspx.designer.cs">
-      <DependentUpon>login.aspx</DependentUpon>
+    <Compile Include="customer\dang-nhap\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

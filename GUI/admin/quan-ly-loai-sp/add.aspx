@@ -1,6 +1,12 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/admin/admin-masterpage/admin.Master" AutoEventWireup="true" CodeBehind="add.aspx.cs" Inherits="GUI.admin.quan_ly_loai_sp.add" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <title>Thêm loại sản phẩm</title>
+    <style>
+        .card{
+            width: 80%;
+            margin: auto;
+        }
+    </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <h5 class="my-4 dark-grey-text font-weight-bold">Thêm</h5>

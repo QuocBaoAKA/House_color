@@ -16,7 +16,7 @@
     }
 
         @media(max-width:768px) {
-            .card {
+        .card {
                 width: 100%;
                 padding: 1.5rem
             }
@@ -181,7 +181,9 @@ label.radio input {
 label.radio {
     cursor: pointer
 }
-
+.detailt_group{
+    background: #f9f9f9;
+}
     </style>  
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -226,32 +228,35 @@ label.radio {
                 <div class="card">
                     <div class="row">
                         <div class="col-md-6 text-center align-self-center"> 
-                            <img class="img-fluid" src="../../public/images/<%# Eval("sp.HinhAnh") %>"> </div>
+                            <img class="img-fluid" src="../../../public/images/<%# Eval("sp.HinhAnh") %>" />
+
+                        </div>
                         <div class="col-md-6 info">
                             <div class="row title">
-                                <div class="col">
-                                    <h2><%# Eval("sp.TenSP") %></h2>
+                                <div class="text">
+                                    <h2 style="color: rgb(54, 54, 54);"><%# Eval("sp.TenSP") %></h2>
                                 </div>
                                 <div class="col text-right"><a href="#"><i class="fa fa-heart-o"></i></a></div>
                             </div>
-                            <p>Mã màu: <%# Eval("sp.MaMau") %></p> <span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> <span class="fa fa-star-half-full"></span> <span id="reviews"></span>
-                            <div class="row price"> <label class="radio"> <input type="radio" name="size1" value="small" checked> <span>
-                                       
-                                        <div class="row"><%# Eval("sp.DonGia", "{0:000,000} VNĐ ") %></div></a>
+                            <p style="color: red;">Mã màu: <%# Eval("sp.MaMau") %></p> <span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> <span class="fa fa-star-half-full"></span> <span id="reviews"></span>
+                            <div class="row price"> <label class="radio"><input type="radio" style="color: #f2f2f2;" name="size1" value="small" checked><span>         
+                                        <div class="row"><%# Eval("sp.DonGia", "{0:000,000} VNĐ ") %></div>
                                     </span> </label> </div>
                         </div>
                     </div>
                     <div class="row lower">
-                        <div class="col text-right align-self-center"> <button class="btn">Mua Hàng</button> </div>
+                        <div class="col text-right align-self-center"> <button class="btn" style="color: blue; border: 1px solid red;">Mua Hàng</button> </div>
                     </div>
                 </div>
             </div>
          </div>
     </div>
 </div>
-</section>
+
             <!----end---->     
               <div class="fb-comments container" data-href='https://developers.facebook.com/docs/plugins/<%# Eval("sp.MaSP") %>' data-numposts="5" data-width="100%"></div>       
-            </ItemTemplate>
+           </section> 
+    </ItemTemplate>
+        
         </asp:Repeater>
 </asp:Content>

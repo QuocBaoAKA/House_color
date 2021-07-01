@@ -12,8 +12,9 @@ namespace GUI.customer.dang_nhap
         protected void Page_Load(object sender, EventArgs e)
         {
             Session.RemoveAll();
-            Session["success"] = "Bạn đã đăng xuất";
-            Response.Redirect(Request.UrlReferrer.ToString());
+            //Session["success"] = "Bạn đã đăng xuất";
+            //Response.Redirect(Request.UrlReferrer.ToString());
+            Response.Redirect("<alert>Đăng xuất thành công</alert>; window.location ='../trang_chu'");
         }
     }
 }

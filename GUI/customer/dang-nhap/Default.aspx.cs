@@ -4,31 +4,31 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using DAL;
 using BLL;
+using DAL;
 using ASPSnippets.GoogleAPI;
-using ASPSnippets.FaceBookAPI;
 using System.Web.Script.Serialization;
+using ASPSnippets.FaceBookAPI;
 
-namespace GUI.customer.dang_nhap
+namespace GUI
 {
-    public partial class Default : System.Web.UI.Page
+    public partial class login : System.Web.UI.Page
     {
-        BLL_Customer bllCustomer = new BLL_Customer();
+        BLL_Customer bll = new BLL_Customer();
         protected void Page_Load(object sender, EventArgs e)
         {
-            GoogleConnect.ClientId = "33386015156-6l69s6kutqqeks48i9o9opu70qm9o34k.apps.googleusercontent.com";
-            GoogleConnect.ClientSecret = "3eAolfro2Ggi2bmXqDdb2KfG";
+            GoogleConnect.ClientId = "684044606396-gss1ijnna0356qcc08g3420gu63g8jbc.apps.googleusercontent.com";
+            GoogleConnect.ClientSecret = "XwVuPRJHCbYjXobUKE7Qwp4w";
             GoogleConnect.RedirectUri = Request.Url.AbsoluteUri.Split('?')[0];
 
-            //FaceBookConnect.API_Key = "327805077749478";
-            //FaceBookConnect.API_Secret = "db49c3cb2e175b0d8a828aa3d7f232eb";
+            //FaceBookConnect.API_Key = "204065788274765";
+            //FaceBookConnect.API_Secret = "53f6a5a2911e038702572085e06b1cca";
 
             if (!this.IsPostBack)
             {
-                if(Session["taiKhoan"] != null)
+                if (Session["taiKhoan"] != null)
                 {
-                    Response.Redirect("../trang-chu/trangchu.aspx");
+                    Response.Redirect("customer/trang-chu/trangchu.aspx");
                 }
 
                 if (!string.IsNullOrEmpty(Request.QueryString["code"]) && Session["loginGG"] != null)
@@ -36,46 +36,47 @@ namespace GUI.customer.dang_nhap
                     string code = Request.QueryString["code"];
                     string json = GoogleConnect.Fetch("me", code);
                     GoogleProfile profile = new JavaScriptSerializer().Deserialize<GoogleProfile>(json);
-                    if (bllCustomer.kiemTraTonTaiTK(profile.Email) == true)
+                    if (bll.kiemTraTonTaiTK(profile.Email) == true)
                     {
-                        Session["taiKhoan"] = bllCustomer.layHoTen(profile.Email);
+                        Session["taiKhoan"] = bll.layHoTen(profile.Email);
                         Session["email"] = profile.Email;
                         Session["success"] = "Đăng nhập thành công";
-                        Response.Redirect(Session["urlBack"].ToString());
+                        //Response.Redirect(Session["urlBack"].ToString());
+                        Response.Redirect("../trang-chu/");
                     }
                     else
                     {
-                        bllCustomer.themTK(profile.Email, null, profile.Name, profile.Email, null, null);
+                        bll.themTK(profile.Email, null, profile.Name, profile.Email, null, null);
 
-                        Session["taiKhoan"] = bllCustomer.layHoTen(profile.Email);
+                        Session["taiKhoan"] = bll.layHoTen(profile.Email);
                         Session["email"] = profile.Email;
                         Session["success"] = "Đăng nhập thành công";
                         Response.Redirect(Session["urlBack"].ToString());
                     }
                 }
 
-                //if (!string.IsNullOrEmpty(Request.QueryString["code"]) && Session["loginFB"] != null)
-                //{
-                //    string code = Request.QueryString["code"];
-                //    string data = FaceBookConnect.Fetch(code, "me?fields=id,name,email");
-                //    FaceBookUser faceBookUser = new JavaScriptSerializer().Deserialize<FaceBookUser>(data);
-                //    //faceBookUser.PictureUrl = string.Format("https://graph.facebook.com/{0}/picture", faceBookUser.Id);
+                if (!string.IsNullOrEmpty(Request.QueryString["code"]) && Session["loginFB"] != null)
+                {
+                    string code = Request.QueryString["code"];
+                    string data = FaceBookConnect.Fetch(code, "me?fields=id,name,email");
+                    FaceBookUser faceBookUser = new JavaScriptSerializer().Deserialize<FaceBookUser>(data);
+                    //faceBookUser.PictureUrl = string.Format("https://graph.facebook.com/{0}/picture", faceBookUser.Id);
 
-                //    if (bllCustomer.kiemTraTonTaiTK(faceBookUser.Email) == true)
-                //    {
-                //        Session["taiKhoan"] = bllCustomer.layHoTen(faceBookUser.Email);
-                //        Session["success"] = "Đăng nhập thành công";
-                //        Response.Redirect(Session["urlBack"].ToString());
-                //    }
-                //    else
-                //    {
-                //        bllCustomer.themTK(faceBookUser.Email, null, faceBookUser.Name, faceBookUser.Email, null, null);
+                    if (bll.kiemTraTonTaiTK(faceBookUser.Email) == true)
+                    {
+                        Session["taiKhoan"] = bll.layHoTen(faceBookUser.Email);
+                        Session["success"] = "Đăng nhập thành công";
+                        Response.Redirect(Session["urlBack"].ToString());
+                    }
+                    else
+                    {
+                        bll.themTK(faceBookUser.Email, null, faceBookUser.Name, faceBookUser.Email, null, null);
 
-                //        Session["taiKhoan"] = bllCustomer.layHoTen(faceBookUser.Email);
-                //        Session["success"] = "Đăng nhập thành công";
-                //        Response.Redirect(Session["urlBack"].ToString());
-                //    }
-                //}
+                        Session["taiKhoan"] = bll.layHoTen(faceBookUser.Email);
+                        Session["success"] = "Đăng nhập thành công";
+                        Response.Redirect(Session["urlBack"].ToString());
+                    }
+                }
 
                 if (Request.QueryString["error"] == "access_denied")
                 {
@@ -83,33 +84,7 @@ namespace GUI.customer.dang_nhap
                 }
             }
         }
-
-        protected void btn_login_Click(object sender, EventArgs e)
-        {
-            string tdn = txt_tdn.Text.Trim();
-            string mk = System.Web.Security.FormsAuthentication.HashPasswordForStoringInConfigFile(txt_mk.Text.Trim(), "SHA1");
-
-            if (bllCustomer.dangNhap(tdn, mk))
-            {
-                Session["taiKhoan"] = bllCustomer.layHoTen(tdn);
-                Session["tdn"] = tdn;
-                Session["success"] = "Đăng nhập thành công";
-                Response.Redirect(Session["urlBack"].ToString());
-            }
-            else
-            {
-                ltr_codeJS.Text = @"<script>
-                                        document.getElementById('login-failed').style.display = 'block';
-                                    </script>";
-            }
-        }
-
-        protected void btn_gg_Click(object sender, EventArgs e)
-        {
-            Session["loginGG"] = 1;
-            GoogleConnect.Authorize("profile", "email");
-        }
-
+      
         public class GoogleProfile
         {
             public string Id { get; set; }
@@ -127,11 +102,41 @@ namespace GUI.customer.dang_nhap
             public string PictureUrl { get; set; }
             public string Email { get; set; }
         }
+        protected void btn_gg_Click1(object sender, EventArgs e)
+        {
+            Session["loginGG"] = 1;
+            GoogleConnect.Authorize("profile", "email");
+        }
 
-        //protected void btn_fb_Click(object sender, EventArgs e)
-        //{
-        //    Session["loginFB"] = 1;
-        //    FaceBookConnect.Authorize("user_photos,email", Request.Url.AbsoluteUri.Split('?')[0]);
-        //}
+
+        protected void LinkButton1_Click1(object sender, EventArgs e)
+        {
+            Session["loginFB"] = 1;
+            FaceBookConnect.Authorize("user_photos,email", Request.Url.AbsoluteUri.Split('?')[0]);
+        }
+
+        protected void btn_login_Click1(object sender, EventArgs e)
+        {
+            string tdn = txt_tdn.Text.Trim();
+            string mk = txt_mk.Text.Trim(); /*System.Web.Security.FormsAuthentication.HashPasswordForStoringInConfigFile(txt_mk.Text.Trim(), "SHA1");*/
+
+            if (bll.dangNhap(tdn, mk))
+            {
+                Session["taiKhoan"] = bll.layHoTen(tdn);
+                Session["tdn"] = tdn;
+                Session["success"] = "Đăng nhập thành công";
+                //Response.Redirect(Session["urlBack"].ToString());
+                //Response.Write("<script>alert('Đăng Nhập Thành Công')</script>");
+                Response.Redirect("../trang-chu/");
+            }
+            else
+            {
+                ltr_codeJS.Text = @"<script>
+                                        document.getElementById('login-failed').style.display = 'block';
+                                    </script>";
+            }
+           
+        }
+
     }
-}
+  }

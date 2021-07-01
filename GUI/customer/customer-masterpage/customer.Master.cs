@@ -20,13 +20,6 @@ namespace GUI.customer.customer_masterpage
             //    rpt_danhMucSP.DataBind();
             //}
         }
-
-        protected void linkbtn_dangNhap_Click(object sender, EventArgs e)
-        {
-            Session["urlBack"] = HttpContext.Current.Request.Url.AbsoluteUri;
-            Response.Redirect("../dang-nhap/");
-        }
-
         protected void lbtn_thongTinCaNhan_Click(object sender, EventArgs e)
         {
             Session["urlBack"] = HttpContext.Current.Request.Url.AbsoluteUri;
@@ -49,6 +42,12 @@ namespace GUI.customer.customer_masterpage
         {
             Session["tuKhoaTimKiem"] = TextBox1.Text.Trim();
             Response.Redirect("../tim-kiem/");
+        }
+
+        protected void linkbtn_dangNhap_Click1(object sender, EventArgs e)
+        {
+            Session["urlBack"] = HttpContext.Current.Request.Url.AbsoluteUri;
+            Response.Redirect("../dang-nhap/");
         }
     }
 }

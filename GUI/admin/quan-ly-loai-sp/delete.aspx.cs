@@ -30,6 +30,7 @@ namespace GUI.admin.quan_ly_loai_sp
                 if (bllAdmin.xoaLoaiSanPham(maLoaiSP))
                 {
                     Session["success"] = "Xóa Loại sản phẩm thành công";
+                    //ClientScript.RegisterStartupScript(this.GetType(), "Deleted!", "Xóa thành công", true); 
                     Response.Redirect("../quan-ly-loai-sp/");
                 }
                 else

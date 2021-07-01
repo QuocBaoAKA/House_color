@@ -8,6 +8,32 @@
             margin-top: 1rem;
         }
     </style>
+    <script>
+        var object = { status: false, ele: null };
+        function xoalh(ev) {
+            if (object.status) {
+                return true;
+            }
+
+            swal({
+                title: "Are you sure?",
+                text: "Your will not be able to recover this imaginary file!",
+                type: "warning",
+                showCancelButton: true,
+                confirmButtonClass: "btn-danger",
+                confirmButtonText: "Yes, delete it!",
+                closeOnConfirm: true
+            },
+        function () {
+            object.status = true;
+            object.ele = ev;
+
+            object.ele.click();
+
+            });
+            return false;
+        };
+    </script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="card">
@@ -34,7 +60,7 @@
                         <td><%# Eval("MaLH") %></td>
                         <td><%# Eval("TenLH") %></td>
                         <td>                           
-                            <a href="./delete.aspx?maloaisp=<%# Eval("MaLH") %>" class="btn btn-danger btn-sm" onclick="return confirm('Bạn có chắc xóa không!!!')"><i class="far fa-trash-alt"></i></a>
+                            <a href="./delete.aspx?maloaisp=<%# Eval("MaLH") %>" class="btn btn-danger btn-sm" onclick="return confirm('Bạn có chắc xóa không!')"><i class="far fa-trash-alt"></i></a>
                             <a href="./edit.aspx?maloaisp=<%# Eval("MaLH") %>" class="btn btn-success btn-sm"><i class="far fa-edit"></i></a>
                         </td>
                     </tr>
