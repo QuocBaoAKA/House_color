@@ -125,8 +125,6 @@ namespace GUI
                 Session["taiKhoan"] = bll.layHoTen(tdn);
                 Session["tdn"] = tdn;
                 Session["success"] = "Đăng nhập thành công";
-                //Response.Redirect(Session["urlBack"].ToString());
-                //Response.Write("<script>alert('Đăng Nhập Thành Công')</script>");
                 Response.Redirect("../trang-chu/");
             }
             else

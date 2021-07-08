@@ -40,8 +40,8 @@ namespace GUI.customer.customer_masterpage
 
         protected void lbtn_timKiem_Click(object sender, EventArgs e)
         {
-            Session["tuKhoaTimKiem"] = TextBox1.Text.Trim();
-            Response.Redirect("../tim-kiem/");
+            //Session["tuKhoaTimKiem"] = TextBox2.Text.Trim();
+            //Response.Redirect("../tim-kiem/");
         }
 
         protected void linkbtn_dangNhap_Click1(object sender, EventArgs e)

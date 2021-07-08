@@ -475,21 +475,21 @@ body{
         <span class="tooltip">Dashboard</span>
       </li>
       <li>
-        <a href="#">
+        <a href="../quan-ly-khach-hang/">
           <i class='bx bx-user' ></i>
           <span class="links_name">Quản Trị Người Dùng</span>
         </a>
         <span class="tooltip">User</span>
       </li>
       <li>
-        <a href="#">
+        <a href="../quan-ly-sp/">
          <i class='bx bxs-widget'></i>
           <span class="links_name">Quản Trị Sản Phẩm</span>
         </a>
         <span class="tooltip">Sản Phẩm</span>
       </li>
       <li>
-        <a href="#">
+        <a href="../quan-ly-hang/">
           <i class='bx bx-color-fill'></i>
           <span class="links_name">Quản Trị Màu Sắc</span>
         </a>
@@ -497,7 +497,7 @@ body{
       </li>
         <li>
         <a href="../quan-ly-loai-sp/">
-          <i class='bx bx-user' ></i>
+          <i class='bx bxs-message-square-edit'></i>
           <span class="links_name">Quản Trị Loại Hàng</span>
         </a>
         <span class="tooltip">User</span>
@@ -536,7 +536,7 @@ body{
         <div class="profile_details">
           <!--<img src="profile.jpg" alt="">-->
           <div class="name_job">
-            <div class="job"><%= Session["taiKhoan"] %></div>
+            <div class="job" style="color: #fff;"><%= Session["taiKhoan"] %></div>
           </div>
         </div>
           <a href="../logout.aspx">

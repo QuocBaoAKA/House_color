@@ -136,10 +136,15 @@
     <Content Include="customer\chi-tiet-san-pham\chitietsp.aspx" />
     <Content Include="customer\chinh-sach-bao-hanh\default.aspx" />
     <Content Include="customer\color\Default.aspx" />
+    <Content Include="customer\color\random.aspx" />
+    <Content Include="customer\dang-ky\dangki.aspx" />
     <Content Include="customer\dang-ky\Default.aspx" />
+    <Content Include="customer\dang-ky\defaultdk.aspx" />
     <Content Include="customer\dang-nhap\caidattk.aspx" />
     <Content Include="customer\dang-nhap\logout.aspx" />
-    <Content Include="customer\danh-muc-san-pham\Default.aspx" />
+    <Content Include="customer\DangKy\default.aspx" />
+    <Content Include="customer\danh-muc-san-pham\hh.aspx" />
+    <Content Include="customer\danh-muc-san-pham\defaultc.aspx" />
     <Content Include="customer\gio-hang\dat-hang-thanh-cong.aspx" />
     <Content Include="customer\gio-hang\Default.aspx" />
     <Content Include="customer\gio-hang\dat-hang.aspx" />
@@ -152,6 +157,8 @@
     <Content Include="customer\trang-chu\khampha.aspx" />
     <Content Include="customer\trang-chu\mausac.aspx" />
     <Content Include="customer\trang-chu\sanpham.aspx" />
+    <Content Include="customer\trang-chu\sonngoaithat.aspx" />
+    <Content Include="customer\trang-chu\sonnoithat.aspx" />
     <Content Include="customer\trang-chu\t.aspx" />
     <Content Include="customer\trang-chu\test.aspx" />
     <Content Include="customer\trang-chu\tintuc.aspx" />
@@ -160,6 +167,7 @@
     <Content Include="Default.aspx" />
     <Content Include="hinh\1562139922_son-ngoai-that-dulux.png" />
     <Content Include="hinh\banner3.jpg" />
+    <Content Include="hinh\bg-map.png" />
     <Content Include="hinh\bn1.jpg" />
     <Content Include="hinh\bn2.jpg" />
     <Content Include="hinh\bn3.jpg" />
@@ -537,6 +545,13 @@
     <Compile Include="customer\color\Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
+    <Compile Include="customer\color\random.aspx.cs">
+      <DependentUpon>random.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="customer\color\random.aspx.designer.cs">
+      <DependentUpon>random.aspx</DependentUpon>
+    </Compile>
     <Compile Include="customer\customer-masterpage\customer.Master.cs">
       <DependentUpon>customer.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -544,12 +559,26 @@
     <Compile Include="customer\customer-masterpage\customer.Master.designer.cs">
       <DependentUpon>customer.Master</DependentUpon>
     </Compile>
+    <Compile Include="customer\dang-ky\dangki.aspx.cs">
+      <DependentUpon>dangki.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="customer\dang-ky\dangki.aspx.designer.cs">
+      <DependentUpon>dangki.aspx</DependentUpon>
+    </Compile>
     <Compile Include="customer\dang-ky\Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="customer\dang-ky\Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="customer\dang-ky\defaultdk.aspx.cs">
+      <DependentUpon>defaultdk.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="customer\dang-ky\defaultdk.aspx.designer.cs">
+      <DependentUpon>defaultdk.aspx</DependentUpon>
     </Compile>
     <Compile Include="customer\dang-nhap\caidattk.aspx.cs">
       <DependentUpon>caidattk.aspx</DependentUpon>
@@ -565,12 +594,26 @@
     <Compile Include="customer\dang-nhap\logout.aspx.designer.cs">
       <DependentUpon>logout.aspx</DependentUpon>
     </Compile>
-    <Compile Include="customer\danh-muc-san-pham\Default.aspx.cs">
-      <DependentUpon>Default.aspx</DependentUpon>
+    <Compile Include="customer\DangKy\default.aspx.cs">
+      <DependentUpon>default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="customer\danh-muc-san-pham\Default.aspx.designer.cs">
-      <DependentUpon>Default.aspx</DependentUpon>
+    <Compile Include="customer\DangKy\default.aspx.designer.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="customer\danh-muc-san-pham\hh.aspx.cs">
+      <DependentUpon>hh.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="customer\danh-muc-san-pham\hh.aspx.designer.cs">
+      <DependentUpon>hh.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="customer\danh-muc-san-pham\defaultc.aspx.cs">
+      <DependentUpon>defaultc.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="customer\danh-muc-san-pham\defaultc.aspx.designer.cs">
+      <DependentUpon>defaultc.aspx</DependentUpon>
     </Compile>
     <Compile Include="customer\gio-hang\dat-hang-thanh-cong.aspx.cs">
       <DependentUpon>dat-hang-thanh-cong.aspx</DependentUpon>
@@ -656,6 +699,20 @@
     <Compile Include="customer\trang-chu\sanpham.aspx.designer.cs">
       <DependentUpon>sanpham.aspx</DependentUpon>
     </Compile>
+    <Compile Include="customer\trang-chu\sonngoaithat.aspx.cs">
+      <DependentUpon>sonngoaithat.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="customer\trang-chu\sonngoaithat.aspx.designer.cs">
+      <DependentUpon>sonngoaithat.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="customer\trang-chu\sonnoithat.aspx.cs">
+      <DependentUpon>sonnoithat.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="customer\trang-chu\sonnoithat.aspx.designer.cs">
+      <DependentUpon>sonnoithat.aspx</DependentUpon>
+    </Compile>
     <Compile Include="customer\trang-chu\t.aspx.cs">
       <DependentUpon>t.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -712,6 +769,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="hinhanh\" />
     <Folder Include="public\excel\" />
   </ItemGroup>
   <PropertyGroup>

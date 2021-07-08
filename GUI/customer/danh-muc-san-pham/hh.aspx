@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/customer/customer-masterpage/customer.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="GUI.customer.danh_muc_san_pham.Default" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/customer/customer-masterpage/customer.Master" AutoEventWireup="true" CodeBehind="hh.aspx.cs" Inherits="GUI.customer.danh_muc_san_pham.Default" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <title>Danh mục sản phẩm</title>
@@ -87,8 +87,8 @@
                                         <div class="card card-ecommerce mb-4" style="height: 390px;">
                                             <!-- Card image -->
                                             <div class="view overlay">
-                                                <img src="../../public/images/product/<%# Eval("sp.hinh_anh") %>" class="img-fluid" style="height: 200px">
-                                                <a href="../chi-tiet-san-pham/?masp=<%# Eval("sp.ma_sp") %>">
+                                                <img src="../../public/images/<%# Eval("sp.HinhAnh") %>" class="img-fluid" style="height: 200px">
+                                                <a href="../chi-tiet-san-pham/?masp=<%# Eval("sp.MaSP") %>">
                                                     <div class="mask rgba-white-slight"></div>
                                                 </a>
                                             </div>
@@ -96,9 +96,9 @@
                                             <!-- Card content -->
                                             <div class="card-body" style="padding-bottom: 0;">
                                                 <!-- Category & Title -->
-                                                <p class="card-title mb-1"><strong><a href="../chi-tiet-san-pham/?masp=<%# Eval("sp.ma_sp") %>" class="dark-grey-text"><%# Eval("sp.ten_sp") %></a></strong></p>
+                                                <p class="card-title mb-1"><strong><a href="../chi-tiet-san-pham/?masp=<%# Eval("sp.MaSP") %>" class="dark-grey-text"><%# Eval("sp.TenSP") %></a></strong></p>
 
-                                                <p><strong>Giá: <%# Eval("gia") %> vnđ</strong></p>
+                                                <p><strong>Giá: <%# Eval("DonGia") %> vnđ</strong></p>
                                                 <!-- Card footer -->
                                                 <div class="card-footer text-center">
 
@@ -117,7 +117,7 @@
                                                                 else
                                                                 {
                                                             %>
-                                                            <asp:LinkButton ID="lbtn_muaHang" CommandArgument='<%# Eval("sp.ma_sp") %>' CommandName="muaHang" class="btn btn-outline-primary btn-md waves-effect ml-0" runat="server" OnClick="lbtn_muaHang_Click" OnClientClick="toastr.success('Thêm sản phẩm vào giỏ hàng thành công')">
+                                                            <asp:LinkButton ID="lbtn_muaHang" CommandArgument='<%# Eval("sp.MaSP") %>' CommandName="muaHang" class="btn btn-outline-primary btn-md waves-effect ml-0" runat="server" OnClick="lbtn_muaHang_Click" OnClientClick="toastr.success('Thêm sản phẩm vào giỏ hàng thành công')">
                                                                 <i class="fas fa-cart-plus"></i> Mua hàng
                                                             </asp:LinkButton>
 

@@ -2,6 +2,9 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <title>Trang Chủ</title>
     <style>
+        body{
+            width: 100%;
+        }
       .btn-grad {background-image: linear-gradient(to right, #00d2ff 0%, #3a7bd5  51%, #00d2ff  100%)}
          .btn-grad {
              width: 200px;
@@ -68,7 +71,7 @@
 	    width: 100%;
 	    height: 100%;
 	    transition: 1s;
-        
+        border-radius: 16px;
     }
 
     .khoi:hover img{
@@ -146,6 +149,65 @@
             margin-top: 5px;
             border-radius: 10px;
         }
+        /*product*/
+        .section_product{
+            background: #f2f2f2;
+            height: 600px;
+        }
+        
+        .product_group{   
+           display: flex;
+        }
+        .product_group{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .product_home{
+            width: 400px;
+            height: 500px;
+            margin: auto;
+            margin-top: 2rem;
+            margin: 10px;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+            transition: 0.2s ease;
+        }
+        .product_home:hover{
+            transform: translateY(-15px);
+            border-bottom-color: #0869ea;
+        }
+        .product_home img{
+            width: 400px;
+            height: 300px;
+        }
+        .product_home h1{
+            font-size: 25px;
+            text-align: center;
+            margin-top: 1.5rem;
+            color: #333333;
+
+        }
+        .product_home .btn_a{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 150px;
+            margin: auto;
+            margin-top: 2rem;
+            padding: 15px;
+            border-radius: 10px;
+            background: #0869ea;
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .btn_a:focus{
+            background: #fff;
+            border: 2px solid #0869ea;
+            color: #000;
+        }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -157,14 +219,13 @@
   </ol>
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img src="https://aats3-f20c7c9531544cda9e01e2d01c48e39-public.s3-eu-west-1.amazonaws.com/styles/article_hero_image_scale/s3/article/top-banner-ec-cbb_2.jpg?itok=Kfu7BF_v" height="450" class="d-block w-100" alt="...">
-    
+         <img src="https://aats3-f20c7c9531544cda9e01e2d01c48e39-public.s3-eu-west-1.amazonaws.com/styles/article_hero_image_scale/s3/article/top-banner-ec-cbb_2.jpg?itok=Kfu7BF_v" height="450" class="d-block w-100" alt="..." />
     </div>
     <div class="carousel-item">
-     <img src="https://sonduluxvietnam.com/wp-content/uploads/2017/02/banner3.jpg" class="d-block w-100" alt="..." height="450">
+         <img src="https://sonduluxvietnam.com/wp-content/uploads/2017/02/banner3.jpg" class="d-block w-100" alt="..." height="450">
     </div>
     <div class="carousel-item">
-     <img src="https://jotunimages.azureedge.net/images/images/majestic-home-herobanner-1000x515-587187_tcm65-95738.jpg" class="d-block w-100" alt="..." height="450">
+         <img src="https://jotunimages.azureedge.net/images/images/majestic-home-herobanner-1000x515-587187_tcm65-95738.jpg" class="d-block w-100" alt="..." height="450">
     </div>
   </div>
   <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -177,7 +238,25 @@
   </a>
 </div>
   <!---noidung---->
-     <section id="about" class="site-padding">
+    <section class="section_product">
+        <h1 style="text-align: center; color: #313131; margin-top: 1rem; margin-bottom: 1rem;"> Lựa chọ sản phẩm cho dự án của bạn</h1>
+        <div class="product_group">
+            
+        <div class="product_home">  
+                <img src="https://viethangroup.vn/wp-content/uploads/2020/03/thiet-ke-ngoai-that-doc-dao.jpg" />
+                <h1>Sơn Ngoại Thất</h1>
+                <a href="#" class="btn_a">Xem Sản Phẩm</a>        
+        </div>
+        <div class="product_home">
+            <img src="https://mocshop.com.vn/library/module_new/bao-gia-thiet-ke---thi-cong-noi-that_s2030.jpg" />
+           
+                <h1>Sơn Ngoại Thất</h1>
+                <a href="#" class="btn_a">Xem Sản Phẩm</a>
+           </div>
+        </div>
+
+    </section>
+     <section id="about" class="site-padding" >
 			<div class="container">
 				<div class="row">
 					<div class="col-sm-6">
@@ -196,6 +275,32 @@
 				</div>
 			</div>
 		</section> 
+     <!-- About Start -->
+        <div class="about wow fadeInUp" data-wow-delay="0.1s">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-5 col-md-6">
+                        <div class="about-img">
+                            <img src="https://mykolor.com/wp-content/uploads/2019/03/1.jpg" alt="Image" />
+                        </div>
+                    </div>
+                    <div class="col-lg-7 col-md-6">
+                        <div class="section-header text-left">
+                            <p>Mykolor</p>
+                            <h3>Bảng màu</h3>
+                            <h2>OFFWHITE</h2>
+                        </div>
+                        <div class="about-text">
+                            <p>
+                              Những gam màu thuộc bảng màu Offwhite, hay gam màu pastel nhạt là những sắc thái của màu trắng bao gồm màu trắng, màu kem, màu vanilla, màu xanh da trời, màu kem bạc hà, màu hồng phấn, vv…                
+                            </p>
+                            <a class="btn-grad" href="#">Tìm hiểu thêm</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- About End -->
     <section class="records">
         <h1 class="text_da" style="text-align: center; bottom: 5px; color: #fff;" data-title="Dự Án">Dự án - Công trình tiêu biểu</h1>
         <div class="overlay overlay-sm">
@@ -212,7 +317,7 @@
           <img src="/hinh/shapes/x.png" alt="" class="shape xshape" />
           <img src="/hinh/shapes/triangle.png" alt="" class="shape triangle" />
         </div>
-      </section>    
+      </section>  
     <div class="main_img">
          
 		<div class="khoi">
@@ -240,6 +345,61 @@
 			
 		</div> <!-- end khoi -->
 	</div>
+        <section id="partner" class="section partner">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h3 class="section-title">Các thương hiệu sơn</h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-3">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSdSr84FH6o5iOrvQWPDj-Y8Lyg_a5A5Y49JzMOs2dKDWivJ80b3ctVWEkpf7F7v0DMcmg&usqp=CAU" style=" border-radius: 50%; width: 200px; height: 200px;" />
+                </div>
+                <div class="col-sm-3">
+                    <img src="https://jotunimages.azureedge.net/images/images/jotun-logo-on-jotun-blue-background_tcm47-28006.png" style="width: 200px; height: 200px; border-radius: 50%;" />
+                </div>
+                <div class="col-sm-3">
+                    <img src="https://mykolor.com/wp-content/themes/steen/app/public/img/about__item__mykolor.jpg?v=1.1" style="width: 200px; height: 200px; border-radius: 50%;" />
+                </div>
+                <div class="col-sm-3">
+                    <img src="https://alex.com.vn/uploads/news/2018_09/203a128a-3684-11e8-89f6-56c566ee3692.png" style="width: 200px; height: 200px; border-radius: 50%;" />
+                </div>
+            </div>
+        </div>
+    </section>
+    <!---tin tuc--->
+    <div class="tintuc_group">
+        <div class="tintuc_g">
+            <img src="https://aats3-f20c7c9531544cda9e01e2d01c48e39-public.s3-eu-west-1.amazonaws.com/digital_colour_card_-_image.jpg" />
+            <div class="tin">
+                <h1 class="h1">Bảng màu DULUX BETTER LIVING AIR CLEAN</h1>
+                <p class="p_d">Cuộc sống trọn vẹn hơn khi các giác quan được giao thoa với nhau. Không khí trong lành giờ đây không chỉ để cảm nhận mà còn để ngắm nhìn.</p>
+            </div>
+            <button class="btn_share">
+                <a href="https://aats3-81bb7ee5abeccf0e228724ceabea4a3-public.s3-eu-west-1.amazonaws.com/colour_card_airclean.pdf">Tải Về</a>
+            </button>
+        </div>
+        <div class="tintuc_g">
+            <img src="https://aats3-f20c7c9531544cda9e01e2d01c48e39-public.s3-eu-west-1.amazonaws.com/ec_stain_repellent.jpg" />
+            <div class="tin">
+                <h1 class="h1">Bảng màu DULUX EASYCLEAN CHỐNG BÁM BẨN</h1>
+                <p class="p_d">Trẻ em thích khám phá, tìm tòi và sáng tạo. Hãy tạo điều kiện tốt nhất để các bé được thỏa sức vui chơi và tự do phát triển tư duy.</p>
+            </div>
+            <button class="btn_share">
+                <a href="https://aats3-f20c7c9531544cda9e01e2d01c48e39-public.s3-eu-west-1.amazonaws.com/cc_-_easyclean_chong_bam_ban.pdf?brand=Dulux">Tải Về</a>
+            </button>
+        </div>
+        <div class="tintuc_g">
+            <img src="https://aats3-f20c7c9531544cda9e01e2d01c48e39-public.s3-eu-west-1.amazonaws.com/ambiance.jpg" />
+            <div class="tin">
+                <h1 class="h1">Bảng màu DULUX AMBIANCE 5IN1</h1>
+                <p class="p_d">Ngôi nhà không chỉ để ở mà còn là nơi thể hiện cá tính và phong cách sống. Vậy tại sao không thay đổi để sáng tạo một không gian sống hoàn hảo?</p>
+            </div>
+            <button class="btn_share">
+                <a href="https://aats3-f20c7c9531544cda9e01e2d01c48e39-public.s3-eu-west-1.amazonaws.com/ambiance_cc.pdf?brand=Dulux">Tải Về </a></button>
+        </div>
+    </div>
     <div id="lienhe" class="best">
          <div class="container">
             <div class="row">
@@ -272,4 +432,26 @@
             </div>
          </div>
       </div>
+    <section class="vitri_gr">
+	<div class="container">
+        <h2>Vị Trí</h2>
+    </div>      
+    </section>
+    <section id="location" class="section location">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-3">
+                   
+                    <address>
+                        <p>House Color</p>
+                        <i class="fas fa-phone-alt phone"></i> Hotline: 08 682 48101 <br />
+                        <i class="fas fa-envelope maill"></i> Email: House.colorvn@gmail.com
+                    </address>
+                </div>
+                <div class="col-sm-9">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3930.1261368207374!2d106.34433061461489!3d9.923451592903687!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31a0175ea296facb%3A0x55ded92e29068221!2zVHLGsOG7nW5nIMSQ4bqhaSBI4buNYyBUcsOgIFZpbmg!5e0!3m2!1svi!2s!4v1625137798623!5m2!1svi!2s" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
 </asp:Content>

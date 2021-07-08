@@ -21,10 +21,12 @@ namespace GUI.customer.trang_chu
             {
                 hienthi();
             }
+            //Session["maxPrice"] = bl.giaCaoNhatTatCaSP();
+            //Session["minPrice"] = bl.giaThapNhatTatCaSP();
         }
         public void hienthi()
         {
-            SqlDataAdapter da = new SqlDataAdapter("select MaSP, TenSP,HinhAnh, DonGia from tbl_SanPham", kn.con);
+            SqlDataAdapter da = new SqlDataAdapter("select MaSP, TenSP, MaLH, HinhAnh, MaMau, DonGia from tbl_SanPham", kn.con);
             DataTable tb = new DataTable();
             da.Fill(tb);
             rpt_hienThiSanPham.DataSource = tb;
@@ -83,6 +85,15 @@ namespace GUI.customer.trang_chu
                     Session["gioHang"] = gioHang;
                 }
             }
+        }
+
+        protected void Button1_Click1(object sender, EventArgs e)
+        {
+            //int locTheo = Int32.Parse(ddl_locTheo.SelectedValue);
+            //int max = Int32.Parse(maxPrice.Text);
+            //int min = Int32.Parse(minPrice.Text);
+            //rpt_hienThiSanPham.DataSource = bl.hienThiSPLoc(min, max, locTheo);
+            //rpt_hienThiSanPham.DataBind();
         }
     }
 }

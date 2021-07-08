@@ -90,14 +90,10 @@
                 </div>
                 </div>
                 <div class="col">
-                    <div class="form-outline">
-                        <label for="txt_sl">Số lượng</label>
-                    <asp:TextBox type="number" ID="TextBox2" runat="server" class="form-control" min="0" required></asp:TextBox>
                     
                 </div>
-                </div>
             </div>
-            <div class="form-group text-right">
+            <div class="form-group text-center">
                 <a href="../quan-ly-sp/" class="btn btn-light btn-md">Hủy</a>
                 <button type="reset" class="btn btn-danger btn-md">Nhập lại</button>
                 <asp:Button ID="btn_them" runat="server" Text="Thêm" CssClass="btn btn-success btn-md" OnClick="btn_them_Click" />

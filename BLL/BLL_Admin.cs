@@ -12,7 +12,7 @@ namespace BLL
 {
     public class BLL_Admin
     {
-        public string srcDir = "D:\\CNPM\\DoAN\\WebLaptop\\GUI\\public\\images\\";
+        public string srcDir = "D:\\CNPM\\DoAN\\DA_CN\\GUI\\hinhanh\\";
         WBLKDataContext db = new WBLKDataContext();
         
         // -- Đăng nhập --
@@ -220,12 +220,12 @@ namespace BLL
                             mamau = hsp.MaMau,
                             gia = String.Format(CultureInfo.InvariantCulture, "{0:#,#}", sp.DonGia),
                             mota = sp.MoTa,
-                            soluong = sp.Soluongton
+                            
                         };
             return query.ToList();
         }
 
-        public bool themSanPham(string masp, string tenSP, string maLoai, string mamau, float gia, string hinhAnh, string moTa, int soluong)
+        public bool themSanPham(string masp, string tenSP, string maLoai, string mamau, float gia, string hinhAnh, string moTa)
         {
             tbl_SanPham sp = new tbl_SanPham();
             sp.MaSP = masp;
@@ -235,7 +235,7 @@ namespace BLL
             sp.DonGia = gia;
             sp.HinhAnh = hinhAnh;
             sp.MoTa = moTa;
-            sp.Soluongton = soluong;
+         
             db.tbl_SanPhams.InsertOnSubmit(sp);
             try
             {
@@ -273,7 +273,7 @@ namespace BLL
             return db.tbl_SanPhams.Where(sp => sp.MaSP == maSP).ToList();
         }
 
-        public bool suaSanPham(string maSP, string tenSP, string maLoai, string mamau, float gia, string hinhAnh, string moTa, int soluong)
+        public bool suaSanPham(string maSP, string tenSP, string maLoai, string mamau, float gia, string hinhAnh, string moTa)
         {
             var timKiem = db.tbl_SanPhams.Where(sp => sp.MaSP == maSP).FirstOrDefault();
            
@@ -284,7 +284,6 @@ namespace BLL
             spSua.DonGia = gia;
             spSua.HinhAnh = hinhAnh;
             spSua.MoTa = moTa;
-            spSua.Soluongton = soluong;
             try
             {
                 db.SubmitChanges();

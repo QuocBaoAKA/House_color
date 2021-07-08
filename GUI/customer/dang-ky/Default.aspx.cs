@@ -20,7 +20,7 @@ namespace GUI.customer.dang_ky
             }
         }
 
-        protected void btn_luu_Click(object sender, EventArgs e)
+        protected void Button1_Click(object sender, EventArgs e)
         {
             string mk = txt_taoMK.Text.Trim();
             string reMK = txt_nhapLaiMk.Text.Trim();

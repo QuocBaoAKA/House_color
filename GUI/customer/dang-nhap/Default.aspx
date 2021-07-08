@@ -4,7 +4,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title></title>
+    <title>Đăng Nhập</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.6.0/mdb.min.css" rel="stylesheet"/>
     <link
   href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
@@ -34,7 +34,7 @@
             width: 550px;
             height: 650px;
             margin: auto;
-            margin-top: 5rem;
+            margin-top: 4rem;
         }
         #login-failed {
             display: none;
@@ -153,12 +153,13 @@
             color: white;
         }
         .dnfs{
-          background-color: #f2f2f2;
+          background-color: #f2f3f5;
           border: 1px solid rgba(95,186,233,0.4) !important;
           color: #0d0d0d;
           padding: 15px 32px;
           text-align: center;
           text-decoration: none;
+          border-radius: 14px;
           outline: none;
           display: inline-block;
           font-size: 16px;
@@ -177,78 +178,137 @@
              background: #fff;
              border-bottom: 2px solid #5fbae9;
         }
-.first{
-    width: 100%;
-    margin-left: 2.5rem;
-}
-h1{
-    text-align: center;
-    margin-bottom: 2rem;
-    margin-top: 1rem;
-    font-size: 46px;
-    text-transform: uppercase;
-    font-weight: 700;
-    font-family: Playfair Display;
-    background-color: #51f794;
-    background-image: linear-gradient( 135deg, #72EDF2 10%, #5151E5 100%);
+        .first{
+            width: 100%;
+            margin-left: 2.5rem;
+        }
+        .card h1{
+             font-size: 40px;
+              font-weight: bold;
+              color: #373941;
+              text-align: center;
+              margin-bottom: 35px;
+        }
+        .btn-danger{
+            width: 50px;
+            height: 50px;
+            margin: auto;
+            font-size: 20px;
+            border-radius: 50%;
 
-   -webkit-background-clip: text;
-   -webkit-text-fill-color: transparent;
-}
-.btn-danger{
-    width: 50px;
-    height: 50px;
-    margin: auto;
-    font-size: 20px;
-    border-radius: 50%;
-
-}
-.dnfs:focus{
-    border-bottom: 2px solid blue !important;
-    border-radius: 2px;
-}
+        }
+        .dnfs:focus{
+            border-bottom: 2px solid blue !important;
+            border-radius: 2px;
+        }
 
 /*back*/
-.bubble {
-    position: absolute;
-    border-radius: 50%;
-  }
+    .bubble {
+        position: absolute;
+        border-radius: 50%;
+      }
 
-.pink-bubble {
-  width: 460px;
-  height: 460px;
-  right: 20px;
-  top: -110px;
-  background-color: #ec9fec;
-}
+    .pink-bubble {
+      width: 460px;
+      height: 460px;
+      right: 60px;
+      top: -110px;
+      background-color: #c7ecee;
+    }
 
-.blue-bubble {
-  width: 520px;
-  height: 520px;
-  left: 48px;
-  top: 350px;
-  background-color: #bbe6f3;
-}
+    .blue-bubble {
+      width: 520px;
+      height: 520px;
+      left: 48px;
+      top: 350px;
+      background-color: #bbe6f3;
+    }
 
-.small-b-bubble {
-  width: 50px;
-  height: 50px;
-  right: 40px;
-  bottom: 65px;
-  background-color: #bae5f2;
-}
-
-.small-p-bubble {
-  width: 105px;
-  height: 105px;
-  left: -45px;
-  top: 100px;
-  background-color: #ebc7e5
+    .small-b-bubble {
+      width: 50px;
+      height: 50px;
+      right: 40px;
+      bottom: 65px;
+      background-color: #bae5f2;
+    }
+    .small-p-bubble {
+      width: 105px;
+      height: 105px;
+      left: -45px;
+      top: 100px;
+      background-color: #ebc7e5
+    }
+    /*lll*/
+    .signup-social {
+      padding: 5px;
+      border-radius: 18px;
+      display: block;
+      width: 80%;
+      color: white;
+      font-size: 16px;
+      font-weight: bold;
+      font-family: "Poppins", sans-serif;
+      border: 0;
+      background-color: #4c6ff4;
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      outline: none;
+      margin: auto;
+      margin-top: -1rem;
+      box-shadow: 0 5px 10px 0 rgba(76, 111, 244, 0.5);
+    }
+    .signup-social-icon {
+      width: 50px;
+      height: 50px;
+      border-radius: 10px;
+      background-color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #4c6ff4;
+      font-size: 30px;
+    }
+    .signup-social-text_t {
+      display: block;
+      margin: 0 auto;
+      text-decoration: none;
+    }
+    .signup:hover{
+        color: #fff;
+    }
+        .signup-already {
+      text-align: center;
+      font-size: 16px;
+      color: #999;
+    }
+.signup-login-link {
+  color: #2979ff;
+  text-decoration: none;
 }
     </style>
 </head>
 <body>
 <form id="form1" runat="server">
+    <% 
+            if (Session["success"] != null)
+            {
+        %>
+        <script>window.onload = function () { toastr.success('<% Response.Write(Session["success"]); %>') };</script>
+        <%
+                Session["success"] = null;
+            }
+        %>
+
+        <% 
+            if (Session["error"] != null)
+            {
+        %>
+        <script>window.onload = function () { toastr.error('<% Response.Write(Session["error"]); %>') };</script>
+        <%
+                Session["error"] = null;
+            }
+        %>
  <div class="container">
     <div class="bubble pink-bubble"></div>
     <div class="bubble blue-bubble"></div>
@@ -268,14 +328,19 @@ h1{
              <div class="button">
                   <asp:Button ID="btn_login" type="submit" runat="server" CssClass="btn_login" Text="Đăng Nhập" CausesValidation="false" OnClick="btn_login_Click1"/>
              </div>
-        <div class="text-center">
-    <p style="font-size: 18px; color: blue;">Đăng nhập với:</p>
-        <asp:LinkButton ID="btn_gg" runat="server" class="btn btn-danger" OnClick="btn_gg_Click1"><i class="fab fa-google-plus-g pr-1"></i></asp:LinkButton>
+      
+        <asp:LinkButton ID="btn_gg" runat="server" class="signup-social" OnClick="btn_gg_Click1"><i class="fab fa-google signup-social-icon"></i>
+            <p class="signup-social-text_t">Sign up with Google</p>
+        </asp:LinkButton>
         <%--<asp:LinkButton ID="LinkButton1" runat="server" class="btn btn-primary" Width="35px" OnClick="LinkButton1_Click1"><i class="fab fa-facebook"></i></asp:LinkButton>--%>
-        <p style="font-size: 18px; color: red;">Đăng nhập tài khoản</p><a class="underlineHover" style="color: blue;" href="admin/Default.aspx">ADMIN</a>
-    </div>
+        <p class="signup-already">
+        <span>Bạn chưa có tài khoản ?</span>
+        <a href="../dang-ky/" class="signup-login-link">Đăng kí</a>
+      </p>
+        <p style="font-size: 18px; color: red; text-align: center;">Đăng nhập tài khoản</p><a class="underlineHover" style="color: blue; text-align: center;" href="/admin/dashboard/">ADMIN</a>
+         </div>
         <asp:Literal ID="ltr_codeJS" runat="server"></asp:Literal>
-        </div>		
+      	
     </form>
     <script>
 
@@ -286,6 +351,9 @@ h1{
   type="text/javascript"
   src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.6.0/mdb.min.js"
 ></script>
+    <script type="text/javascript" src="../../MDB/js/jquery.min.js"></script>
+        <!-- Bootstrap tooltips -->
+        <script type="text/javascript" src="../../MDB/js/popper.min.js"></script>
     <script src="cutomer.js"></script>
 </body>
 </html>

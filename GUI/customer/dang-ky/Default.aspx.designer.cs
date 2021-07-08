@@ -40,15 +40,6 @@ namespace GUI.customer.dang_ky {
         protected global::System.Web.UI.WebControls.TextBox txt_nhapLaiMk;
         
         /// <summary>
-        /// txt_hoTen control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txt_hoTen;
-        
-        /// <summary>
         /// txt_email control.
         /// </summary>
         /// <remarks>
@@ -56,6 +47,15 @@ namespace GUI.customer.dang_ky {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txt_email;
+        
+        /// <summary>
+        /// txt_hoTen control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txt_hoTen;
         
         /// <summary>
         /// txt_sdt control.
@@ -76,13 +76,13 @@ namespace GUI.customer.dang_ky {
         protected global::System.Web.UI.WebControls.TextBox txt_diaChi;
         
         /// <summary>
-        /// btn_luu control.
+        /// Button1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btn_luu;
+        protected global::System.Web.UI.WebControls.Button Button1;
         
         /// <summary>
         /// ltr_codeJS control.

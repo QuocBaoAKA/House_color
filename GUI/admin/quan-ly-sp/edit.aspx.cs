@@ -37,7 +37,7 @@ namespace GUI.admin.quan_ly_sp
                     txt_tenAnh.Text = value.HinhAnh.ToString();
                     txt_moTa.Text = value.MoTa.ToString();
                     txt_gia.Text = value.DonGia.ToString();
-                    hienThiHinhAnhSauKhiUp.ImageUrl = "../../public/images/" + value.HinhAnh.ToString();
+                    hienThiHinhAnhSauKhiUp.ImageUrl = "../hinhanh/" + value.HinhAnh.ToString();
                     hienThiDDLLoaiSP(value.MaLH.ToString());
                     hienThimau(value.MaMau.ToString());
                 }
@@ -93,8 +93,7 @@ namespace GUI.admin.quan_ly_sp
           
             string moTa = txt_moTa.Text.Trim();
             float gia = long.Parse(txt_gia.Text.Trim());
-            int soluong = int.Parse(TextBox1.Text.Trim());
-            string fileName = hienThiHinhAnhSauKhiUp.ImageUrl.Split("/".ToCharArray())[5];
+            string fileName = hienThiHinhAnhSauKhiUp.ImageUrl.Split("./".ToCharArray())[5];
             string filePath = "";
             
             if (ful_hinhAnh.HasFile)
@@ -102,7 +101,7 @@ namespace GUI.admin.quan_ly_sp
                 if (CheckFileType(ful_hinhAnh.FileName))
                 {
                     fileName = DateTime.Now.ToString("ddMMyyyy_hhmmss_tt_") + ful_hinhAnh.FileName;
-                    filePath = MapPath("../../public/images/" + fileName);
+                    filePath = MapPath("/hinhanh/" + fileName);
                     ful_hinhAnh.SaveAs(filePath);
                 }
                 else
@@ -111,7 +110,7 @@ namespace GUI.admin.quan_ly_sp
                 }
             }
 
-            if (bllAdmin.suaSanPham(maSP, tenSP, maLoai, mamau, gia, fileName, moTa, soluong))
+            if (bllAdmin.suaSanPham(maSP, tenSP, maLoai, mamau, gia, fileName, moTa))
             {
                 Session["success"] = "Cập nhật sản phẩm thành công";
                 Response.Redirect("../quan-ly-sp/");

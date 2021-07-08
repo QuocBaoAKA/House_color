@@ -13,7 +13,7 @@
         
         color: white;
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
-    }
+        }
 
         @media(max-width:768px) {
         .card {
@@ -72,7 +72,7 @@
 
         .fa-heart-o {
             font-size: 2rem;
-            color: #ffffffaf;
+            color: #ffffff;
             font-weight: lighter
         }
 
@@ -102,29 +102,29 @@
               display: inline-block;
           }
 
-.lower {
-    margin-top: 3rem
-}
+        .lower {
+            margin-top: 3rem
+        }
 
-.lower i {
-    padding: 2.5vh;
-    margin-right: 1vh;
-    color: grey;
-    border: 1px solid rgb(85, 85, 85)
-}
+        .lower i {
+            padding: 2.5vh;
+            margin-right: 1vh;
+            color: grey;
+            border: 1px solid rgb(85, 85, 85)
+        }
 
-.lower .col {
-    padding: 0
-}
+        .lower .col {
+            padding: 0
+        }
 
-@media(max-width:768px) {
-    .lower i {
-        padding: 2vh;
-        margin-right: 1vh;
-        color: grey;
-        border: 1px solid rgb(85, 85, 85)
-    }
-}
+        @media(max-width:768px) {
+            .lower i {
+                padding: 2vh;
+                margin-right: 1vh;
+                color: grey;
+                border: 1px solid rgb(85, 85, 85)
+            }
+        }
 
 .btn {
     background-color: transparent;
@@ -184,12 +184,41 @@ label.radio {
 .detailt_group{
     background: #f9f9f9;
 }
+    .tab_mota{
+        width: 800px;
+        margin: auto;
+    }
+    .tab_mota p{
+        font-size: 20px;
+    }
+    .facebook{
+        width: 90%;
+        margin: auto;
+    }
+    .nav-tabs{
+        width: 800px;
+        margin: auto;
+    }
+    .tab_group{
+        width: 80%;
+        margin: auto;
+        margin-top: 1rem;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    }
+    .purple-gradient{
+        color:  #fff;
+        height: 50px;
+        background-color: #0026ff;
+    }
+    .purple-gradient:hover{
+        color: #fff;
+    }
     </style>  
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
  <div id="fb-root"></div>
 <script async defer crossorigin="anonymous" src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v9.0&appId=1035397543626875&autoLogAppEvents=1" nonce="QpDWsGnI"></script>
-    <asp:Repeater ID="Repeater1" runat="server">
+    <asp:Repeater ID="Repeater1" runat="server" OnItemCommand="Repeater1_ItemCommand">
         <ItemTemplate>
     <%--<div class="de_pro">
             <div class="card1">
@@ -228,7 +257,7 @@ label.radio {
                 <div class="card">
                     <div class="row">
                         <div class="col-md-6 text-center align-self-center"> 
-                            <img class="img-fluid" src="../../../public/images/<%# Eval("sp.HinhAnh") %>" />
+                            <img class="img-fluid" src="/hinhanh/<%# Eval("sp.HinhAnh") %>" />
 
                         </div>
                         <div class="col-md-6 info">
@@ -238,25 +267,112 @@ label.radio {
                                 </div>
                                 <div class="col text-right"><a href="#"><i class="fa fa-heart-o"></i></a></div>
                             </div>
+
                             <p style="color: red;">Mã màu: <%# Eval("sp.MaMau") %></p> <span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> <span class="fa fa-star-half-full"></span> <span id="reviews"></span>
-                            <div class="row price"> <label class="radio"><input type="radio" style="color: #f2f2f2;" name="size1" value="small" checked><span>         
-                                        <div class="row"><%# Eval("sp.DonGia", "{0:000,000} VNĐ ") %></div>
-                                    </span> </label> </div>
+
+                             <div class="row"><%# Eval("sp.DonGia", "{0:000,000} VNĐ ") %></div>      
+                    
+                    <div class="row lower">
+                       
+                             
+                             <asp:UpdatePanel ID="UpdatePanel2" runat="server">
+                                    <ContentTemplate>
+                                        <div class="form-inline">
+                                            <label for="txt_slMua" style="color: #000000">Số lượng mua:</label>
+                                            <asp:TextBox ID="txt_slMua" runat="server" class="ml-2 form-control w-25" type="number" value="1" min="1" max='<%# Eval("sp.SoLuongTon") %>' required></asp:TextBox>
+                                        </div>
+
+                                        <%
+                                            if (Session["taiKhoan"] == null)
+                                            {
+                                        %>
+
+                                        <asp:LinkButton ID="LinkButton1" class="mt-3 btn purple-gradient" runat="server" OnClientClick="toastr.error('Vui lòng đăng nhập để mua hàng')">
+                                            <i class="fas fa-cart-plus mr-2" style="font-size: 20px; border: none; margin-top: -25px;"></i>Thêm vào giỏ hàng
+                                        </asp:LinkButton>
+
+
+                                        <%
+                                            }
+                                            else
+                                            {
+                                        %>
+                                        
+                                        <asp:Button ID="lbtn_muaHang"  runat="server" CommandArgument='<%# Eval("sp.MaSP") %>' CommandName="muaHang" class="mt-3 btn purple-gradient"  OnClick="lbtn_muaHang_Click" OnClientClick="hienThiThongBaoChiTietSP()" Text="Thêm vào giỏ hàng"/>
+             
+                                        <%
+                                            }
+                                        %>
+                                    </ContentTemplate>
+                                </asp:UpdatePanel>       
+                        </div>
                         </div>
                     </div>
-                    <div class="row lower">
-                        <div class="col text-right align-self-center"> <button class="btn" style="color: blue; border: 1px solid red;">Mua Hàng</button> </div>
-                    </div>
+                </div>
                 </div>
             </div>
          </div>
     </div>
 </div>
+      </section>
+    <div class="tab_group">
+    <ul class="nav nav-tabs" id="myTab" role="tablist">
+      <li class="nav-item" role="presentation">
+        <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">Mô Tả</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">Bình luận</button>
+      </li>
+    </ul>
+    <div class="tab-content" id="myTabContent">
+      <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+          <div class="tab_mota">
+            <p> <%# Eval("sp.MoTa") %></p>
+          </div>
+      </div>
+      <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+          
+          <div class="facebook">
+              <h3>Bình luận</h3>
+          <div class="fb-comments container" data-href='https://developers.facebook.com/docs/plugins/<%# Eval("sp.MaSP") %>' data-numposts="5" data-width="100%"></div>       
+         </div>
 
-            <!----end---->     
-              <div class="fb-comments container" data-href='https://developers.facebook.com/docs/plugins/<%# Eval("sp.MaSP") %>' data-numposts="5" data-width="100%"></div>       
-           </section> 
+      </div>
+    </div>
+    </div>    <!----end---->     
+         
     </ItemTemplate>
         
         </asp:Repeater>
+    <script>
+        const cover = document.querySelector(".img-fluid");
+        cover.addEventListener("mousemove", function (e) {
+            const screenImage = document.querySelector(".screen-image");
+            const image = document.querySelector(".img-fluid");
+            image.style = "width: auto;height:auto;max-height:unset";
+
+            let imageWidth = image.offsetWidth;
+            let imageHeight = image.offsetHeight;
+            const screenWidth = screenImage.offsetWidth;
+            const screenHeight = screenImage.offsetHeight;
+            const spaceX = (imageWidth / 2 - screenWidth) * 2;
+            const spaceY = (imageHeight / 2 - screenHeight) * 2;
+            imageWidth = imageWidth + spaceX;
+            imageHeight = imageHeight + spaceY;
+
+            let x =
+              e.pageX - screenImage.offsetParent?.offsetLeft - screenImage.offsetLeft;
+            let y = e.pageY - screenImage.offsetParent?.offsetTop - screenImage.offsetTop;
+
+            const positionX = (imageWidth / screenWidth / 2) * x;
+            const positionY = (imageHeight / screenHeight / 2) * y;
+
+            image.style = `left: ${-positionX}px;top: ${-positionY}px;width: auto;height:auto;max-height:unset;transform:none;`;
+        });
+
+        cover.addEventListener("mouseleave", function (e) {
+            const image = document.querySelector(".screen-image__img");
+            image.style = '';
+        });
+    </script>
 </asp:Content>

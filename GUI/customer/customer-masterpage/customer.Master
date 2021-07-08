@@ -5,6 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title>House Color</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0. 1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous" /> 
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet" />
@@ -14,7 +15,8 @@
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet' />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.8.2/css/lightbox.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js" integrity="sha512-VEd+nq25CkR676O+pLBnDW09R7VQX9Mdiij052gVCp5yVH3jGtH70Ho/UUv4mJDsEdTvqRCFZg0NKGiojGnUCw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-        <style>
+   
+    <style>
            
         .menu ul{
             list-style: none;
@@ -74,99 +76,99 @@
             background: red;
         }
         .mid-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    height: 80px;
-    background-color: #fff;
-}
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 80px;
+            background-color: #fff;
+        }
 
-.logo {
-    font-size: 40px;
-    font-weight: 700;
-}
+        .logo {
+            font-size: 40px;
+            font-weight: 700;
+        }
 
-.mb-logo {
-    font-size: 25px;
-    font-weight: 700;
-}
+        .mb-logo {
+            font-size: 25px;
+            font-weight: 700;
+        }
 
-.search {
-    width: 600px;
-    height: 40px;
-    position: relative;
-}
+        .search {
+            width: 600px;
+            height: 40px;
+            position: relative;
+        }
 
-.search input {
-    height: 100%;
-    width: 100%;
-    font-size: 16px;
-    outline: 0;
-    padding: 0 20px;
-    border-radius: 10px;
-    border: 0;
-    background-color: #f5f5f5;
-}
+        .search input {
+            height: 100%;
+            width: 100%;
+            font-size: 16px;
+            outline: 0;
+            padding: 0 20px;
+            border-radius: 10px;
+            border: 0;
+            background-color: #f5f5f5;
+        }
 
-.search i {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    right: 20px;
-    cursor: pointer;
-    font-size: 25px;
-}
-.user-menu {
-    display: flex;
-}
+        .search i {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            right: 20px;
+            cursor: pointer;
+            font-size: 25px;
+        }
+        .user-menu {
+            display: flex;
+        }
 
-.user-menu > li > a {
-    font-size: 30px;
-    margin-left: 15px;
-}
+        .user-menu > li > a {
+            font-size: 30px;
+            margin-left: 15px;
+        }
 
-.bottom-header {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
+        .bottom-header {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
 
-.main-menu {
-    display: flex;
-    height: 45px;
-}
+        .main-menu {
+            display: flex;
+            height: 45px;
+        }
 
-.main-menu > li > a {
-    display: flex;
-    align-items: center;
-    margin: 0 20px;
-    font-weight: 600;
-    height: 100%;
-    text-transform: uppercase;
-}
+        .main-menu > li > a {
+            display: flex;
+            align-items: center;
+            margin: 0 20px;
+            font-weight: 600;
+            height: 100%;
+            text-transform: uppercase;
+        }
 
-.main-menu > li {
-    border-bottom: 2px solid transparent;
-    border-top: 2px solid transparent;
-}
+        .main-menu > li {
+            border-bottom: 2px solid transparent;
+            border-top: 2px solid transparent;
+        }
 
-.main-menu > li:hover {
-    border-bottom: 2px solid red;
-}
-.user-menu {
-    display: flex;
-}
-.user-menu li{
-    list-style: none;
-}
-.user-menu > li > a {
-    font-size: 30px;
-    margin-left: 15px;
+        .main-menu > li:hover {
+            border-bottom: 2px solid red;
+        }
+        .user-menu {
+            display: flex;
+        }
+        .user-menu li{
+            list-style: none;
+        }
+        .user-menu > li > a {
+            font-size: 30px;
+            margin-left: 15px;
    
-}
-.logo {
-        font-size: 30px;
-    }
+        }
+        .logo {
+                font-size: 30px;
+            }
 /*footer*/
         .ftb_ter {
              background-color: #022739;
@@ -493,7 +495,166 @@
           border: none;
         }
         /*footer*/
-     
+       .search-box_x{
+            right: -7px;
+	        top: 100%;
+	        padding: 15px;
+	        display: none;
+	        background: #fcfafb;
+	        position: absolute;
+	        border-top: solid 2px #ea4c1d;
+	        box-shadow: 5px 5px rgba(91, 91, 91, 0.2);
+	        width: 300px;
+            height: 50px;
+	        margin-top: 0;
+	        z-index: 22;
+
+        }
+        .search-box_x:after{
+            top: -8px;
+	        width: 0; 
+	        height: 0;
+	        right: 8px;
+	        z-index: 2; 
+	        content: " "; 
+	        display: block; 
+	        position: absolute;
+	        border-bottom: 8px solid #e6400c;
+	        border-right: 8px solid transparent;
+	        border-left: 8px solid transparent;
+        }
+        /*header*/
+        .top-bar {
+            position: relative;
+            height: 35px;
+            background: #0768ea;
+        }
+
+        .top-bar .top-bar-left {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+        }
+
+        .top-bar .top-bar-right {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+        }
+
+        .top-bar .text {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: row;
+            height: 35px;
+            padding: 0 10px;
+            text-align: center;
+            border-left: 1px solid rgba(255, 255, 255, .15);
+        }
+
+        .top-bar .text:last-child {
+            border-right: 1px solid rgba(255, 255, 255, .15);
+        }
+
+        .top-bar .text i {
+            font-size: 13px;
+            color: #ffffff;
+            margin-right: 5px;
+        }
+
+        .top-bar .text h2 {
+            color: #eeeeee;
+            font-weight: 400;
+            font-size: 13px;
+            letter-spacing: 1px;
+            margin: 0;
+        }
+
+        .top-bar .text p {
+            color: #eeeeee;
+            font-size: 14px;
+            font-weight: 400;
+            margin: 0 0 0 5px;
+        }
+
+        .top-bar .social {
+            display: flex;
+            height: 35px;
+            font-size: 0;
+            justify-content: flex-end;
+        }
+
+        .top-bar .social a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 35px;
+            height: 100%;
+            font-size: 16px;
+            color: #ffffff;
+            border-right: 1px solid rgba(255, 255, 255, .15);
+        }
+
+        .top-bar .social a:first-child {
+            border-left: 1px solid rgba(255, 255, 255, .15);
+        }
+
+        .top-bar .social a:hover {
+            
+            text-decoration: none;
+        }
+
+        @media (min-width: 992px) {
+            .top-bar {
+                padding: 0 60px;
+            }
+        }
+        .dropdown-menu{
+            width: 200px;
+            height: 50px;
+        }
+        .dropdown-menu .input-group .form-search{
+            width: 100%;
+            background: #f2f2f2;
+        }
+        /*css darkmode*/
+        body.night{
+            background: #000;
+            color: #fff;
+        }
+        body.night #partner{
+            background: #000;
+            color: #fff;
+        }
+        body.night #partner .section-title{
+            color: #fff;
+        }
+        body.night .tintuc_group{
+           background-color: #000;
+        }
+        body.night .tintuc_g{
+            background: #000;
+            border: 1px solid #00a8ff;
+        }
+        body.night .tin .h1{
+            color: #fff;
+        }
+        body.night .tin .p_d{
+            color: #fff;
+        }
+        body.night .best{
+            background: #000;
+        }
+        body.night .best h2{
+            color: #fff;
+        }
+        body.night #main_nav{
+            background: #000;
+        }
+        body.night .product_group{
+            background: #000;
+        }
         </style>
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
@@ -649,7 +810,7 @@
         </div>--%>
         <!----header---->
             <!-- mid header -->
-            <div class="bg-main">
+            <%--<div class="bg-main">
                 <div class="mid-header container">
                     <a href="#" class="logo"><i class='bx bx-buildings bx-sm text-dark'></i></a>
                     <div class="search">
@@ -675,14 +836,64 @@
                                                 }
                                             %>
 
-                                            <i id="navbar-static-cart" class="bx bx-cart"></i>
+                                            <i id="navbar-static-cart" class="bx bx-cart" style="font-size: 24px;"></i>
                                         </a>
                                     </ContentTemplate>
-                                </asp:UpdatePanel>
+                       </asp:UpdatePanel>
                         
                     </ul>
                 </div>
+            </div>--%>
+       <div class="top-bar d-none d-md-block">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-8">
+                        <div class="top-bar-left">
+                            <div class="text">
+                                <i class="fas fa-envelope"></i>
+                                <h2 style="color: #fff;">house.colorvn@gmail.com</h2>
+                                
+                            </div>
+                            <div class="text">
+                                <i class="fa fa-phone-alt"></i>
+                                <h2 style="color: #fff;">08 682 48101</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="top-bar-right">
+                            <div class="social">
+                                <a href="#"><i class="fas fa-adjust" id="icon_dark"></i></a>
+                                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#"><i class="fab fa-youtube"></i></a>
+                                <a href="#"><i class="fab fa-instagram"></i></a>
+                            <asp:UpdatePanel ID="UpdatePanel2" runat="server">
+                                    <ContentTemplate>
+                                        <a href="../gio-hang/">
+
+                                            <%
+                                                if (Session["slSPtrongGioHang"] != null)
+                                                {
+                                            %>
+                                            <span class="badge red z-depth-1 mr-1">
+
+                                                <%= Session["slSPtrongGioHang"] %>
+                                                
+                                            </span>
+                                            <%
+                                                }
+                                            %>
+
+                                            <i id="navbar-static-cart" class="bx bx-cart" style="font-size: 24px;"></i>
+                                        </a>
+                                    </ContentTemplate>
+                        </asp:UpdatePanel>   
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
+        </div>
         <!--  menu -->
         <nav id="main_nav" class="navbar navbar-expand-lg navbar-light bg-white shadow">
         <div class="container d-flex justify-content-between align-items-center">
@@ -716,11 +927,14 @@
                     </ul>
                 </div>
                 <div class="navbar align-self-center d-flex">
+                    <ul class="nav navbar-nav">
                     <%
                                 if (Session["taiKhoan"] == null)
                                 {
+
                             %>
-                             <asp:LinkButton ID="linkbtn_dangNhap" class="nav-link" runat="server" OnClick="linkbtn_dangNhap_Click1"><i class="fas fa-sign-in-alt"></i></asp:LinkButton>
+                             <asp:LinkButton class="nav-link" ID="lbtn_dangKy" runat="server" OnClick="lbtn_dangKy_Click"><i class="fas fa-user-plus" style="color: #00a8ff;"></i></asp:LinkButton>
+                             <asp:LinkButton ID="linkbtn_dangNhap" class="nav-link" runat="server" OnClick="linkbtn_dangNhap_Click1"><i class="fas fa-sign-in-alt" style="color: #00a8ff;"></i></asp:LinkButton>
                            <%-- <a  href="../trang-chu/login.aspx"><i class="fas fa-sign-in-alt"></i> Đăng Nhập</a> --%>
                             <% }
                         else
@@ -728,8 +942,21 @@
                             <a class="nav-link" href="../dang-nhap/caidattk.aspx"><i class="fas fa-user-alt"></i>
                                 (<%Response.Write(Session["taiKhoan"].ToString());%>)</a><%} %>
                     
-                    
-                   <%-- <a class="nav-link" href="loginad.aspx"><i class="fas fa-user-cog"></i></a>--%>
+                           <%-- <li>
+                             <a href="#" class="nav-link"  data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                                     <i class="fas fa-search" style="color: #00a8ff;"></i></a>
+                                         <ul class="dropdown-menu">
+                                             <li>
+                                              <div class="search-box_x">
+                                                  
+                                                   <asp:TextBox ID="TextBox2" runat="server" placeholder="Search" class="form-search"></asp:TextBox>
+                                                   <button class="btn btn-primary" type="submit">Search</button>   
+                                              </div>
+                                            </li>
+                                        </ul>
+                             </li>--%>
+                            <div class="search-icon"><i class="fas fa-search"></i></div>
+                        </ul>
                     </div>  
                    
                 </div>  
@@ -745,33 +972,151 @@
             </asp:ContentPlaceHolder>
         </div>
         <!-- Footer -->
-      <%--<footer class="footer">
-		<div class="container">
-            <ul class="foote_bottom_ul_amrc">
-            <li><a href="#">Trang Chủ</a></li>
-            <li><a href="#">Màu Sắc</a></li>
-            <li><a href="#">Sản Phẩm</a></li>
-            <li><a href="#">Mẫu Đẹp</a></li>
-            <li><a href="#">Tin Tức</a></li>
-            </ul>
-            <!--foote_bottom_ul_amrc ends here-->
-            <p class="text-center" style="color: #fff;">Copyright @2021 | Designed by <a href="#">HQB</a></p>
+         <footer class="bg-secondary pt-4">
+        <div class="container">
+            <div class="row py-4">
 
-            <ul class="social_footer_ul">
-            <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-            <li><a href="#"><i class="fab fa-youtube"></i></a></li>
-            </ul>
-            <!--social_footer_ul ends here-->
+                <div class="col-lg-3 col-12 align-left">
+                    <a class="navbar-brand" href="index.html">
+                        <i class='bx bx-buildings bx-sm text-light'></i>
+                        <span class="text-light h5">House</span> <span class="text-light h5 semi-bold-600">Color</span>
+                    </a>
+                    <p class="text-light my-lg-4 my-2">
+                        Kết nối với chúng tôi
+                    </p>
+                    <ul class="list-inline footer-icons light-300">
+                        <li class="list-inline-item m-0">
+                            <a class="text-light" target="_blank" href="#">
+                                <i class='bx bxl-facebook-square bx-md' style="color: #00a8ff;"></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item m-0">
+                            <a class="text-light" target="_blank" href="#">
+                                <i class='bx bxl-youtube bx-md' style="color: red;"></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item m-0">
+                            <a class="text-light" target="_blank" href="#">
+                                <i class='bx bxl-instagram bx-md' ></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3 col-md-4 my-sm-0 mt-4">
+                    <h3 class="h4 pb-lg-3 text-light light-300">Menu</h3>
+                        <ul class="list-unstyled text-light light-300">
+                            <li class="pb-2">
+                                <i class='bx-fw bx bxs-chevron-right bx-xs'></i><a class="text-decoration-none text-light" href="index.html">Trang Chủ</a>
+                            </li>
+                            <li class="pb-2">
+                                <i class='bx-fw bx bxs-chevron-right bx-xs'></i><a class="text-decoration-none text-light py-1" href="about.html">Màu sắc</a>
+                            </li>
+                            <li class="pb-2">
+                                <i class='bx-fw bx bxs-chevron-right bx-xs'></i><a class="text-decoration-none text-light py-1" href="work.html">Sản phẩm</a>
+                            </li>
+                            <li class="pb-2">
+                                <i class='bx-fw bx bxs-chevron-right bx-xs'></i><a class="text-decoration-none text-light py-1" href="pricing.html">Mẫu đẹp</a>
+                            </li>
+                            <li class="pb-2">
+                                <i class='bx-fw bx bxs-chevron-right bx-xs'></i><a class="text-decoration-none text-light py-1" href="contact.html">Tin tức</a>
+                            </li>
+                        </ul>
+                </div>
+
+                <div class="col-lg-3 col-md-4 my-sm-0 mt-4">
+                    <h2 class="h4 pb-lg-3 text-light light-300">Chính sách</h2>
+                    <ul class="list-unstyled text-light light-300">
+                        <li class="pb-2">
+                            <i class='bx-fw bx bxs-chevron-right bx-xs'></i><a class="text-decoration-none text-light py-1" href="#">Chính sách bảo hành</a>
+                        </li>
+                        <li class="pb-2">
+                            <i class='bx-fw bx bxs-chevron-right bx-xs'></i><a class="text-decoration-none text-light py-1" href="#">Chính sách bảo mật</a>
+                        </li>
+                        <li class="pb-2">
+                            <i class='bx-fw bx bxs-chevron-right bx-xs'></i><a class="text-decoration-none text-light py-1" href="#">Chính sách mua hàng</a>
+                        </li>
+                        <li class="pb-2">
+                            <i class='bx-fw bx bxs-chevron-right bx-xs'></i><a class="text-decoration-none text-light py-1" href="#">Chính sách đổi trả</a>
+                        </li>
+                        <li class="pb-2">
+                            <i class='bx-fw bx bxs-chevron-right bx-xs'></i><a class="text-decoration-none text-light py-1" href="#">Về chúng tôi</a>
+                        </li>
+                        
+                    </ul>
+                </div>
+
+                <div class="col-lg-3 col-md-4 my-sm-0 mt-4">
+                    <h2 class="h4 pb-lg-3 text-light light-300">Liên hệ</h2>
+                    <ul class="list-unstyled text-light light-300">
+                        <li class="pb-2">
+                            <i class='bx-fw bx bx-phone bx-xs'></i><a class="text-decoration-none text-light py-1" href="tel:010-020-0340">0868248101</a>
+                        </li>
+                        <li class="pb-2">
+                            <i class='bx-fw bx bx-mail-send bx-xs'></i><a class="text-decoration-none text-light py-1" href="mailto:info@company.com">house.colorvn@gmail.com</a>
+                        </li>
+                    </ul>
+                </div>
+
             </div>
-          </footer>--%>
+        </div>
 
+        <div class="w-100 bg-primary py-3"  style="background: #000000 !important;">
+            <div class="container">
+                <div class="row pt-2">
+                    <div class="col-lg-6 col-sm-12">
+                        <p class="text-lg-start text-center text-light light-300">
+                            © Copyright 2021 Đồ án chuyên nghành. TVU.
+                        </p>
+                    </div>
+                    <div class="col-lg-6 col-sm-12">
+                        <p class="text-lg-end text-center text-light light-300" >
+                            Designed by <a rel="sponsored" class="text-decoration-none text-light" href="#" target="_blank"><strong>Hồ Quốc Bão</strong></a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </footer>
 
             <!-- Footer Links -->
             
         <a href="#" class="back-to-top">
         <i class="fas fa-angle-up"></i>
         </a>
+
+        <!---darkmode---->
+        
+
+
+        <!--Start of HappyFox Live Chat Script-->
+<script>
+  window.HFCHAT_CONFIG = {
+    EMBED_TOKEN: '4b372fe0-df14-11eb-b6c1-dd4eda524586',
+    ASSETS_URL: 'https://widget.happyfoxchat.com/v2/visitor'
+  };
+  (function () {
+    var scriptTag = document.createElement('script')
+    scriptTag.type = 'text/javascript'
+    scriptTag.async = true
+    scriptTag.src = window.HFCHAT_CONFIG.ASSETS_URL + '/js/widget-loader.js'
+
+    var s = document.getElementsByTagName('script')[0]
+    s.parentNode.insertBefore(scriptTag, s)
+  })()
+</script>
+<!--End of HappyFox Live Chat Script-->
+<script>
+            var content = document.getElementsByTagName('body')[0];
+            var dark = document.getElementById('icon_dark');
+            dark.addEventListener('click', function(){
+                dark.classList.toggle('active');
+                content.classList.toggle('night');
+        })
+        </script>
+
+
         <!-- Footer Links -->
         <script>
             // search-box open close js code
@@ -805,6 +1150,11 @@
         <script type="text/javascript" src="../../public/js/customer.js"></script>
         <script type="text/javascript" src="../../public/js/back-top.js"></script>
         <script type="text/javascript" src="../../public/js/show.js"></script>
+
+        <!---mdb---->
+        <script
+  type="text/javascript"
+  src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.6.0/mdb.min.js"></script>
     </form>
 </body>
 </html>

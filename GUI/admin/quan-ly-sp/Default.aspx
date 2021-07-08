@@ -9,7 +9,13 @@
             margin-top: 2rem;
         
        } 
-        
+        .table_card{
+            width: 90%;
+            height: 100%;
+            margin: auto;
+            background: #fff;
+        }
+       
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -19,19 +25,21 @@
                 <%--<a href="./excel.aspx" class="btn btn-success"><i class="fas fa-plus"></i> Thêm từ excel</a>--%>
                 <a href="./add.aspx" class="btn btn-primary"><i class="fas fa-plus"></i> Thêm </a>
             </div>
+ 
             <asp:Repeater ID="rpt_bangSP" runat="server" EnableTheming="True" OnItemCommand="rpt_bangSP_ItemCommand">
                 <HeaderTemplate>
+                </div>
+                    <div class="table_card">
                     <table class="table table-bordered table-hover table-responsive-sm datatable">
                         <thead>
-                            <tr class="text-white" style="background-color: #1A7DFF;">
+                            <tr class="text-white" style="background-color: #000000;">
                                 <th>#</th>
                                 <th>Mã SP</th>
                                 <th style="width: 20%">Tên sản phẩm</th>
                                 <th>Loại hàng</th>
                                 <th>Màu sắc</th>
                                 <th>Hình ảnh</th>
-                                <th>Mô tả</th>
-                                <th>Số lượng</th>
+                                <%--<th>Mô tả</th>--%>
                                 <th>Giá (VNĐ)</th>
                                 <th style="width: 18%">Hành động</th>
                             </tr>
@@ -47,10 +55,9 @@
                         <td><%# Eval("maLoai") %></td>
                         <td><%# Eval("mamau") %></td>
                         <td><%# Eval("gia") %></td>
-                        <td><%# Eval("mota") %></td>
-                        <td><%# Eval("soluong") %></td>
+                        <%--<td style="width: 20%; height: 30px;"><%# Eval("mota") %></td>--%>
                         <td>
-                            <img src="../../public/images/<%# Eval("HinhAnh") %>" width="100"/>
+                            <img src="/hinhanh/<%# Eval("HinhAnh") %>" width="100"/>
                         </td>
                       
                         <td style="text-align: center;">                           
@@ -62,9 +69,9 @@
                 <FooterTemplate>
                     </tbody>
                     </table>
+                </div>
                 </FooterTemplate>
             </asp:Repeater>
         </div>
     </div>
-    
 </asp:Content>

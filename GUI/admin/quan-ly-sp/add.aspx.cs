@@ -53,14 +53,13 @@ namespace GUI.admin.quan_ly_sp
             string mamau = ddl_hangSP.SelectedValue.ToString();
             string moTa = txt_moTa.Text.Trim();
             float gia = float.Parse(txt_gia.Text.Trim());
-            int soluong = int.Parse(TextBox2.Text.Trim());
             if (CheckFileType(ful_hinhAnh.FileName))
             {
                 string fileName = DateTime.Now.ToString("ddMMyyyy_hhmmss_tt_") + ful_hinhAnh.FileName;
-                string filePath = MapPath("../../public/images/product/" + fileName);              
+                string filePath = MapPath("/hinhanh/" + fileName);              
                 ful_hinhAnh.SaveAs(filePath);
 
-                if (bllAdmin.themSanPham(masp, tenSP, maLoai, mamau, gia, fileName, moTa, soluong))
+                if (bllAdmin.themSanPham(masp, tenSP, maLoai, mamau, gia, fileName, moTa))
                 {
                     Session["success"] = "Thêm sản phẩm thành công";
                     Response.Redirect("../quan-ly-sp/");

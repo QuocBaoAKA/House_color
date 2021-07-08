@@ -44,7 +44,10 @@
             margin: 5px;
             letter-spacing: 1px;
             cursor: pointer;
-            border-radius: 20px;
+            border-radius: 5px;
+            transition:all 0.3s ease-in-out;
+	        -moz-transition:all 0.3s ease-in-out;
+	        -webkit-transition: all 0.3s ease-in-out;
         }
         .section_media ul li.active{
             background: #03a9f4;
@@ -74,6 +77,10 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
+            margin-bottom:25px;
+            transition:all 0.3s ease-in-out;
+	        -moz-transition:all 0.3s ease-in-out;
+	        -webkit-transition:all 0.3s ease-in-out;
         }
         /*modal*/
         .modal-body {

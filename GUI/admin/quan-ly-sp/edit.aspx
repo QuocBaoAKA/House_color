@@ -67,11 +67,8 @@
                 <asp:TextBox type="number" ID="txt_gia" runat="server" class="form-control" min="1000" required></asp:TextBox>
                 <label for="txt_gia">Giá</label>
             </div>
-            <div class="md-form">
-                <asp:TextBox type="number" ID="TextBox1" runat="server" class="form-control" min="1000" required></asp:TextBox>
-                <label for="txt_gia">Giá</label>
-            </div>
-            <div class="form-group text-right">
+           
+            <div class="form-group text-center">
                 <a href="../quan-ly-sp/" class="btn btn-light btn-md">Hủy</a>
                 <button type="reset" class="btn btn-danger btn-md">Nhập lại</button>
                 <asp:Button ID="btn_sua" runat="server" Text="Sửa" CssClass="btn btn-success btn-md" OnClick="btn_sua_Click" />

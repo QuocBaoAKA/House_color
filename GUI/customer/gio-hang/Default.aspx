@@ -38,8 +38,8 @@
                             <td><%# Container.ItemIndex + 1 %></td>
                             <td data-toggle="tooltip" data-placement="left" title="Nhấn vào tên sản phẩm để đến trang chi tiết sản phẩm"><a href="../chi-tiet-san-pham/?masp=<%# Eval("maSP") %>"><%# Eval("tenSP") %></a></td>
                             <td>
-                                <img src="../../public/images/product/<%# Eval("hinhAnh") %>" width="50" /></td>
-                            <td><%# Eval("gia", "{0:0,00}") %> vnđ</td>
+                                <img src="../../public/images/product/<%# Eval("HinhAnh") %>" width="50" /></td>
+                            <td><%# Eval("DonGia", "{0:0,00}") %> vnđ</td>
                             <td>
                                 <asp:TextBox ID="txt_slMua" runat="server" class="ml-2 form-control w-75" Style="min-width: 60px" type="number" value='<%# Eval("sl") %>' min="1" max='<%# Eval("slTon") %>' required></asp:TextBox>
                             </td>
