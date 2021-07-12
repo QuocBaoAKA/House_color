@@ -98,7 +98,7 @@
     /*Liên hệ*/
         .best {
          background: #fff;
-         margin-top: 50px;
+         margin-top: 2px;
         }
             .best .titlepage h2 {
                 color: #030100;
@@ -106,14 +106,11 @@
                 text-align: center;
                 font-size: 3em;
             }   
-             
-
         .best .titlepage span {
              color: #23262d;
              font-size: 17px;
              line-height: 28px;
         }
-
         .best_box {
              text-align: center;
              background-color: #00a8ff;
@@ -239,7 +236,7 @@
 </div>
   <!---noidung---->
     <section class="section_product">
-        <h1 style="text-align: center; color: #313131; margin-top: 1rem; margin-bottom: 1rem;"> Lựa chọ sản phẩm cho dự án của bạn</h1>
+        <h1 style="text-align: center; color: #313131; margin-top: 1rem; margin-bottom: 1rem;" class="h1_dr"> Lựa chọ sản phẩm cho dự án của bạn</h1>
         <div class="product_group">
             
         <div class="product_home">  
@@ -400,15 +397,15 @@
                 <a href="https://aats3-f20c7c9531544cda9e01e2d01c48e39-public.s3-eu-west-1.amazonaws.com/ambiance_cc.pdf?brand=Dulux">Tải Về </a></button>
         </div>
     </div>
-    <div id="lienhe" class="best">
+    
+    <section class="vitri_gr">
+	<div class="container">
+        <h2>Liên Hệ</h2>
+    </div>      
+    </section>
+    <section id="location" class="section location">
+        <div id="lienhe" class="best">
          <div class="container">
-            <div class="row">
-               <div class="col-md-12">
-                  <div class="titlepage">
-                     <h2>Liên hệ</h2>
-                  </div>
-               </div>
-            </div>
             <div class="row">
                <div class="col-md-4">
                   <div class="best_box">
@@ -432,20 +429,14 @@
             </div>
          </div>
       </div>
-    <section class="vitri_gr">
-	<div class="container">
-        <h2>Vị Trí</h2>
-    </div>      
-    </section>
-    <section id="location" class="section location">
         <div class="container">
             <div class="row">
                 <div class="col-sm-3">
                    
                     <address>
-                        <p>House Color</p>
-                        <i class="fas fa-phone-alt phone"></i> Hotline: 08 682 48101 <br />
-                        <i class="fas fa-envelope maill"></i> Email: House.colorvn@gmail.com
+                        <h1>House Color</h1>
+                        <p>Tô điểm cho ngôi nhà của bạn</p>
+                        
                     </address>
                 </div>
                 <div class="col-sm-9">

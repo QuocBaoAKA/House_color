@@ -129,10 +129,53 @@ có chiều rộng dưới 600px */
             width: 100%;
           }
         }
+      .color_nt{
+         width: 90%;        
+         height: 400px;
+         position: relative;
+         background-image: url(/hinh/cach.jpg);
+         background-size: cover;
+         border-radius: 10px;
+         margin-top: 10px;
+         display: block;
+         margin-left: auto;
+         margin-right: auto;
+      }
+      .color_nt .h2_nt{  
+          position: absolute;  
+          top: 0;
+          bottom: 20%;
+          left: 50%;
+          transform: translate(-50%, 50%);  
+          color: #3742fa;
+          font-size: 46px;
+          line-height: 54px;
+          font-weight: 400;
+          font-family: "Playfair Display", serif;  
+      }
+      .color_nt p{
+          text-align: center;
+          position: absolute;
+          top: 0;
+          bottom: -18%;
+          left: 50%;
+          transform: translate(-50%, 50%); 
+          font-size: 20px;
+      }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-     <h2 style="text-align: center; margin-top: 1rem; margin-bottom: 1rem; color: #3742fa; font-family: Playfair Display;">Sơn Nội Thất</h2>
+    <section class="color_nt">
+     <h2 class="h2_nt">Sơn Nội Thất</h2>
+    <p>Tìm hiểu thông tin chi tiết về các sản phẩm của chúng tôi.</p>
+    </section>
+<nav aria-label="breadcrumb" style="margin-top: 35px; width: 380px; border-radius: 15px;">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="../trang-chu/">Trang chủ</a></li>
+    <li class="breadcrumb-item"><a href="../trang-chu/sanpham.aspx">Sản phẩm</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Sơn nội thất</li>
+  </ol>
+</nav>
     <div class="column_1">
     <asp:Repeater ID="rpt_hienThiSanPham" runat="server">
             <ItemTemplate>                           

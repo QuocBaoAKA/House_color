@@ -620,21 +620,21 @@
         }
         /*css darkmode*/
         body.night{
-            background: #000;
+            background: #1f2937;
             color: #fff;
         }
         body.night #partner{
-            background: #000;
+            background: #1f2937;
             color: #fff;
         }
         body.night #partner .section-title{
             color: #fff;
         }
         body.night .tintuc_group{
-           background-color: #000;
+           background-color: #1f2937;
         }
         body.night .tintuc_g{
-            background: #000;
+            background: #1f2937;
             border: 1px solid #00a8ff;
         }
         body.night .tin .h1{
@@ -644,16 +644,23 @@
             color: #fff;
         }
         body.night .best{
-            background: #000;
+            background: #1f2937;
         }
         body.night .best h2{
             color: #fff;
         }
         body.night #main_nav{
-            background: #000;
+            background: #1f2937;
         }
         body.night .product_group{
-            background: #000;
+            background: #1f2937;
+        }
+        body.night .section_product{
+            background: #1f2937;
+            color: #fff;
+        }
+        body.night .section_product .h1_dr{
+            color: #fff !important;
         }
         </style>
     <asp:ContentPlaceHolder ID="head" runat="server">

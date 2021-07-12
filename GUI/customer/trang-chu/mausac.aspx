@@ -1622,10 +1622,17 @@
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+<nav aria-label="breadcrumb" style="margin-top: 35px;">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="../trang-chu/">Trang chủ</a></li>
+    <li class="breadcrumb-item"><a href="#">Màu sắc</a></li>
+    <%--<li class="breadcrumb-item active" aria-current="page">Data</li>--%>
+  </ol>
+</nav>
      <div id="header" class="content-block">
 				<section class="center">
 					<div class="slogan">
-						<h1>Bộ sưu tập Màu sắc</h1>
+						<h1>Chào mừng bạn đến với thế giới sắc màu</h1>
 					</div>
 					<div class="secondary-slogan">
 						Khám phá và lấy cảm hứng từ bộ sưu tập màu sắc mới nhất của chúng tôi

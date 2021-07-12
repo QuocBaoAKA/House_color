@@ -90,9 +90,10 @@
         }
         .product_sp{
             width: 100%;
-            height: 80px;
+            height: 200px;
             border: 1px solid rgba(100, 100, 111, 0.2);
-            margin-top: 5px;     
+            margin-top: 5px;   
+            background: #fff;  
         }
         .product_sp h1{
             text-align: center;
@@ -202,7 +203,7 @@
           float: left;
           width: 280px;
           padding: 15px;
-          background: #f2f2f2;
+        
           height: 600px;
         }
         .column_1{
@@ -214,6 +215,7 @@
             align-items: center;
             align-content: flex-end;
             flex-wrap: wrap;
+            background: #fbfbfb;
         }
     /* Clear float khác sau các cột */
         .row:after {
@@ -377,11 +379,53 @@ có chiều rộng dưới 600px */
 .txt_loc{
     margin-left: -2rem;
 }
+.link_son{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 4rem;
+}
+.link_son .a1{
+    width: 150px;
+    height: 50px;
+    background: red;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 20px;
+    text-decoration: none;
+    border-radius: 10px;
+    margin-right: 1rem;
+}
+.link_son .a2{
+    width: 150px;
+    height: 50px;
+    background: red;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 20px;
+    text-decoration: none;
+    border-radius: 10px;
+}
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">    
+ <nav aria-label="breadcrumb" style="margin-top: 35px; background: none;">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="../trang-chu/">Trang chủ</a></li>
+    <li class="breadcrumb-item"><a href="#">Sản phẩm</a></li>
+    <%--<li class="breadcrumb-item active" aria-current="page">Data</li>--%>
+  </ol>
+</nav>
     <div class="product_sp">
         <h1>Các sản phẩm sơn</h1>
+        <div class="link_son">
+            <a href="../trang-chu/sonnoithat.aspx" class="a1">Sơn Nội Thất</a>
+            <a href="../trang-chu/sonngoaithat.aspx" class="a2">Sơn Ngoại Thất</a>
+        </div>
     </div>      
 <!-----layout----->
  <div class="row">

@@ -216,10 +216,18 @@ label.radio {
     </style>  
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+
  <div id="fb-root"></div>
 <script async defer crossorigin="anonymous" src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v9.0&appId=1035397543626875&autoLogAppEvents=1" nonce="QpDWsGnI"></script>
     <asp:Repeater ID="Repeater1" runat="server" OnItemCommand="Repeater1_ItemCommand">
         <ItemTemplate>
+                <nav aria-label="breadcrumb" style="margin-top: 35px;">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="../trang-chu/">Trang chủ</a></li>
+    <li class="breadcrumb-item"><a href="#">Sản phẩm</a></li>
+    <li class="breadcrumb-item active" aria-current="page"><%# Eval("sp.TenSP") %></li>
+  </ol>
+</nav>
     <%--<div class="de_pro">
             <div class="card1">
                  <img src="../../public/images/<%# Eval("sp.HinhAnh") %>" />
