@@ -95,5 +95,11 @@ namespace GUI.customer.trang_chu
             //rpt_hienThiSanPham.DataSource = bl.hienThiSPLoc(min, max, locTheo);
             //rpt_hienThiSanPham.DataBind();
         }
+
+        protected void btn_search_Click(object sender, EventArgs e)
+        {
+            rpt_hienThiSanPham.DataSource = bl.timsp(TextBox1.Text);
+            rpt_hienThiSanPham.DataBind();
+        }
     }
 }

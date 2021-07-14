@@ -114,6 +114,7 @@
             align-items: center;
             align-content: flex-end;
             flex-wrap: wrap;
+            background: #f2f2f2;
         }
     /* Clear float khác sau các cột */
         .row:after {
@@ -134,7 +135,7 @@ có chiều rộng dưới 600px */
          width: 90%;        
          height: 400px;
          position: relative;
-         background-image: url(/hinh/cach.jpg);
+         background: #ffffff;
          background-size: cover;
          border-radius: 10px;
          margin-top: 10px;
@@ -164,10 +165,11 @@ có chiều rộng dưới 600px */
           font-size: 20px;
           color: #333333;
       }
+
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <nav aria-label="breadcrumb" style="margin-top: 3px; width: 380px; border-radius: 15px;">
+<nav aria-label="breadcrumb" style="margin-top: 3px; width: 380px; border-radius: 15px;">
   <ol class="breadcrumb">
     <li class="breadcrumb-item"><a href="../trang-chu/">Trang chủ</a></li>
     <li class="breadcrumb-item"><a href="../trang-chu/sanpham.aspx">Sản phẩm</a></li>
@@ -178,7 +180,6 @@ có chiều rộng dưới 600px */
      <h2 class="h2_nt">Sơn Ngoại Thất</h2>
     <p>Tìm hiểu thông tin chi tiết về các sản phẩm của chúng tôi.</p>
     </section>
-
     <div class="column_1">
     <asp:repeater ID="rpt_ngoaithat" runat="server">
         <ItemTemplate>                           

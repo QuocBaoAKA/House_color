@@ -1622,7 +1622,7 @@
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-<nav aria-label="breadcrumb" style="margin-top: 35px;">
+<nav aria-label="breadcrumb" style="margin-top: 3px; width: 300px;">
   <ol class="breadcrumb">
     <li class="breadcrumb-item"><a href="../trang-chu/">Trang chủ</a></li>
     <li class="breadcrumb-item"><a href="#">Màu sắc</a></li>
@@ -2003,8 +2003,8 @@
     </div>
     <div class="color_pro">
         <div class="color_pr">
-            <img src="/hinh/nt3.jpg" />
-            <a href="ngoaithat.aspx"><p>Mùa nội thất cao cấp Majestic  <i class="fas fa-angle-right"></i></p></a>
+            <img src="/hinh/phongthuy.jpg" />
+            <a href="../trang-chu/color_phongthuy.aspx"><p>Màu sắc phong thủy<i class="fas fa-angle-right"></i></p></a>
         </div>
     </div>
     </center>

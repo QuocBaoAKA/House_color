@@ -122,7 +122,14 @@ namespace BLL
         {
             return db.tbl_SanPhams.Where(sp => sp.Soluongton > 0).OrderByDescending(sp => sp.MaSP).Select(sp => new { gia = String.Format(CultureInfo.InvariantCulture, "{0:#,#}", sp.DonGia), sp }).Take(8).ToList();
         }
-
+        //tim
+        public List<tbl_SanPham> timsp(string TenSP)
+        {
+            var dss1 = from sp in db.tbl_SanPhams
+                       where sp.TenSP.Contains(TenSP)
+                       select sp;
+            return dss1.ToList();
+        }
         // -- Hiển thị Sản phẩm tìm kiếm
         public IEnumerable hienThiSPTimKiem(string tuKhoa)
         {
@@ -469,5 +476,7 @@ namespace BLL
         //}
         #endregion
 
+        //timkiem
+        
     }
 }

@@ -90,20 +90,26 @@
         }
         .product_sp{
             width: 100%;
-            height: 200px;
+            height: 300px;
             border: 1px solid rgba(100, 100, 111, 0.2);
             margin-top: 5px;   
             background: #fff;  
         }
         .product_sp h1{
-            text-align: center;
-            font-size: 36px;
+            height: 200px;
+            text-align: center;     
             line-height: 54px;
             color: #3742fa;
+            margin-top: 2rem;
             font-style: normal;
-            font-weight: 400;
+            font-weight: 700;
             font-family: Playfair Display;
+           background: linear-gradient(to right, #30CFD0 0%, #330867 100%);
+	        -webkit-background-clip: text;
+	        -webkit-text-fill-color: transparent;
+	        font-size: 45px;
         }
+		
 
         /*gia*/
         .app__container{
@@ -237,20 +243,20 @@ có chiều rộng dưới 600px */
       }
       /*color*/
       .color-price .color-option{
-  display: flex;
-  align-items: center;
-}
+          display: flex;
+          align-items: center;
+        }
       .color-price{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-top: 10px;
-}
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          margin-top: 10px;
+        }
       .color-price .price .price_num{
-  font-size: 25px;
-  font-weight: 600;
-  color: #707070;
-}
+          font-size: 25px;
+          font-weight: 600;
+          color: #707070;
+        }
      .button-layer a{
           position: absolute;
           height: 50px;
@@ -274,6 +280,7 @@ có chiều rộng dưới 600px */
         box-shadow: 0 2px 7px #dfdfdf;
         margin: 10px;
         background: #f7f5f3;
+        transition: 0.25s ease;
     }
         .product-card:hover {
             box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
@@ -290,130 +297,158 @@ có chiều rộng dưới 600px */
             padding: 3px 10px;
         }
 
-    .product-tumb {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        height: 300px;
-        padding: 50px;
-        background: #fff;
-    }
+        .product-tumb {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 300px;
+            padding: 50px;
+            background: #fff;
+        }
 
-    .product-tumb img {
-        max-width: 100%;
-        max-height: 100%;
-    }
+        .product-tumb img {
+            max-width: 100%;
+            max-height: 100%;
+        }
 
-.product-details {
-    padding: 30px;
-}
+        .product-details {
+            padding: 30px;
+        }
 
-.product-catagory {
-    display: block;
-    font-size: 12px;
-    font-weight: 700;
-    text-transform: uppercase;
-    color: #ccc;
-    margin-bottom: 18px;
-}
+        .product-catagory {
+            display: block;
+            font-size: 12px;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: #ccc;
+            margin-bottom: 18px;
+        }
 
-.product-details h4 {
-    font-weight: 500;
-    display: block;
-    font-size: 22px;
-    margin-bottom: 18px;
-    text-transform: uppercase;
-    color: #363636;
-    text-decoration: none;
-    transition: 0.3s;
-}
+        .product-details h4 {
+            font-weight: 500;
+            display: block;
+            font-size: 22px;
+            margin-bottom: 18px;
+            text-transform: uppercase;
+            color: #363636;
+            text-decoration: none;
+            transition: 0.3s;
+        }
 
-.product-details h4:hover {
-    color: #3742fa;
-}
+        .product-details h4:hover {
+            color: #3742fa;
+        }
 
-.product-details p {
-    font-size: 15px;
-    line-height: 22px;
-    margin-bottom: 18px;
-    color: #999;
-}
+        .product-details p {
+            font-size: 15px;
+            line-height: 22px;
+            margin-bottom: 18px;
+            color: #999;
+        }
 
-.product-bottom-details {
-    overflow: hidden;
-    border-top: 1px solid #eee;
-    margin-top: 2rem;
-}
+        .product-bottom-details {
+            overflow: hidden;
+            border-top: 1px solid #eee;
+            margin-top: 2rem;
+        }
 
-.product-bottom-details div {
-    float: left;
-    width: 50%;
-}
+        .product-bottom-details div {
+            float: left;
+            width: 50%;
+        }
 
-.product-price {
-    font-size: 20px;
-    color: #3742fa;
-    font-weight: 600;
-}
+        .product-price {
+            font-size: 20px;
+            color: #3742fa;
+            font-weight: 600;
+        }
 
-.product-links {
-    text-align: right;
-}
+        .product-links {
+            text-align: right;
+        }
 
-.product-links a {
-    display: inline-block;
-    margin-left: 5px;
-    color: #3742fa;
-    transition: 0.3s;
-    font-size: 17px;
-}
+        .product-links a {
+            display: inline-block;
+            margin-left: 5px;
+            color: #3742fa;
+            transition: 0.3s;
+            font-size: 17px;
+        }
 
-.product-links a:hover {
-    color: #fbb72c;
-}
-.select_gia{
-    width: 200px;
-    padding: 8px;
-    border: 1px solid rgba(100, 100, 111, 0.2);
-}
-.txt_loc{
-    margin-left: -2rem;
-}
-.link_son{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 4rem;
-}
-.link_son .a1{
-    width: 150px;
-    height: 50px;
-    background: red;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #fff;
-    font-size: 20px;
-    text-decoration: none;
-    border-radius: 10px;
-    margin-right: 1rem;
-}
-.link_son .a2{
-    width: 150px;
-    height: 50px;
-    background: red;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #fff;
-    font-size: 20px;
-    text-decoration: none;
-    border-radius: 10px;
-}
+        .product-links a:hover {
+            color: #fbb72c;
+        }
+        .select_gia{
+            width: 200px;
+            padding: 8px;
+            border: 1px solid rgba(100, 100, 111, 0.2);
+        }
+        .txt_loc{
+            margin-left: -2rem;
+        }
+        .link_son{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: -30px;
+        }
+        .link_son .a1{
+            width: 150px;
+            height: 50px;
+            background: red;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            font-size: 20px;
+            text-decoration: none;
+            border-radius: 10px;
+            margin-right: 1rem;
+        }
+        .link_son .a2{
+            width: 150px;
+            height: 50px;
+            background: red;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            font-size: 20px;
+            text-decoration: none;
+            border-radius: 10px;
+        }
+        /*search*/
+        .form_ser{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 80px;
+            background: #dcd4cd;
+        }
+        .src{
+            width: 400px;
+            padding: 14px;
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+            outline: none;
+        }
+        .src:focus{
+            border: 1px solid #3742fa;
+        }
+        .srcbtn{
+            width: 100px;
+            padding: 13px;
+            margin: 6px;
+            border: none;
+            border-radius: 5px;
+            background: #3742fa;
+            color: #fff;
+        }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">    
- <nav aria-label="breadcrumb" style="margin-top: 35px; background: none;">
+ <nav aria-label="breadcrumb" style="margin-top: 3px; background: none;">
   <ol class="breadcrumb">
     <li class="breadcrumb-item"><a href="../trang-chu/">Trang chủ</a></li>
     <li class="breadcrumb-item"><a href="#">Sản phẩm</a></li>
@@ -426,6 +461,10 @@ có chiều rộng dưới 600px */
             <a href="../trang-chu/sonnoithat.aspx" class="a1">Sơn Nội Thất</a>
             <a href="../trang-chu/sonngoaithat.aspx" class="a2">Sơn Ngoại Thất</a>
         </div>
+    </div>
+    <div class="form_ser">
+        <asp:TextBox ID="TextBox1" CssClass="src" runat="server"></asp:TextBox>
+        <asp:Button ID="btn_search" CssClass="srcbtn" runat="server" Text="Tìm Kiếm" OnClick="btn_search_Click" />
     </div>      
 <!-----layout----->
  <div class="row">

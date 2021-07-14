@@ -130,11 +130,12 @@ có chiều rộng dưới 600px */
           }
         }
       .color_nt{
-         width: 90%;        
+         width: 100%;        
          height: 400px;
          position: relative;
          background-image: url(/hinh/cach.jpg);
          background-size: cover;
+         background-attachment: fixed;
          border-radius: 10px;
          margin-top: 10px;
          display: block;
@@ -166,16 +167,17 @@ có chiều rộng dưới 600px */
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <section class="color_nt">
-     <h2 class="h2_nt">Sơn Nội Thất</h2>
-    <p>Tìm hiểu thông tin chi tiết về các sản phẩm của chúng tôi.</p>
-    </section>
-<nav aria-label="breadcrumb" style="margin-top: 35px; width: 380px; border-radius: 15px;">
+        <nav aria-label="breadcrumb" style="margin-top: 1px; width: 380px; border-radius: 15px;">
   <ol class="breadcrumb">
     <li class="breadcrumb-item"><a href="../trang-chu/">Trang chủ</a></li>
     <li class="breadcrumb-item"><a href="../trang-chu/sanpham.aspx">Sản phẩm</a></li>
     <li class="breadcrumb-item active" aria-current="page">Sơn nội thất</li>
   </ol>
 </nav>
+     <h2 class="h2_nt">Sơn Nội Thất</h2>
+    <p>Tìm hiểu thông tin chi tiết về các sản phẩm của chúng tôi.</p>
+    </section>
+
     <div class="column_1">
     <asp:Repeater ID="rpt_hienThiSanPham" runat="server">
             <ItemTemplate>                           

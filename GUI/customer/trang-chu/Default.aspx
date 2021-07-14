@@ -236,7 +236,7 @@
 </div>
   <!---noidung---->
     <section class="section_product">
-        <h1 style="text-align: center; color: #313131; margin-top: 1rem; margin-bottom: 1rem;" class="h1_dr"> Lựa chọ sản phẩm cho dự án của bạn</h1>
+        <h1 style="text-align: center; color: #313131; margin-top: 1rem; margin-bottom: 1rem;" class="h1_dr"> Lựa chọn sản phẩm cho dự án của bạn</h1>
         <div class="product_group">
             
         <div class="product_home">  

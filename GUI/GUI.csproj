@@ -150,10 +150,15 @@
     <Content Include="customer\gio-hang\dat-hang.aspx" />
     <Content Include="customer\lich-su-mua-hang\chi-tiet-don-hang.aspx" />
     <Content Include="customer\lich-su-mua-hang\Default.aspx" />
+    <Content Include="customer\phong-thuy\tuoisua.aspx" />
+    <Content Include="customer\phong-thuy\tuoithan.aspx" />
+    <Content Include="customer\phong-thuy\tuoithin.aspx" />
+    <Content Include="customer\phong-thuy\tuoity.aspx" />
     <Content Include="customer\tat-ca-san-pham\Default.aspx" />
     <Content Include="customer\thay-doi-mat-khau\Default.aspx" />
     <Content Include="customer\thong-tin-ca-nhan\Default.aspx" />
     <Content Include="customer\tim-kiem\Default.aspx" />
+    <Content Include="customer\trang-chu\color_phongthuy.aspx" />
     <Content Include="customer\trang-chu\khampha.aspx" />
     <Content Include="customer\trang-chu\mausac.aspx" />
     <Content Include="customer\trang-chu\sanpham.aspx" />
@@ -650,6 +655,34 @@
     <Compile Include="customer\lich-su-mua-hang\Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
+    <Compile Include="customer\phong-thuy\tuoisua.aspx.cs">
+      <DependentUpon>tuoisua.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="customer\phong-thuy\tuoisua.aspx.designer.cs">
+      <DependentUpon>tuoisua.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="customer\phong-thuy\tuoithan.aspx.cs">
+      <DependentUpon>tuoithan.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="customer\phong-thuy\tuoithan.aspx.designer.cs">
+      <DependentUpon>tuoithan.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="customer\phong-thuy\tuoithin.aspx.cs">
+      <DependentUpon>tuoithin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="customer\phong-thuy\tuoithin.aspx.designer.cs">
+      <DependentUpon>tuoithin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="customer\phong-thuy\tuoity.aspx.cs">
+      <DependentUpon>tuoity.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="customer\phong-thuy\tuoity.aspx.designer.cs">
+      <DependentUpon>tuoity.aspx</DependentUpon>
+    </Compile>
     <Compile Include="customer\tat-ca-san-pham\Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -677,6 +710,13 @@
     </Compile>
     <Compile Include="customer\tim-kiem\Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="customer\trang-chu\color_phongthuy.aspx.cs">
+      <DependentUpon>color_phongthuy.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="customer\trang-chu\color_phongthuy.aspx.designer.cs">
+      <DependentUpon>color_phongthuy.aspx</DependentUpon>
     </Compile>
     <Compile Include="customer\trang-chu\khampha.aspx.cs">
       <DependentUpon>khampha.aspx</DependentUpon>
