@@ -2,9 +2,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <title>Trang Chủ</title>
     <style>
-        body{
-            width: 100%;
-        }
+      
       .btn-grad {background-image: linear-gradient(to right, #00d2ff 0%, #3a7bd5  51%, #00d2ff  100%)}
          .btn-grad {
              width: 200px;
@@ -205,6 +203,7 @@
             border: 2px solid #0869ea;
             color: #000;
         }
+       
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -235,8 +234,9 @@
   </a>
 </div>
   <!---noidung---->
+    <div class="container_group">
     <section class="section_product">
-        <h1 style="text-align: center; color: #313131; margin-top: 1rem; margin-bottom: 1rem;" class="h1_dr"> Lựa chọn sản phẩm cho dự án của bạn</h1>
+        <h1 style="text-align: center; color: #313131; margin-top: 1rem; margin-bottom: 1rem; font-size: 2.5rem" class="h1_dr"> Lựa chọn sản phẩm cho dự án của bạn</h1>
         <div class="product_group">
             
         <div class="product_home">  
@@ -346,7 +346,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    <h3 class="section-title">Các thương hiệu sơn</h3>
+                    <h3 class="section-title" style="font-size: 2.5rem;">Các thương hiệu sơn</h3>
                 </div>
             </div>
             <div class="row">
@@ -360,7 +360,7 @@
                     <img src="https://mykolor.com/wp-content/themes/steen/app/public/img/about__item__mykolor.jpg?v=1.1" style="width: 200px; height: 200px; border-radius: 50%;" />
                 </div>
                 <div class="col-sm-3">
-                    <img src="https://alex.com.vn/uploads/news/2018_09/203a128a-3684-11e8-89f6-56c566ee3692.png" style="width: 200px; height: 200px; border-radius: 50%;" />
+                    <img src="/hinh/1531636777375-700X400.png" style="width: 200px; height: 200px; border-radius: 50%;" />
                 </div>
             </div>
         </div>
@@ -400,7 +400,7 @@
     
     <section class="vitri_gr">
 	<div class="container">
-        <h2>Liên Hệ</h2>
+        <h2 style="font-size: 2.5rem; text-transform: none;">Liên hệ</h2>
     </div>      
     </section>
     <section id="location" class="section location">
@@ -445,4 +445,5 @@
             </div>
         </div>
     </section>
+    </div>
 </asp:Content>

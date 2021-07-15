@@ -24,3 +24,19 @@ btnkp1[0].onclick = function () {
 btnkp1[1].onclick = function () {
     imgbanner1.src = "/hinh/x2.jpg";
 }
+
+
+var btnkp2 = document.getElementsByClassName("btnkp2");
+var imgbannerpn = document.getElementById("imgbannerpn");
+btnkp2[0].onclick = function () {
+    imgbannerpn.src = "/hinh/pnn1.jpg";
+}
+btnkp2[1].onclick = function () {
+    imgbannerpn.src = "/hinh/pnn2.jpg";
+}
+btnkp2[2].onclick = function () {
+    imgbannerpn.src = "/hinh/pnn3.jpg";
+}
+btnkp2[3].onclick = function () {
+    imgbannerpn.src = "/hinh/pnn4.jpg";
+}

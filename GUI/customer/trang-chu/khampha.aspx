@@ -153,6 +153,22 @@
         .ul_kp_x .active{
             background: #333;
         }
+        .ul_kp_y{
+            position: absolute;
+            bottom: 30px;
+        }
+        .ul_kp_y .btnkp2{
+            list-style: none;
+            width: 15px;
+            height: 15px;
+            display: inline-block;
+            background: rgba(149, 157, 165, 0.2);
+            border-radius: 50%;
+            cursor: pointer;
+        }
+        .ul_kp_y .active{
+            background: #333;
+        }
         .modal_img{
             width: 80%;
             
@@ -176,7 +192,7 @@
         }
         .home_kp{
             width: 100%;
-            height: 250px;
+            height: 120px;
         }
         .home_kp h1{
             font-size: 42px;
@@ -268,21 +284,60 @@
         } 
         /*home-city*/
         .tab_nhapho{
-            display: flex;
-            width: 350px;
+            width: 430px;
             height: 400px;
             box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
         }
-        .city_home{
-            
-        }
-        .city_home img{
-            width: 330px;
+        .tab_nhapho img{
+            width: 100%;
             height: 300px;
         }  
+        .tab_nhapho h3{
+            display: flex;
+            margin-left: 30px;
+        }
+        .city{
+            display: flex;
+        }
+        .city1{
+            width: 50px;
+            height: 50px;
+            margin: 6px;
+        }
+        .text-city{
+            display: flex;
+            flex-direction: column;
+        }
+        .city h4{
+            font-size: 16px;
+        }
+        .city p{
+            font-size: 14px;
+            font-weight: 400;      
+        }
+        .tab_ground{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+        .tab_content{
+            margin: 15px;
+        }
+        .breadcrumb{
+            background: #fff !important;
+        }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    <nav aria-label="breadcrumb" style="margin-top: 3px; background: none;">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="../trang-chu/">Trang chủ</a></li>
+<%--        <li class="breadcrumb-item"><a href="#">Mẫu nhà đẹp</a></li>--%>
+      <li class="breadcrumb-item active" aria-current="page">Mẫu nhà đẹp</li>
+      </ol>
+    </nav>
     <div class="home_kp">
         <h1>Mẫu phối màu nhà đẹp</h1>
         <p>Bạn gặp rắc rối trong việc hình dung ra căn nhà mơ ước? Giúp cho sức sáng tạo của bạn bay xa với gợi ý mẫu phối màu sơn nhà đẹp của chúng tôi</p>
@@ -335,29 +390,198 @@
 		</div>
 		<div class="tab_wrap" style="display: none;">
 			<h1 class="h1_bg">Mẫu nhà phố đẹp</h1>
+            <div class="tab_ground">
 			<div class="tab_content">
-                <div class="tab_nhapho">
-                    <div class="city_home">
-                        <img src="/hinh/nha_pho_6.jpg" />
-                    </div>
-                    <h3>Nhà phố 1</h3>
+                <div class="tab_nhapho"> 
+                    <img src="/hinh/nha_pho_6.jpg" />
+                        <h3>Nhà phố 1</h3>
                     <div class="city">
-                        
+                        <div class="city1" style="background: #e7e3d7; margin-left: 20px;"></div>
+                        <div class="text-city">
+                        <h4>Ermine white</h4>
+                        <p>#E7E3D7</p>
+                        </div>
+                        &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;
+                       <div class="city1" style="background: #acaca7;"></div>
+                        <div class="text-city">
+                        <h4>Dauphin Gray</h4>
+                        <p>#ACACA7</p>
+                        </div>
+                    </div>
+                </div>
+			</div>
+            <div class="tab_content">
+                <div class="tab_nhapho"> 
+                    <img src="/hinh/nha_pho_4.jpg" />
+                        <h3>Nhà phố 2</h3>
+                    <div class="city">
+                        <div class="city1" style="background: #ede9e7; margin-left: 20px;"></div>
+                        <div class="text-city">
+                        <h4>Eva</h4>
+                        <p>#EDE9E7</p>
+                        </div>
+                        &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;
+                       <div class="city1" style="background: #aba77b;"></div>
+                        <div class="text-city">
+                        <h4>Alphalpha</h4>
+                        <p>#ABA77B</p>
+                        </div>
+                    </div>
+                </div>
+			</div>
+            <div class="tab_content">
+                <div class="tab_nhapho"> 
+                    <img src="/hinh/nha_pho_5.jpg" />
+                        <h3>Nhà phố 3</h3>
+                    <div class="city">
+                        <div class="city1" style="background: #f2f0e4; margin-left: 20px;"></div>
+                        <div class="text-city">
+                        <h4>Sugar white</h4>
+                        <p>#F2F0E4</p>
+                        </div>
+                        &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;
+                       <div class="city1" style="background: #505050;"></div>
+                        <div class="text-city">
+                        <h4>Cumberland</h4>
+                        <p>#505050</p>
+                        </div>
+                    </div>
+                </div>
+			</div>
+                <div class="tab_content">
+                <div class="tab_nhapho"> 
+                    <img src="/hinh/nha_pho_2.jpg" />
+                        <h3>Nhà phố 4</h3>
+                    <div class="city">
+                        <div class="city1" style="background: #eae9c9; margin-left: 20px;"></div>
+                        <div class="text-city">
+                        <h4>Glisten</h4>
+                        <p>#F2F0E4</p>
+                        </div>
+                        &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;
+                       <div class="city1" style="background: #d9b795;"></div>
+                        <div class="text-city">
+                        <h4>Carlsbad Canyon</h4>
+                        <p>#505050</p>
+                        </div>
+                    </div>
+                </div>
+			</div>
+                <div class="tab_content">
+                <div class="tab_nhapho"> 
+                    <img src="/hinh/nha_pho_1.jpg" />
+                        <h3>Nhà phố 5</h3>
+                    <div class="city">
+                        <div class="city1" style="background: #f3e2cb; margin-left: 20px;"></div>
+                        <div class="text-city">
+                        <h4>Orange Scent</h4>
+                        <p>#F3E2CB</p>
+                        </div>
+                        &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;
+                       <div class="city1" style="background: #f8ab67;"></div>
+                        <div class="text-city">
+                        <h4>Tangerine</h4>
+                        <p>#F8AB67</p>
+                        </div>
                     </div>
                 </div>
 			</div>
 		</div>
+      </div>
+        <!---phong ăn--->
 		<div class="tab_wrap" style="display: none;">
-			<div class="title">Phone</div>
+                <h1 class="h1_bg">Mẫu phòng ăn đẹp</h1>
+            <div class="tab_ground">
 			<div class="tab_content">
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem inventore perspiciatis alias, magni provident nulla recusandae odio consequatur praesentium officia non voluptate voluptatum debitis consequuntur omnis incidunt fuga eaque sit aliquam nemo. Recusandae voluptatibus excepturi, voluptates inventore nulla aliquid porro a asperiores beatae quas quo incidunt at, cumque minima officiis error eius dignissimos animi ullam unde odit! Nobis aut animi quibusdam molestias libero, facere vel cum atque incidunt esse! Libero ipsam praesentium sit, enim corrupti quia nobis obcaecati nostrum voluptatem totam nulla delectus ipsa facilis optio quis iure unde repudiandae voluptas temporibus, ad veritatis dolorem, culpa maiores. Dicta, quod neque.</p>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem inventore perspiciatis alias, magni provident nulla recusandae odio consequatur praesentium officia non voluptate voluptatum debitis consequuntur omnis incidunt fuga eaque sit aliquam nemo. Recusandae voluptatibus excepturi, voluptates inventore nulla aliquid porro a asperiores beatae quas quo incidunt at, cumque minima officiis error eius dignissimos animi ullam unde odit! Nobis aut animi quibusdam molestias libero, facere vel cum atque incidunt esse! Libero ipsam praesentium sit, enim corrupti quia nobis obcaecati nostrum voluptatem totam nulla delectus ipsa facilis optio quis iure unde repudiandae voluptas temporibus, ad veritatis dolorem, culpa maiores. Dicta, quod neque.</p>
+                <div class="tab_nhapho"> 
+                    <img src="/hinh/thiết-kế-nhà-bếp.jpg" />
+                        <h3>Phòng ăn 1</h3>
+                    <div class="city">
+                        <div class="city1" style="background: #4d3f35; margin-left: 20px;"></div>
+                        <div class="text-city">
+                        <p>#4D3F35</p>
+                        </div>
+                        &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;
+                       <div class="city1" style="background: #a09fa5;"></div>
+                        <div class="text-city">
+                      
+                        <p>#A09FA5</p>
+                        </div>
+                    </div>
+                </div>
 			</div>
-		</div>
-		<div class="tab_wrap" style="display: none;">
-			<div class="title">Phòng Ngủ</div>
 			<div class="tab_content">
-                <section  class="row_bg">     
+                <div class="tab_nhapho"> 
+                    <img src="/hinh/pa.jpg" />
+                        <h3>Phòng ăn 2</h3>
+                    <div class="city">
+                        <div class="city1" style="background: #d7d7d9; margin-left: 20px;"></div>
+                        <div class="text-city">
+                        <p>#D7D7D9</p>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+			<div class="tab_content">
+                <div class="tab_nhapho"> 
+                    <img src="/hinh/phong-bep-nho-gon-10-ntcc.jpg"/>
+                        <h3>Phòng ăn 3</h3>
+                    <div class="city">
+                        <div class="city1" style="background: #ccc6be; margin-left: 20px;"></div>
+                        <div class="text-city">
+                        <p>#CCC6BE</p>
+                        </div>
+                         &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;
+                        <div class="city1" style="background: #d4b056; margin-left: 20px;"></div>
+                        <div class="text-city">
+                        <p>#D4B056</p>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab_content">
+                <div class="tab_nhapho"> 
+                    <img src="/hinh/thiet-ke-phong-bep.jpg"/>
+                        <h3>Phòng ăn 4</h3>
+                    <div class="city">
+                        <div class="city1" style="background: #102f2a; margin-left: 20px;"></div>
+                        <div class="text-city">
+                   
+                        <p>#102F2A</p>
+                        </div>
+                        &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;
+                       <div class="city1" style="background: #ccc9c4;"></div>
+                        <div class="text-city">
+               
+                        <p>#CCC9C4</p>
+                        </div>
+                    </div>
+                </div>
+			</div>
+            <div class="tab_content">
+                <div class="tab_nhapho"> 
+                    <img src="/hinh/mau-thiet-ke-phong-bep-dep.jpg"/>
+                        <h3>Phòng ăn 5</h3>
+                    <div class="city">
+                        <div class="city1" style="background: #C2C5B3; margin-left: 20px;"></div>
+                        <div class="text-city">
+                   
+                        <p>#C2C5B3</p>
+                        </div>
+                        &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;
+                       <div class="city1" style="background: #95714f;"></div>
+                        <div class="text-city">
+               
+                        <p>#95714F</p>
+                        </div>
+                    </div>
+                </div>
+			</div>
+        </div>
+       </div>
+		<div class="tab_wrap" style="display: none;">
+			<div class="tab_content">
+         <section  class="row_bg">     
             <div id="row_bg" class="row_kp">
                 <div class="col-kp-1">
             <h1>Mẫu Phòng ngủ<br /> với tông màu hồng đầy cá tính</h1>
@@ -379,11 +603,31 @@
         </div>    
     </div>
     </section>
+                <!----h2---->
+     <section  class="row_bg">     
+            <div id="row_bg1" class="row_kp">
+                <div class="col-kp-1">
+                <h1>Mẫu Phòng ngủ<br /> với tông màu xám cổ điển, sang trọng</h1>
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                Xem thêm
+                </button>
+            <ul class="ul_kp_y">
+                <li class="btnkp2 active"></li>
+                <li class="btnkp2"></li>
+                <li class="btnkp2"></li>
+                <li class="btnkp2"></li>
+                <li class="btnkp2"></li>
+            </ul>
+        </div>
+        <div class="col-kp-2">
+            <img src="/hinh/phong-ngu-mau-xam-2.jpg"  alt="anh-demo" id="imgbannerpn"/>        
+        </div>    
+    </div>
+    </section>
 			</div>
 		</div>
-	</div>
 </div>
-
+</div>
     <!--end----->
     
     <!-- banner2 -->

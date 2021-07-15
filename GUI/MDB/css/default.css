@@ -358,10 +358,10 @@
     margin-left: 6rem;
 }
 
-.about .about-text a.btn-grad {
+.about-text a.btn-grad {
     position: relative;
     margin-top: 15px;
-    margin-left: 6rem;
+    margin-left: 5rem;
     padding: 12px 20px;
     font-size: 14px;
     font-weight: 600;
@@ -369,12 +369,24 @@
     color: #fff;
     border-radius: 0;
     transition: .3s;
-    background: #396afc;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #2948ff, #396afc);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #2948ff, #396afc); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
 
 }
+.btn-grad{
+    position: relative;
+    margin-top: 15px;
+    margin-left: 5rem;
+    padding: 12px 20px;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: #fff;
+    border-radius: 0;
+    transition: .3s;
+    background-image: linear-gradient(to right, #00d2ff 0%, #3a7bd5 51%, #00d2ff 100%);
 
+
+}
 .about .about-text a.btn:hover {
     color: #343148;
     background: #F7CAC9;

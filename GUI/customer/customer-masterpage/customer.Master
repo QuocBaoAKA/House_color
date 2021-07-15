@@ -17,7 +17,12 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js" integrity="sha512-VEd+nq25CkR676O+pLBnDW09R7VQX9Mdiij052gVCp5yVH3jGtH70Ho/UUv4mJDsEdTvqRCFZg0NKGiojGnUCw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
    
     <style>
-           
+           *{
+            margin: 0;
+            padding: 0;
+            position: relative;
+            box-sizing: border-box;
+        }  
         .menu ul{
             list-style: none;
             text-align: center;
@@ -662,6 +667,22 @@
         body.night .section_product .h1_dr{
             color: #fff !important;
         }
+        body.night .product_home{
+            background: #1f2937;
+        }
+        body.night .product_home h1{
+            color: #fff;
+        }
+        body.night #main_nav{
+            background: #1f2937 !important;
+            color: #fff;
+        }
+        body.night .nav-link{
+            color: #fff !important;
+        }
+        body.night .text-dark{
+            color: #fff !important;
+        }
         </style>
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
@@ -1157,11 +1178,12 @@
         <script type="text/javascript" src="../../public/js/customer.js"></script>
         <script type="text/javascript" src="../../public/js/back-top.js"></script>
         <script type="text/javascript" src="../../public/js/show.js"></script>
-
+        <script type="text/javascript" src="../../public/js/skrollr.js"></script>
+        <script type="text/javascript">
+            var s = skrollr.init();
+        </script>
         <!---mdb---->
-        <script
-  type="text/javascript"
-  src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.6.0/mdb.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.6.0/mdb.min.js"></script>
     </form>
 </body>
 </html>
