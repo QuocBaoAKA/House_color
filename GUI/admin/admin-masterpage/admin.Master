@@ -488,6 +488,13 @@ body{
         </a>
         <span class="tooltip">Sản Phẩm</span>
       </li>
+         <li>
+        <a href="../quan-ly-ncc/">
+         <i class='bx bxs-widget'></i>
+          <span class="links_name">Quản Trị Nhà cung cấp</span>
+        </a>
+        <span class="tooltip">Sản Phẩm</span>
+      </li>
       <li>
         <a href="../quan-ly-hang/">
           <i class='bx bx-color-fill'></i>

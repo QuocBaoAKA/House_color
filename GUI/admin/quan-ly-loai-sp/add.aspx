@@ -9,7 +9,7 @@
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <h5 class="my-4 dark-grey-text font-weight-bold">Thêm</h5>
+    <h5 class="my-4 dark-grey-text font-weight-bold" style="text-align: center; font-size: 2.5em;">Thêm loại sản phẩm</h5>
     <div class="card">
         <div class="card-body">
             <div class="md-form"> 

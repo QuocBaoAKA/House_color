@@ -187,6 +187,10 @@ namespace DAL
 		
 		private System.Nullable<double> _TongTien;
 		
+		private EntityRef<tbl_SanPham> _tbl_SanPham;
+		
+		private EntityRef<tbl_DonDatHang> _tbl_DonDatHang;
+		
     #region Extensibility Method Definitions
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
@@ -203,6 +207,8 @@ namespace DAL
 		
 		public tbl_ChiTietDatHang()
 		{
+			this._tbl_SanPham = default(EntityRef<tbl_SanPham>);
+			this._tbl_DonDatHang = default(EntityRef<tbl_DonDatHang>);
 			OnCreated();
 		}
 		
@@ -217,6 +223,10 @@ namespace DAL
 			{
 				if ((this._MaDDH != value))
 				{
+					if (this._tbl_DonDatHang.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
 					this.OnMaDDHChanging(value);
 					this.SendPropertyChanging();
 					this._MaDDH = value;
@@ -237,6 +247,10 @@ namespace DAL
 			{
 				if ((this._MaSP != value))
 				{
+					if (this._tbl_SanPham.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
 					this.OnMaSPChanging(value);
 					this.SendPropertyChanging();
 					this._MaSP = value;
@@ -286,6 +300,74 @@ namespace DAL
 			}
 		}
 		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="tbl_SanPham_tbl_ChiTietDatHang", Storage="_tbl_SanPham", ThisKey="MaSP", OtherKey="MaSP", IsForeignKey=true)]
+		public tbl_SanPham tbl_SanPham
+		{
+			get
+			{
+				return this._tbl_SanPham.Entity;
+			}
+			set
+			{
+				tbl_SanPham previousValue = this._tbl_SanPham.Entity;
+				if (((previousValue != value) 
+							|| (this._tbl_SanPham.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._tbl_SanPham.Entity = null;
+						previousValue.tbl_ChiTietDatHangs.Remove(this);
+					}
+					this._tbl_SanPham.Entity = value;
+					if ((value != null))
+					{
+						value.tbl_ChiTietDatHangs.Add(this);
+						this._MaSP = value.MaSP;
+					}
+					else
+					{
+						this._MaSP = default(string);
+					}
+					this.SendPropertyChanged("tbl_SanPham");
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="tbl_DonDatHang_tbl_ChiTietDatHang", Storage="_tbl_DonDatHang", ThisKey="MaDDH", OtherKey="MaDDH", IsForeignKey=true)]
+		public tbl_DonDatHang tbl_DonDatHang
+		{
+			get
+			{
+				return this._tbl_DonDatHang.Entity;
+			}
+			set
+			{
+				tbl_DonDatHang previousValue = this._tbl_DonDatHang.Entity;
+				if (((previousValue != value) 
+							|| (this._tbl_DonDatHang.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._tbl_DonDatHang.Entity = null;
+						previousValue.tbl_ChiTietDatHangs.Remove(this);
+					}
+					this._tbl_DonDatHang.Entity = value;
+					if ((value != null))
+					{
+						value.tbl_ChiTietDatHangs.Add(this);
+						this._MaDDH = value.MaDDH;
+					}
+					else
+					{
+						this._MaDDH = default(string);
+					}
+					this.SendPropertyChanged("tbl_DonDatHang");
+				}
+			}
+		}
+		
 		public event PropertyChangingEventHandler PropertyChanging;
 		
 		public event PropertyChangedEventHandler PropertyChanged;
@@ -329,6 +411,10 @@ namespace DAL
 		
 		private System.Nullable<int> _Soluongton;
 		
+		private string _MaNCC;
+		
+		private EntitySet<tbl_ChiTietDatHang> _tbl_ChiTietDatHangs;
+		
 		private EntitySet<tbl_CungCap> _tbl_CungCaps;
 		
 		private EntityRef<tbl_LoaiHang> _tbl_LoaiHang;
@@ -355,10 +441,13 @@ namespace DAL
     partial void OnDonGiaChanged();
     partial void OnSoluongtonChanging(System.Nullable<int> value);
     partial void OnSoluongtonChanged();
+    partial void OnMaNCCChanging(string value);
+    partial void OnMaNCCChanged();
     #endregion
 		
 		public tbl_SanPham()
 		{
+			this._tbl_ChiTietDatHangs = new EntitySet<tbl_ChiTietDatHang>(new Action<tbl_ChiTietDatHang>(this.attach_tbl_ChiTietDatHangs), new Action<tbl_ChiTietDatHang>(this.detach_tbl_ChiTietDatHangs));
 			this._tbl_CungCaps = new EntitySet<tbl_CungCap>(new Action<tbl_CungCap>(this.attach_tbl_CungCaps), new Action<tbl_CungCap>(this.detach_tbl_CungCaps));
 			this._tbl_LoaiHang = default(EntityRef<tbl_LoaiHang>);
 			this._tbl_MaMau = default(EntityRef<tbl_MaMau>);
@@ -533,6 +622,39 @@ namespace DAL
 			}
 		}
 		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MaNCC", DbType="VarChar(20)")]
+		public string MaNCC
+		{
+			get
+			{
+				return this._MaNCC;
+			}
+			set
+			{
+				if ((this._MaNCC != value))
+				{
+					this.OnMaNCCChanging(value);
+					this.SendPropertyChanging();
+					this._MaNCC = value;
+					this.SendPropertyChanged("MaNCC");
+					this.OnMaNCCChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="tbl_SanPham_tbl_ChiTietDatHang", Storage="_tbl_ChiTietDatHangs", ThisKey="MaSP", OtherKey="MaSP")]
+		public EntitySet<tbl_ChiTietDatHang> tbl_ChiTietDatHangs
+		{
+			get
+			{
+				return this._tbl_ChiTietDatHangs;
+			}
+			set
+			{
+				this._tbl_ChiTietDatHangs.Assign(value);
+			}
+		}
+		
 		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="tbl_SanPham_tbl_CungCap", Storage="_tbl_CungCaps", ThisKey="MaSP", OtherKey="MaSP")]
 		public EntitySet<tbl_CungCap> tbl_CungCaps
 		{
@@ -632,6 +754,18 @@ namespace DAL
 			{
 				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
 			}
+		}
+		
+		private void attach_tbl_ChiTietDatHangs(tbl_ChiTietDatHang entity)
+		{
+			this.SendPropertyChanging();
+			entity.tbl_SanPham = this;
+		}
+		
+		private void detach_tbl_ChiTietDatHangs(tbl_ChiTietDatHang entity)
+		{
+			this.SendPropertyChanging();
+			entity.tbl_SanPham = null;
 		}
 		
 		private void attach_tbl_CungCaps(tbl_CungCap entity)
@@ -833,6 +967,8 @@ namespace DAL
 		
 		private string _SDT;
 		
+		private EntitySet<tbl_ChiTietDatHang> _tbl_ChiTietDatHangs;
+		
 		private EntityRef<tbl_KhachHang> _tbl_KhachHang;
 		
 		private EntityRef<tbl_NhanVien> _tbl_NhanVien;
@@ -857,6 +993,7 @@ namespace DAL
 		
 		public tbl_DonDatHang()
 		{
+			this._tbl_ChiTietDatHangs = new EntitySet<tbl_ChiTietDatHang>(new Action<tbl_ChiTietDatHang>(this.attach_tbl_ChiTietDatHangs), new Action<tbl_ChiTietDatHang>(this.detach_tbl_ChiTietDatHangs));
 			this._tbl_KhachHang = default(EntityRef<tbl_KhachHang>);
 			this._tbl_NhanVien = default(EntityRef<tbl_NhanVien>);
 			OnCreated();
@@ -990,6 +1127,19 @@ namespace DAL
 			}
 		}
 		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="tbl_DonDatHang_tbl_ChiTietDatHang", Storage="_tbl_ChiTietDatHangs", ThisKey="MaDDH", OtherKey="MaDDH")]
+		public EntitySet<tbl_ChiTietDatHang> tbl_ChiTietDatHangs
+		{
+			get
+			{
+				return this._tbl_ChiTietDatHangs;
+			}
+			set
+			{
+				this._tbl_ChiTietDatHangs.Assign(value);
+			}
+		}
+		
 		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="tbl_KhachHang_tbl_DonDatHang", Storage="_tbl_KhachHang", ThisKey="ID_TK", OtherKey="ID_TK", IsForeignKey=true)]
 		public tbl_KhachHang tbl_KhachHang
 		{
@@ -1076,6 +1226,18 @@ namespace DAL
 			{
 				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
 			}
+		}
+		
+		private void attach_tbl_ChiTietDatHangs(tbl_ChiTietDatHang entity)
+		{
+			this.SendPropertyChanging();
+			entity.tbl_DonDatHang = this;
+		}
+		
+		private void detach_tbl_ChiTietDatHangs(tbl_ChiTietDatHang entity)
+		{
+			this.SendPropertyChanging();
+			entity.tbl_DonDatHang = null;
 		}
 	}
 	

@@ -295,7 +295,86 @@ namespace BLL
             }
         }
         #endregion
+        // -- Quản lý nha cung cap --
+        #region Quản lý sản phẩm
+        public IEnumerable hienThincc()
+        {
+            var query = from sp in db.tbl_NhaCungCaps
+                        select new
+                        {
+                            mancc = sp.MaNCC,
+                            tenncc = sp.TenNCC,
+                            diachi = sp.DiaChi,
+                            email = sp.Email,
+                            sdt = sp.SDT,
+                           
+                        };
+            return query.ToList();
+        }
 
+        public bool themncc(string mancc, string tenncc, string email, int sdt, string diachi)
+        {
+            tbl_NhaCungCap sp = new tbl_NhaCungCap();
+            sp.MaNCC = mancc;
+            sp.TenNCC = tenncc;
+            sp.DiaChi = diachi;
+            sp.Email = email;
+            sp.SDT = sdt;
+
+            db.tbl_NhaCungCaps.InsertOnSubmit(sp);
+            try
+            {
+                db.SubmitChanges();
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+
+        }
+
+        public bool xoancc(string mancc)
+        {
+            var timKiem = db.tbl_NhaCungCaps.Where(sp => sp.MaNCC == mancc).FirstOrDefault();
+            tbl_NhaCungCap spXoa = timKiem;
+            db.tbl_NhaCungCaps.DeleteOnSubmit(spXoa);
+            try
+            {
+                db.SubmitChanges();
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+
+        public List<tbl_NhaCungCap> hienThinccdesua(string mancc)
+        {
+            return db.tbl_NhaCungCaps.Where(sp => sp.MaNCC == mancc).ToList();
+        }
+
+        public bool suancc(string mancc, string tenncc, string email, string diachi, int sdt)
+        {
+            var timKiem = db.tbl_NhaCungCaps.Where(sp => sp.MaNCC == mancc).FirstOrDefault();
+
+            tbl_NhaCungCap spSua = timKiem;
+            spSua.TenNCC = tenncc;
+            spSua.Email = email;
+            spSua.DiaChi = diachi;
+            spSua.SDT = sdt;
+            try
+            {
+                db.SubmitChanges();
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+        #endregion
         // -- Quản lý khách hàng --
         #region Quản lý khách hàng
         public IEnumerable hienThiKH()

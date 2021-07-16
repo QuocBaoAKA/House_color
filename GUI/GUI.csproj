@@ -123,6 +123,10 @@
     <Content Include="admin\quan-ly-loai-sp\Default.aspx" />
     <Content Include="admin\quan-ly-loai-sp\delete.aspx" />
     <Content Include="admin\quan-ly-loai-sp\edit.aspx" />
+    <Content Include="admin\quan-ly-ncc\Default.aspx" />
+    <Content Include="admin\quan-ly-ncc\suancc.aspx" />
+    <Content Include="admin\quan-ly-ncc\themncc.aspx" />
+    <Content Include="admin\quan-ly-ncc\xoancc.aspx" />
     <Content Include="admin\quan-ly-sp\add.aspx" />
     <Content Include="admin\quan-ly-sp\Default.aspx" />
     <Content Include="admin\quan-ly-sp\delete.aspx" />
@@ -479,6 +483,34 @@
     </Compile>
     <Compile Include="admin\quan-ly-loai-sp\edit.aspx.designer.cs">
       <DependentUpon>edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\quan-ly-ncc\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\quan-ly-ncc\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\quan-ly-ncc\suancc.aspx.cs">
+      <DependentUpon>suancc.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\quan-ly-ncc\suancc.aspx.designer.cs">
+      <DependentUpon>suancc.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\quan-ly-ncc\themncc.aspx.cs">
+      <DependentUpon>themncc.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\quan-ly-ncc\themncc.aspx.designer.cs">
+      <DependentUpon>themncc.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\quan-ly-ncc\xoancc.aspx.cs">
+      <DependentUpon>xoancc.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\quan-ly-ncc\xoancc.aspx.designer.cs">
+      <DependentUpon>xoancc.aspx</DependentUpon>
     </Compile>
     <Compile Include="admin\quan-ly-sp\add.aspx.cs">
       <DependentUpon>add.aspx</DependentUpon>

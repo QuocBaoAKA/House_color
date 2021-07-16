@@ -155,7 +155,7 @@
 	background-color: #46c8fb;
 }
 #latest h2{
-	background-color: darkred;
+	background-color: #4361ee;
 }
 #our-picks h2{
 	background-color: darkblue;

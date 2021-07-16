@@ -8,7 +8,9 @@
             margin: auto;
             border-radius: 10px;
             margin-top: 1rem;
+            
         }
+        
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
