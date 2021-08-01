@@ -18,8 +18,7 @@ namespace GUI.customer.DangKy
                 Response.Redirect("../trang-chu/");
             }
         }
-
-        protected void Button1_Click(object sender, EventArgs e)
+        protected void Button2_Click1(object sender, EventArgs e)
         {
             string mk = txt_taoMK1.Text.Trim();
             string reMK = txt_nhapLaiMk1.Text.Trim();

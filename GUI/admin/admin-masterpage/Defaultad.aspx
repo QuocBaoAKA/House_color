@@ -40,6 +40,21 @@
             transition: color 0.5s ease 0s;
             z-index: 1;
             position: relative;
+            flex-direction: column;
+
+              margin-bottom: 2rem;
+
+        }
+        .flex_cont i{
+            font-size: 40px;
+            width: 60px;
+            height: 60px;
+            background: #4361ee;
+            display: flex;
+           justify-content:center;
+           align-items: center;
+           color: #fff;
+           border-radius: 18px;
 
         }
         .flex_cont:before{
@@ -64,7 +79,9 @@
             transform: scale(3);
              color: #fff;
         }
-        
+        .flex_cont i:hover:before{
+            z-index: 999;
+        }
        .flex_cont a{
            font-size: 25px;
            color: #000;
@@ -73,24 +90,39 @@
            font-weight: 600;
         
        }
-      
+       .img-admin{
+           display: flex;
+           justify-content:center;
+           align-items: center;
+       }
+        .img-admin img{
+            width: 80%;
+            height: 450px;
+            border-radius: 20px;
+            margin-top: 1rem;
+        }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <h1 class="h1_a">House Color</h1>
-    <h1 class="h1_b">ADMIN</h1>
+    <div class="img-admin">
+        <img src="/hinh/2.png" />
+    </div>
     <div class="flex_content">
         <div class="flex_cont">
+            <i class='bx bxs-store-alt'></i>
             <a href="../quan-ly-sp/">Sản Phẩm</a>
         </div>
         <div class="flex_cont">
-            <a href="#">Màu Sắc</a>
+            <i class='bx bxs-color-fill' style="background: #0ead69 ;" ></i>
+            <a href="../quan-ly-hang/">Màu Sắc</a>
         </div>
         <div class="flex_cont">
-            <a href="#">Loại Sản Phẩm</a>
+            <i class='bx bxs-coin-stack' style="background: #ffea00;"></i>
+            <a href="../quan-ly-loai-sp/">Loại Sản Phẩm</a>
         </div>
         <div class="flex_cont">
-            <a href="#">Khách Hàng</a>
+            <i class='bx bxs-face' style="background: #eed7c5;" ></i>
+            <a href="../quan-ly-khach-hang/">Khách Hàng</a>
         </div>
     </div>
 </asp:Content>

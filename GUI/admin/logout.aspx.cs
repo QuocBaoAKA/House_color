@@ -13,7 +13,7 @@ namespace GUI.admin
         {
             
             Session.RemoveAll();
-            Response.Redirect("Default.aspx");
+            Response.Redirect("../trang-chu/");
 
         }
     }

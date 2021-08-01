@@ -1618,12 +1618,81 @@
   color: #fff;
   cursor: pointer;
 }
+/*colorsession2*/
+.contentBox {
 
+    width: 100%;
+
+    height: 70vh;
+
+    display: flex;
+
+    justify-content: space-evenly;
+
+    align-items: center;
+
+}
+
+.contentBox .colorBox {
+
+    width:15%;
+
+    height: 80%;
+
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+}
+
+.contentBox .colorBox .color{
+    width:100%;
+    height: 80%;
+    background-color: aqua;
+    border-radius: 10px 10px  0 0;
+}
+
+.contentBox .colorBox .code{
+    width:100%;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.actions {
+    width: 100%;
+    height: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.actions button{
+    padding: 12px 60px;
+    background-color: #4361ee;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    color: #fff;
+    margin: 0 25px;
+    border:none;
+    outline: none;
+    transition: 0.3s;
+}
+.actions button:hover {
+    background-color: #fff;
+    color: #000;
+    cursor: pointer;
+    border: 3px solid #1e90ff;
+}
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 <nav aria-label="breadcrumb" style="margin-top: 3px; width: 300px;">
-  <ol class="breadcrumb">
+  <ol class="breadcrumb" style="background: none;">
     <li class="breadcrumb-item"><a href="../trang-chu/">Trang chủ</a></li>
     <li class="breadcrumb-item"><a href="#">Màu sắc</a></li>
     <%--<li class="breadcrumb-item active" aria-current="page">Data</li>--%>
@@ -1643,11 +1712,52 @@
 				</section>
 	</div>
     <!---bangrmau--->
- <div class="container_color">
-      <div class="logo_h">
+    <div class="logo_h">
          Bảng Màu
     </div>
-  <div class="palette">
+    <div class="contentBox">
+        <div class="colorBox">
+        <div class="color"></div>
+
+        <p class="code">#4cae3a</p>
+
+        </div>
+        <div class="colorBox">
+        <div class="color"></div>
+        <p class="code">#4cae3a</p>
+        </div>
+        <div class="colorBox">
+        <div class="color"></div>
+        <p class="code">#4cae3a</p>
+        </div>
+        <div class="colorBox">
+
+        <div class="color"></div>
+
+        <p class="code">#4cae3a</p>
+
+        </div>
+        <div class="colorBox">
+        <div class="color"></div>
+        <p class="code">#4cae3a</p>
+
+        </div>
+
+        <div class="colorBox">
+        <div class="color"></div>
+        <p class="code">#4cae3a</p>
+        </div>
+        </div>
+        <div class="actions">
+        <button>Đổi màu</button>
+        </div>
+    <!--end-->
+ <%--<div class="container_color">
+      <div class="logo_h">
+         Bảng Màu
+    </div>--%>
+
+  <%--<div class="palette">
     <div class="a_palette_color"></div>
     <div class="a_palette_color"></div>
     <div class="a_palette_color"></div>
@@ -1671,9 +1781,9 @@
       <div class="palette-name">
      
     </div>
-  </div>
+  </div>--%>
 
-  <div class="palette">
+  <%--<div class="palette">
     <div class="au_palette_color"></div>
     <div class="au_palette_color"></div>
     <div class="au_palette_color"></div>
@@ -1694,9 +1804,9 @@
     <div class="au_palette_color"></div>
     <div class="au_palette_color"></div>
     <div class="au_palette_color"></div>
-  </div>
+  </div>--%>
 
-  <div class="palette">
+  <%--<div class="palette">
     <div class="br_palette_color"></div>
     <div class="br_palette_color"></div>
     <div class="br_palette_color"></div>
@@ -1718,7 +1828,7 @@
     <div class="br_palette_color"></div>
     <div class="br_palette_color"></div>
     
-  </div>
+  </div>--%>
 
  <%-- <div class="palette">
     <div class="ca_palette_color"></div>
@@ -1746,7 +1856,7 @@
     </div>
   </div>--%>
 
-  <div class="palette">
+ <%-- <div class="palette">
     <div class="chi_palette_color"></div>
     <div class="chi_palette_color"></div>
     <div class="chi_palette_color"></div>
@@ -1767,9 +1877,9 @@
     <div class="chi_palette_color"></div>
     <div class="chi_palette_color"></div>
     <div class="chi_palette_color"></div>
-  </div>
+  </div>--%>
 
-  <div class="palette">
+  <%--<div class="palette">
     <div class="du_palette_color"></div>
     <div class="du_palette_color"></div>
     <div class="du_palette_color"></div>
@@ -1790,7 +1900,7 @@
     <div class="du_palette_color"></div>
     <div class="du_palette_color"></div>
     <div class="du_palette_color"></div>
-  </div>
+  </div>--%>
 
  <%-- <div class="palette">
     <div class="fr_palette_color"></div>
@@ -1973,7 +2083,7 @@
       Turkish Palette
     </div>
   </div>--%>
-</div>
+<%--</div>
 
 <audio
   id="copy"
@@ -1981,7 +2091,7 @@
 ></audio>
 <div class="toast-copied">
 #fab1a0
-</div>
+</div>--%>
 
 
 
@@ -2007,9 +2117,15 @@
             <a href="../trang-chu/color_phongthuy.aspx"><p>Màu sắc phong thủy<i class="fas fa-angle-right"></i></p></a>
         </div>
     </div>
+    <div class="color_pro">
+        <div class="color_pr">
+            <img src="/hinh/540x320x1-BON-MAU.jpg" />
+            <a href="../trang-chu/xuhuongcolor.aspx"><p>Bộ sưu tập xu hướng sắc màu<i class="fas fa-angle-right"></i></p></a>
+        </div>
+    </div>
     </center>
 
-    <script>
+   <%-- <script>
         var copyToast = document.getElementsByClassName("toast-copied")[0];
 
         var americanHandler = document.getElementsByClassName("a_palette_color");
@@ -2245,5 +2361,58 @@
             document.body.removeChild(dummy);
         }
 
+    </script>--%>
+    <script>
+        var code = document.querySelectorAll('.code');
+
+        var color = document.querySelectorAll('.color');
+
+        var button = document.querySelector('button');
+
+        button.addEventListener("click", colorGen);
+
+        function colorGen() {
+
+            var letters = '0123456789abcdef';
+
+            var hastag = ['#', '#', '#', '#', '#', '#'];
+
+            for (let i = 0; i < 6; i++) {
+
+                hastag[i] += letters[Math.floor(Math.random() * 16)];
+
+                hastag[i] += letters[Math.floor(Math.random() * 16)];
+
+                hastag[i] += letters[Math.floor(Math.random() * 16)];
+
+                hastag[i] += letters[Math.floor(Math.random() * 16)];
+
+                hastag[i] += letters[Math.floor(Math.random() * 16)];
+
+                hastag[i] += letters[Math.floor(Math.random() * 16)];
+
+            }
+
+            for (let i = 0; i < code.length; i++) {
+
+                code[i].innerHTML = hastag[i];
+
+                color[i].style.backgroundColor = hastag[i];
+
+            }
+
+        }
+
+        colorGen();
+
+        window.onkeyup = (e) => {
+
+            if (e.which || e.keycode == 33) {
+
+                colorGen();
+
+            }
+
+        };
     </script>
 </asp:Content>

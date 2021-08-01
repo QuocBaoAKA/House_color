@@ -147,7 +147,7 @@
         /*product*/
         .section_product{
             background: #f2f2f2;
-            height: 600px;
+            height: 420px;
         }
         
         .product_group{   
@@ -159,8 +159,8 @@
             align-items: center;
         }
         .product_home{
-            width: 400px;
-            height: 500px;
+            width: 650px;
+            height: 300px;
             margin: auto;
             margin-top: 2rem;
             margin: 10px;
@@ -168,42 +168,81 @@
             border-radius: 10px;
             box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
             transition: 0.2s ease;
+            display: flex;
         }
         .product_home:hover{
             transform: translateY(-15px);
             border-bottom-color: #0869ea;
         }
         .product_home img{
-            width: 400px;
-            height: 300px;
+            width: 350px;
+            height: 280px;
+            border-radius: 20px;
+            margin-left: 10px;
+            margin-top: 10px;
         }
         .product_home h1{
             font-size: 25px;
-            text-align: center;
+            margin-left: 10px;
             margin-top: 1.5rem;
             color: #333333;
+            width: 100%;
 
         }
-        .product_home .btn_a{
+        .btn_a{
             display: flex;
             justify-content: center;
             align-items: center;
             width: 150px;
-            margin: auto;
-            margin-top: 2rem;
+            margin-left: -8rem;
+            margin-top: 10rem;
             padding: 15px;
+            height: 50px;
             border-radius: 10px;
             background: #0869ea;
             color: #fff;
             text-decoration: none;
         }
-
+        .btn_a1{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 150px;
+       
+            margin-top: 10rem;
+            padding: 15px;
+            height: 50px;
+            border-radius: 10px;
+            background: #0869ea;
+            color: #fff;
+            text-decoration: none;
+        }
         .btn_a:focus{
             background: #fff;
             border: 2px solid #0869ea;
-            color: #000;
+            color: #23262d !important;
         }
-       
+       .product_text
+       {
+           display: flex;
+           flex-direction: column;
+           justify-content: center;
+           align-items: center;
+           width: 100%;
+       }
+       .product_text h1{
+           text-align: center;
+           font-family: 'Hahmlet', serif;
+           font-size: 28px;
+           font-weight: 600;
+       }
+       .product_text .btn_a{
+           margin-left: 1rem;
+       }
+       .product_text .btn_a:hover{
+           text-decoration: none;
+           color: #fff;
+       }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -212,8 +251,12 @@
     <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
     <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
     <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
   </ol>
   <div class="carousel-inner">
+    <div class="carousel-item">
+         <img src="/hinh/housecolor.png" class="d-block w-100" alt="..." height="450" />
+    </div>
     <div class="carousel-item active">
          <img src="https://aats3-f20c7c9531544cda9e01e2d01c48e39-public.s3-eu-west-1.amazonaws.com/styles/article_hero_image_scale/s3/article/top-banner-ec-cbb_2.jpg?itok=Kfu7BF_v" height="450" class="d-block w-100" alt="..." />
     </div>
@@ -221,8 +264,9 @@
          <img src="https://sonduluxvietnam.com/wp-content/uploads/2017/02/banner3.jpg" class="d-block w-100" alt="..." height="450">
     </div>
     <div class="carousel-item">
-         <img src="https://jotunimages.azureedge.net/images/images/majestic-home-herobanner-1000x515-587187_tcm65-95738.jpg" class="d-block w-100" alt="..." height="450">
+         <img src="/hinh/re.png" class="d-block w-100" alt="..." height="450" />
     </div>
+
   </div>
   <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -236,22 +280,24 @@
   <!---noidung---->
     <div class="container_group">
     <section class="section_product">
-        <h1 style="text-align: center; color: #313131; margin-top: 1rem; margin-bottom: 1rem; font-size: 2.5rem" class="h1_dr"> Lựa chọn sản phẩm cho dự án của bạn</h1>
-        <div class="product_group">
-            
+        <h1 style="text-align: center; font-family: 'Playfair Display', serif; padding: 15px; color: #313131; margin-bottom: 1rem; font-size: 2.5rem" class="h1_dr" > Lựa chọn sản phẩm cho dự án của bạn</h1>
+        <div class="product_group">           
         <div class="product_home">  
-                <img src="https://viethangroup.vn/wp-content/uploads/2020/03/thiet-ke-ngoai-that-doc-dao.jpg" />
-                <h1>Sơn Ngoại Thất</h1>
-                <a href="#" class="btn_a">Xem Sản Phẩm</a>        
+                <img src="https://viethangroup.vn/wp-content/uploads/2020/03/thiet-ke-ngoai-that-doc-dao.jpg" />  
+             <div class="product_text">
+             <h1>Sơn Ngoại Thất</h1>
+                <a href="../trang-chu/sonngoaithat.aspx" class="btn_a">Xem Sản Phẩm</a> 
+             </div>   
         </div>
+            
         <div class="product_home">
-            <img src="https://mocshop.com.vn/library/module_new/bao-gia-thiet-ke---thi-cong-noi-that_s2030.jpg" />
-           
-                <h1>Sơn Ngoại Thất</h1>
-                <a href="#" class="btn_a">Xem Sản Phẩm</a>
+            <img src="https://mocshop.com.vn/library/module_new/bao-gia-thiet-ke---thi-cong-noi-that_s2030.jpg" />           
+             <div class="product_text">    
+                <h1>Sơn Nội Thất</h1>
+                <a href="../trang-chu/sonnoithat.aspx" class="btn_a">Xem Sản Phẩm</a>
+            </div>
            </div>
         </div>
-
     </section>
      <section id="about" class="site-padding" >
 			<div class="container">
@@ -298,8 +344,8 @@
             </div>
         </div>
         <!-- About End -->
-    <section class="records">
-        <h1 class="text_da" style="text-align: center; bottom: 5px; color: #fff;" data-title="Dự Án">Dự án - Công trình tiêu biểu</h1>
+    <section class="records" style="background: #0768ea;">
+        <h1 class="text_da" style="text-align: center; font-family: 'Playfair Display', serif; bottom: 5px; color: #fff;" data-title="Dự Án">Dự án - Công trình tiêu biểu</h1>
         <div class="overlay overlay-sm">
           <img src="/hinh/square.png" alt="" class="shape square1" />
           <img src="/hinh/square.png" alt="" class="shape square2" />
@@ -315,10 +361,9 @@
           <img src="/hinh/shapes/triangle.png" alt="" class="shape triangle" />
         </div>
       </section>  
-    <div class="main_img">
-         
+    <div class="main_img">     
 		<div class="khoi">
-			<img src="/hinh/CT1.jpg" />
+			<img src="/hinh/Screen-Shot-2016-02-03-at-7.22.29-AM.png" />
 			
 		</div> <!-- end khoi -->
 		<div class="khoi">
@@ -334,11 +379,11 @@
 			
 		</div> <!-- end khoi -->
 		<div class="khoi">
-			<img src="/hinh/CT5.jpg" />
+			<img src="/hinh/sector-hero_0.jpg" />
 			
 		</div> <!-- end khoi -->
 		<div class="khoi">
-			<img src="/hinh/CT7.jpg" />
+			<img src="/hinh/trackrecord-vn-terrarosa_0.jpg" />
 			
 		</div> <!-- end khoi -->
 	</div>
@@ -346,7 +391,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    <h3 class="section-title" style="font-size: 2.5rem;">Các thương hiệu sơn</h3>
+                    <h3 class="section-title" style="font-size: 2.5rem; font-family: 'Playfair Display', serif;">Các thương hiệu sơn</h3>
                 </div>
             </div>
             <div class="row">
@@ -400,7 +445,7 @@
     
     <section class="vitri_gr">
 	<div class="container">
-        <h2 style="font-size: 2.5rem; text-transform: none;">Liên hệ</h2>
+        <h2 style="font-size: 2.5rem; text-transform: none; font-family: 'Playfair Display', serif; line-height: 46px;">Liên hệ</h2>
     </div>      
     </section>
     <section id="location" class="section location">

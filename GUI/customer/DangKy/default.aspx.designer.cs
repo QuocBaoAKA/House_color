@@ -76,13 +76,13 @@ namespace GUI.customer.DangKy {
         protected global::System.Web.UI.WebControls.TextBox txt_diaChi;
         
         /// <summary>
-        /// Button1 control.
+        /// Button2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button1;
+        protected global::System.Web.UI.WebControls.Button Button2;
         
         /// <summary>
         /// ltr_codeJS control.

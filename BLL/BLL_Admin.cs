@@ -218,6 +218,7 @@ namespace BLL
                             tenHang = hsp.TenMau,
                             maLoai = lsp.MaLH,
                             mamau = hsp.MaMau,
+                            mancc = sp.MaNCC,
                             gia = String.Format(CultureInfo.InvariantCulture, "{0:#,#}", sp.DonGia),
                             mota = sp.MoTa,
                             
@@ -225,17 +226,18 @@ namespace BLL
             return query.ToList();
         }
 
-        public bool themSanPham(string masp, string tenSP, string maLoai, string mamau, float gia, string hinhAnh, string moTa)
+        public bool themSanPham(string masp, string tenSP, string maLoai, string mamau, float gia, string hinhAnh, string moTa, string mancc)
         {
             tbl_SanPham sp = new tbl_SanPham();
             sp.MaSP = masp;
             sp.TenSP = tenSP;
             sp.MaLH = maLoai;
             sp.MaMau = mamau;
+            sp.MaNCC = mancc;
             sp.DonGia = gia;
             sp.HinhAnh = hinhAnh;
             sp.MoTa = moTa;
-         
+            
             db.tbl_SanPhams.InsertOnSubmit(sp);
             try
             {
@@ -273,7 +275,7 @@ namespace BLL
             return db.tbl_SanPhams.Where(sp => sp.MaSP == maSP).ToList();
         }
 
-        public bool suaSanPham(string maSP, string tenSP, string maLoai, string mamau, float gia, string hinhAnh, string moTa)
+        public bool suaSanPham(string maSP, string tenSP, string maLoai, string mamau, float gia, string hinhAnh, string moTa, string mancc)
         {
             var timKiem = db.tbl_SanPhams.Where(sp => sp.MaSP == maSP).FirstOrDefault();
            
@@ -281,6 +283,7 @@ namespace BLL
             spSua.TenSP = tenSP;
             spSua.MaLH = maLoai;
             spSua.MaMau = mamau;
+            spSua.MaNCC = mancc;
             spSua.DonGia = gia;
             spSua.HinhAnh = hinhAnh;
             spSua.MoTa = moTa;

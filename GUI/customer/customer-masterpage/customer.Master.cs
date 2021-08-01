@@ -35,7 +35,7 @@ namespace GUI.customer.customer_masterpage
         protected void lbtn_dangKy_Click(object sender, EventArgs e)
         {
             Session["urlBack"] = HttpContext.Current.Request.Url.AbsoluteUri;
-            Response.Redirect("../dang-ky/");
+            Response.Redirect("../DangKy/");
         }
 
         protected void lbtn_timKiem_Click(object sender, EventArgs e)

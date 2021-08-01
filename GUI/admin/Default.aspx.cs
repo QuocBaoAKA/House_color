@@ -26,7 +26,7 @@ namespace GUI.admin
             {
                 Session["taiKhoan"] = tdn;
                 Session["success"] = "Đăng nhập thành công";
-                Response.Redirect("./quan-ly-sp/");
+                Response.Redirect("./admin-masterpage/Defaultad.aspx");
             }
             else
             {

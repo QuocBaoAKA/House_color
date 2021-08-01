@@ -10,7 +10,7 @@
         margin-top: 1rem;
         padding: 4rem;
         background: #fff;
-        
+        z-index: 1;
         color: white;
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
         }
@@ -213,6 +213,8 @@ label.radio {
     .purple-gradient:hover{
         color: #fff;
     }
+    
+   
     </style>  
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -221,9 +223,9 @@ label.radio {
 <script async defer crossorigin="anonymous" src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v9.0&appId=1035397543626875&autoLogAppEvents=1" nonce="QpDWsGnI"></script>
     <asp:Repeater ID="Repeater1" runat="server" OnItemCommand="Repeater1_ItemCommand">
         <ItemTemplate>
-                <nav aria-label="breadcrumb" style="margin-top: 35px;">
-  <ol class="breadcrumb">
-    <li class="breadcrumb-item"><a href="../trang-chu/">Trang chủ</a></li>
+ <nav aria-label="breadcrumb" style="margin-top: 35px;">
+  <ol class="breadcrumb" style="background: none;">
+    <li class="breadcrumb-item"><a href="./trang-chu/">Trang chủ</a></li>
     <li class="breadcrumb-item"><a href="#">Sản phẩm</a></li>
     <li class="breadcrumb-item active" aria-current="page"><%# Eval("sp.TenSP") %></li>
   </ol>
@@ -257,6 +259,7 @@ label.radio {
                             <p class="pf1">Mô tả sản phẩm</p>
                                 <%# Eval("sp.MoTa") %>
             </div>--%>
+<div class="box">
 <section class="detailt_group">
   <div class="container">
     <div id="demo" class="carousel slide" data-ride="carousel">
@@ -278,11 +281,9 @@ label.radio {
 
                             <p style="color: red;">Mã màu: <%# Eval("sp.MaMau") %></p> <span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> <span class="fa fa-star-half-full"></span> <span id="reviews"></span>
 
-                             <div class="row"><%# Eval("sp.DonGia", "{0:000,000} VNĐ ") %></div>      
+                            <div class="row"><%# Eval("sp.DonGia", "{0:000,000} VNĐ ") %></div>      
                     
-                    <div class="row lower">
-                       
-                             
+                   <%-- <div class="row lower">     
                              <asp:UpdatePanel ID="UpdatePanel2" runat="server">
                                     <ContentTemplate>
                                         <div class="form-inline">
@@ -294,19 +295,15 @@ label.radio {
                                             if (Session["taiKhoan"] == null)
                                             {
                                         %>
-
                                         <asp:LinkButton ID="LinkButton1" class="mt-3 btn purple-gradient" runat="server" OnClientClick="toastr.error('Vui lòng đăng nhập để mua hàng')">
                                             <i class="fas fa-cart-plus mr-2" style="font-size: 20px; border: none; margin-top: -25px;"></i>Thêm vào giỏ hàng
                                         </asp:LinkButton>
-
-
                                         <%
                                             }
                                             else
                                             {
-                                        %>
-                                        
-                                        <asp:Button ID="lbtn_muaHang"  runat="server" CommandArgument='<%# Eval("sp.MaSP") %>' CommandName="muaHang" class="mt-3 btn purple-gradient"  OnClick="lbtn_muaHang_Click" OnClientClick="hienThiThongBaoChiTietSP()" Text="Thêm vào giỏ hàng"/>
+                                        %>                                       
+                                     <asp:Button ID="lbtn_muaHang"  runat="server" CommandArgument='<%# Eval("sp.MaSP") %>' CommandName="muaHang" class="mt-3 btn purple-gradient"  OnClick="lbtn_muaHang_Click" OnClientClick="hienThiThongBaoChiTietSP()" Text="Thêm vào giỏ hàng"/>
              
                                         <%
                                             }
@@ -314,7 +311,7 @@ label.radio {
                                     </ContentTemplate>
                                 </asp:UpdatePanel>       
                         </div>
-                        </div>
+                        </div>--%>
                     </div>
                 </div>
                 </div>
@@ -322,32 +319,16 @@ label.radio {
          </div>
     </div>
 </div>
-      </section>
-    <div class="tab_group">
-    <ul class="nav nav-tabs" id="myTab" role="tablist">
-      <li class="nav-item" role="presentation">
-        <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">Mô Tả</button>
-      </li>
-      <li class="nav-item" role="presentation">
-        <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">Bình luận</button>
-      </li>
-    </ul>
-    <div class="tab-content" id="myTabContent">
-      <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+</section>
           <div class="tab_mota">
             <p> <%# Eval("sp.MoTa") %></p>
           </div>
-      </div>
-      <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
           
           <div class="facebook">
               <h3>Bình luận</h3>
           <div class="fb-comments container" data-href='https://developers.facebook.com/docs/plugins/<%# Eval("sp.MaSP") %>' data-numposts="5" data-width="100%"></div>       
          </div>
-
-      </div>
-    </div>
-    </div>    <!----end---->     
+    <!----end---->     
          
     </ItemTemplate>
         

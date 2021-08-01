@@ -2,13 +2,14 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <style>
          .product-card {
-        width: 300px;
-        height: 580px;
-        position: relative;
-        box-shadow: 0 2px 7px #dfdfdf;
-        margin: 10px;
-        background: #f7f5f3;
-    }
+            width: 300px;
+            height: 510px;
+            position: relative;
+            box-shadow: 0 2px 7px #dfdfdf;
+            margin: 10px;
+            background: #f7f5f3;
+            border-radius: 10px;
+        }
         .product-card:hover {
             box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
         }
@@ -35,32 +36,31 @@
 
     .product-tumb img {
         max-width: 100%;
-        max-height: 100%;
+        max-height: 80%;
     }
 
-.product-details {
-    padding: 30px;
-}
+    .product-details {
+        padding: 30px;
+    }
 
-.product-catagory {
-    display: block;
-    font-size: 12px;
-    font-weight: 700;
-    text-transform: uppercase;
-    color: #ccc;
-    margin-bottom: 18px;
-}
+    .product-catagory {
+        display: block;
+        font-size: 12px;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: #ccc;
+        margin-bottom: 10px;
+    }
 
-.product-details h4 {
-    font-weight: 500;
-    display: block;
-    font-size: 22px;
-    margin-bottom: 18px;
-    text-transform: uppercase;
-    color: #363636;
-    text-decoration: none;
-    transition: 0.3s;
-}
+    .product-details h4 {
+        font-weight: 500;
+        display: block;
+        font-size: 16px;
+        margin-bottom: 18px;
+        color: #363636;
+        text-decoration: none;
+        transition: 0.3s;
+    }
 
 .product-details h4:hover {
     color: #3742fa;
@@ -133,10 +133,11 @@ có chiều rộng dưới 600px */
          width: 100%;        
          height: 400px;
          position: relative;
-         background-image: url(/hinh/cach.jpg);
+         background-image: url(/hinh/the-learning-site-clipart-bedroom-1799_1199.jpg);
          background-size: cover;
          background-attachment: fixed;
-         border-radius: 10px;
+         background-repeat: no-repeat;
+         background-position: 0px -80px;
          margin-top: 10px;
          display: block;
          margin-left: auto;
@@ -148,7 +149,7 @@ có chiều rộng dưới 600px */
           bottom: 20%;
           left: 50%;
           transform: translate(-50%, 50%);  
-          color: #3742fa;
+          color: #fff;
           font-size: 46px;
           line-height: 54px;
           font-weight: 400;
@@ -163,17 +164,21 @@ có chiều rộng dưới 600px */
           transform: translate(-50%, 50%); 
           font-size: 20px;
       }
+      .breadcrumb{
+          background: #fff !important;
+      }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <section class="color_nt">
-        <nav aria-label="breadcrumb" style="margin-top: 1px; width: 380px; border-radius: 15px;">
-  <ol class="breadcrumb">
+    <nav aria-label="breadcrumb" style="margin-top: 1px; width: 380px; border-radius: 15px;">
+  <ol class="breadcrumb" style="background: none !important;">
     <li class="breadcrumb-item"><a href="../trang-chu/">Trang chủ</a></li>
     <li class="breadcrumb-item"><a href="../trang-chu/sanpham.aspx">Sản phẩm</a></li>
     <li class="breadcrumb-item active" aria-current="page">Sơn nội thất</li>
   </ol>
 </nav>
+    <section class="color_nt">
+
      <h2 class="h2_nt">Sơn Nội Thất</h2>
     <p>Tìm hiểu thông tin chi tiết về các sản phẩm của chúng tôi.</p>
     </section>
@@ -194,7 +199,6 @@ có chiều rộng dưới 600px */
 				            <div class="product-price"><%# Eval("DonGia", "{0:000,000}")%></div>
 				            <div class="product-links">
 					            <a href="../chi-tiet-san-pham/chitietsp.aspx/?masp=<%# Eval("MaSP") %>"><i class="fas fa-plus"></i></a>
-					            <a href="#"><i class="fa fa-shopping-cart"></i></a>
 				            </div>
 			            </div>
 		            </div>

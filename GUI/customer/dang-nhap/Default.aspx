@@ -10,7 +10,7 @@
   href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
   rel="stylesheet"
 />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
     <link  rel="stylesheet" href ="../css/main.css" />
     <link  rel="stylesheet" href ="../css/util.css" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous" />
@@ -25,13 +25,11 @@
             background-color: #f4f4f4;
         }
         .card{
-            background: rgba( 255, 255, 255, 0.25 );
-            box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-            backdrop-filter: blur( 2.0px );
-            -webkit-backdrop-filter: blur( 2.0px );
-            border-radius: 10px;
-            border: 1px solid rgba( 255, 255, 255, 0.18 );
-            width: 550px;
+             background: rgba( 255, 255, 255, 0.2 );
+              border: solid 1px rgba(255,255,255,.3);
+              backgroud-clip: padding-box;
+              backdrop-filter: blur(10px );
+            width: 500px;
             height: 650px;
             margin: auto;
             margin-top: 4rem;
@@ -61,6 +59,8 @@
             background: #54a0ff;
             color: #f1f2f6;
             font-weight: 700;
+                border-radius: 25px;
+
         }
          .btn-login:hover{
              background-color: #4cd137;
@@ -138,15 +138,17 @@
             justify-content: center;
             align-items: center;
             margin-top: 3rem;
+                border-radius: 25px;
         }
         .btn-login{
             width: 120px;
             height: 50px;
-            border-radius: 15px;
             background: #2ed573;
             border: none;
             font-weight: 700;
             color: white;
+            border-radius: 25px !important;
+
         }
         .btn-login:hover{
             background: #1e90ff;
@@ -211,7 +213,7 @@
     .pink-bubble {
       width: 460px;
       height: 460px;
-      right: 60px;
+      right: 150px;
       top: -110px;
       background-color: #c7ecee;
     }
@@ -219,7 +221,7 @@
     .blue-bubble {
       width: 520px;
       height: 520px;
-      left: 48px;
+      left: 65px;
       top: 350px;
       background-color: #bbe6f3;
     }
@@ -234,7 +236,7 @@
     .small-p-bubble {
       width: 105px;
       height: 105px;
-      left: -45px;
+      left: -65px;
       top: 100px;
       background-color: #ebc7e5
     }
@@ -314,7 +316,7 @@
     <div class="bubble blue-bubble"></div>
     <div class="bubble small-p-bubble"></div>
     <div class="bubble small-b-bubble"></div>   
-</div> 
+</div>
     <div class="card">
         <h1>Đăng Nhập</h1>
 		<div class="fadeIn first">

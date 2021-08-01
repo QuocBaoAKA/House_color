@@ -154,6 +154,10 @@
     <Content Include="customer\gio-hang\dat-hang.aspx" />
     <Content Include="customer\lich-su-mua-hang\chi-tiet-don-hang.aspx" />
     <Content Include="customer\lich-su-mua-hang\Default.aspx" />
+    <Content Include="customer\NCC\dulux.aspx" />
+    <Content Include="customer\NCC\jotun.aspx" />
+    <Content Include="customer\NCC\mykoler.aspx" />
+    <Content Include="customer\NCC\nippon.aspx" />
     <Content Include="customer\phong-thuy\tuoisua.aspx" />
     <Content Include="customer\phong-thuy\tuoithan.aspx" />
     <Content Include="customer\phong-thuy\tuoithin.aspx" />
@@ -172,9 +176,12 @@
     <Content Include="customer\trang-chu\test.aspx" />
     <Content Include="customer\trang-chu\tintuc.aspx" />
     <Content Include="customer\trang-chu\Default.aspx" />
+    <Content Include="customer\trang-chu\xuhuongcolor.aspx" />
     <Content Include="cutomer.js" />
     <Content Include="Default.aspx" />
+    <Content Include="hinh\1.svg" />
     <Content Include="hinh\1562139922_son-ngoai-that-dulux.png" />
+    <Content Include="hinh\2.png" />
     <Content Include="hinh\banner3.jpg" />
     <Content Include="hinh\bg-map.png" />
     <Content Include="hinh\bn1.jpg" />
@@ -192,6 +199,7 @@
     <Content Include="hinh\dulux-logo.png" />
     <Content Include="hinh\grey.png" />
     <Content Include="hinh\half-circle.png" />
+    <Content Include="hinh\housecolor.png" />
     <Content Include="hinh\icon.png" />
     <Content Include="hinh\images.jpg" />
     <Content Include="hinh\k1.jpg" />
@@ -214,10 +222,12 @@
     <Content Include="hinh\nt3.jpg" />
     <Content Include="hinh\nt5.jpg" />
     <Content Include="hinh\page1.gif" />
+    <Content Include="hinh\pngtree-simple-oil-paint-banner-background-image_221959.jpg" />
     <Content Include="hinh\points1.png" />
     <Content Include="hinh\points2.png" />
     <Content Include="hinh\points3.png" />
     <Content Include="hinh\points4.png" />
+    <Content Include="hinh\re.png" />
     <Content Include="hinh\slide5.jpg" />
     <Content Include="hinh\sonnha.jpg" />
     <Content Include="hinh\square.png" />
@@ -225,6 +235,7 @@
     <Content Include="hinh\thumbnail_large-1.jpg" />
     <Content Include="hinh\top.jpg" />
     <Content Include="hinh\triangle.png" />
+    <Content Include="hinh\undraw_Mobile_login_re_9ntv.svg" />
     <Content Include="hinh\wave.png" />
     <Content Include="hinh\wavy-shape.png" />
     <Content Include="hinh\x.png" />
@@ -687,6 +698,34 @@
     <Compile Include="customer\lich-su-mua-hang\Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
+    <Compile Include="customer\NCC\dulux.aspx.cs">
+      <DependentUpon>dulux.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="customer\NCC\dulux.aspx.designer.cs">
+      <DependentUpon>dulux.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="customer\NCC\jotun.aspx.cs">
+      <DependentUpon>jotun.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="customer\NCC\jotun.aspx.designer.cs">
+      <DependentUpon>jotun.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="customer\NCC\mykoler.aspx.cs">
+      <DependentUpon>mykoler.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="customer\NCC\mykoler.aspx.designer.cs">
+      <DependentUpon>mykoler.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="customer\NCC\nippon.aspx.cs">
+      <DependentUpon>nippon.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="customer\NCC\nippon.aspx.designer.cs">
+      <DependentUpon>nippon.aspx</DependentUpon>
+    </Compile>
     <Compile Include="customer\phong-thuy\tuoisua.aspx.cs">
       <DependentUpon>tuoisua.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -812,6 +851,13 @@
     </Compile>
     <Compile Include="customer\trang-chu\Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="customer\trang-chu\xuhuongcolor.aspx.cs">
+      <DependentUpon>xuhuongcolor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="customer\trang-chu\xuhuongcolor.aspx.designer.cs">
+      <DependentUpon>xuhuongcolor.aspx</DependentUpon>
     </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>

@@ -2,13 +2,14 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <style>
          .product-card {
-        width: 300px;
-        height: 580px;
-        position: relative;
-        box-shadow: 0 2px 7px #dfdfdf;
-        margin: 10px;
-        background: #f7f5f3;
-    }
+            width: 300px;
+            height: 510px;
+            position: relative;
+            box-shadow: 0 2px 7px #dfdfdf;
+            margin: 10px;
+            background: #f7f5f3;
+            border-radius: 15px;
+        }
         .product-card:hover {
             box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
         }
@@ -24,60 +25,59 @@
             padding: 3px 10px;
         }
 
-    .product-tumb {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        height: 300px;
-        padding: 50px;
-        background: #fff;
+        .product-tumb {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 300px;
+            padding: 50px;
+            background: #fff;
+        }
+
+        .product-tumb img {
+            max-width: 100%;
+            max-height: 80%;
+        }
+
+        .product-details {
+            padding: 30px;
+        }
+
+        .product-catagory {
+            display: block;
+            font-size: 12px;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: #ccc;
+            margin-bottom: 18px;
+        }
+
+        .product-details h4 {
+            font-weight: 500;
+            display: block;
+            font-size: 16px;
+            margin-bottom: 18px;
+            color: #363636;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+    .product-details h4:hover {
+        color: #3742fa;
     }
 
-    .product-tumb img {
-        max-width: 100%;
-        max-height: 100%;
+        .product-details p {
+            font-size: 15px;
+            line-height: 22px;
+            margin-bottom: 18px;
+            color: #999;
+        }
+
+    .product-bottom-details {
+        overflow: hidden;
+        border-top: 1px solid #eee;
+        margin-top: 2rem;
     }
-
-.product-details {
-    padding: 30px;
-}
-
-.product-catagory {
-    display: block;
-    font-size: 12px;
-    font-weight: 700;
-    text-transform: uppercase;
-    color: #ccc;
-    margin-bottom: 18px;
-}
-
-.product-details h4 {
-    font-weight: 500;
-    display: block;
-    font-size: 22px;
-    margin-bottom: 18px;
-    text-transform: uppercase;
-    color: #363636;
-    text-decoration: none;
-    transition: 0.3s;
-}
-
-.product-details h4:hover {
-    color: #3742fa;
-}
-
-.product-details p {
-    font-size: 15px;
-    line-height: 22px;
-    margin-bottom: 18px;
-    color: #999;
-}
-
-.product-bottom-details {
-    overflow: hidden;
-    border-top: 1px solid #eee;
-    margin-top: 2rem;
-}
 
 .product-bottom-details div {
     float: left;
@@ -132,16 +132,17 @@ có chiều rộng dưới 600px */
         }
       /*header*/
       .color_nt{
-         width: 90%;        
-         height: 400px;
+         width: 100%;        
+         height: 450px;
          position: relative;
-         background: #ffffff;
+         background-image: url(/hinh/1b7e6af26f6f145168cbeabf780e91aa.png);
          background-size: cover;
-         border-radius: 10px;
+         background-position: 0px 25px;
          margin-top: 10px;
          display: block;
          margin-left: auto;
          margin-right: auto;
+         background-attachment: fixed;
          }
       .color_nt .h2_nt{  
           position: absolute;  
@@ -163,14 +164,14 @@ có chiều rộng dưới 600px */
           left: 50%;
           transform: translate(-50%, 50%); 
           font-size: 20px;
-          color: #333333;
+          color: #000;
       }
 
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 <nav aria-label="breadcrumb" style="margin-top: 3px; width: 380px; border-radius: 15px;">
-  <ol class="breadcrumb">
+  <ol class="breadcrumb" style="background: none;">
     <li class="breadcrumb-item"><a href="../trang-chu/">Trang chủ</a></li>
     <li class="breadcrumb-item"><a href="../trang-chu/sanpham.aspx">Sản phẩm</a></li>
     <li class="breadcrumb-item active" aria-current="page">Sơn ngoại thất</li>

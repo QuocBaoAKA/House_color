@@ -53,6 +53,12 @@
                     </asp:DropDownList>
                     <label class="mdb-main-label">Mã Loại Hàng</label>
                 </div>
+                <div class="col">
+                    <asp:DropDownList ID="DropDownList1" runat="server" class="mdb-select md-form colorful-select dropdown-ins mt-5" required>
+                        <asp:ListItem Value="" disabled Selected>-- Chọn --</asp:ListItem>
+                    </asp:DropDownList>
+                    <label class="mdb-main-label">Mã Nhà cung cấp</label>
+                </div>
             </div>  
 
            <%-- <div class="md-form">

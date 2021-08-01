@@ -1,7 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/customer/customer-masterpage/customer.Master" AutoEventWireup="true" CodeBehind="sanpham.aspx.cs" Inherits="GUI.customer.trang_chu.sanpham" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-    <style>
-       
+    <style>     
         .products{
             width: 300px;
             height: 500px;
@@ -9,8 +8,7 @@
             border-radius: 10px;
             position: relative;
              margin: 1rem;
-            transition: 0.3s;
-           
+            transition: 0.3s;       
         }
         .products:before {
           content: attr(data-card);
@@ -90,23 +88,24 @@
         }
         .product_sp{
             width: 100%;
-            height: 300px;
+            height: 350px;
             border: 1px solid rgba(100, 100, 111, 0.2);
             margin-top: 5px;   
-            background: #fff;  
+            background-image: url(/hinh/sơn-phủ-4.jpg); 
+            background-size: cover; 
+            background-repeat: no-repeat;
+            
+            background-attachment: fixed;
         }
         .product_sp h1{
             height: 200px;
             text-align: center;     
             line-height: 54px;
-            color: #3742fa;
+            color: #3742fa !important;
             margin-top: 2rem;
             font-style: normal;
             font-weight: 700;
             font-family: Playfair Display;
-           background: linear-gradient(to right, #30CFD0 0%, #330867 100%);
-	        -webkit-background-clip: text;
-	        -webkit-text-fill-color: transparent;
 	        font-size: 45px;
         }
 		
@@ -273,29 +272,29 @@ có chiều rộng dưới 600px */
         }
 
      /*new product*/
-       .product-card {
-        width: 300px;
-        height: 580px;
-        position: relative;
-        box-shadow: 0 2px 7px #dfdfdf;
-        margin: 10px;
-        background: #f7f5f3;
-        transition: 0.25s ease;
-    }
-        .product-card:hover {
-            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-        }
-        .badge {
-            position: absolute;
-            left: 0;
-            top: 20px;
-            text-transform: uppercase;
-            font-size: 13px;
-            font-weight: 700;
-            background: red;
-            color: #fff;
-            padding: 3px 10px;
-        }
+           .product-card {
+            width: 300px;
+            height: 510px;
+            position: relative;
+            box-shadow: 0 2px 7px #dfdfdf;
+            margin: 10px;
+            background: #f7f5f3;
+            transition: 0.25s ease;
+            }
+            .product-card:hover {
+                box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+            }
+            .badge {
+                position: absolute;
+                left: 0;
+                top: 20px;
+                text-transform: uppercase;
+                font-size: 13px;
+                font-weight: 700;
+                background: red;
+                color: #fff;
+                padding: 3px 10px;
+            }
 
         .product-tumb {
             display: flex;
@@ -308,7 +307,7 @@ có chiều rộng dưới 600px */
 
         .product-tumb img {
             max-width: 100%;
-            max-height: 100%;
+            max-height: 80%;
         }
 
         .product-details {
@@ -320,16 +319,15 @@ có chiều rộng dưới 600px */
             font-size: 12px;
             font-weight: 700;
             text-transform: uppercase;
-            color: #ccc;
-            margin-bottom: 18px;
+            color: #cccccc;
+            margin-bottom: 5px;
         }
 
         .product-details h4 {
             font-weight: 500;
+            width: 100%;
             display: block;
-            font-size: 22px;
-            margin-bottom: 18px;
-            text-transform: uppercase;
+            font-size: 16px;
             color: #363636;
             text-decoration: none;
             transition: 0.3s;
@@ -365,6 +363,7 @@ có chiều rộng dưới 600px */
 
         .product-links {
             text-align: right;
+            padding: 10px;
         }
 
         .product-links a {
@@ -445,6 +444,26 @@ có chiều rộng dưới 600px */
             background: #3742fa;
             color: #fff;
         }
+        .form_ser{
+            height: 100px;
+            margin-top: 1rem;
+            background: #a68a64;
+        }
+        .ncc_ground{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .a3 img{
+            width: 150px;
+            height: 80px;
+            margin-top: 1rem;
+            border-radius: 15px;
+            margin-right: 30px;
+        }
+        .breadcrumb{
+            background: #fff !important;
+        }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">    
@@ -456,11 +475,26 @@ có chiều rộng dưới 600px */
   </ol>
 </nav>
     <div class="product_sp">
-        <h1>Các sản phẩm sơn</h1>
+        <h1 style="color: #fff;">Các sản phẩm sơn</h1>
         <div class="link_son">
             <a href="../trang-chu/sonnoithat.aspx" class="a1">Sơn Nội Thất</a>
             <a href="../trang-chu/sonngoaithat.aspx" class="a2">Sơn Ngoại Thất</a>
         </div>
+    </div>
+    
+    <div class="ncc_ground">
+            <a href="../NCC/dulux.apsx" class="a3">
+                <img src="/hinh/ab1.jpg" />
+            </a>
+            <a href="../NCC/jotun.aspx" class="a3">
+                <img src="/hinh/jotun.png" />
+            </a>
+            <a href="../NCC/nippon.aspx" class="a3">
+                <img src="/hinh/nippon-paint-viet-nam.png" />
+            </a>
+            <a href="../NCC/mykoler.aspx" class="a3">
+                <img src="/hinh/about__item__mykolor.jpg" />
+            </a>
     </div>
     <div class="form_ser">
         <asp:TextBox ID="TextBox1" CssClass="src" runat="server"></asp:TextBox>
@@ -565,7 +599,7 @@ có chiều rộng dưới 600px */
 				            <div class="product-price"><%# Eval("DonGia", "{0:000,000}")%></div>
 				            <div class="product-links">
 					            <a href="../chi-tiet-san-pham/chitietsp.aspx/?masp=<%# Eval("MaSP") %>"><i class="fas fa-plus"></i></a>
-					            <a href="#"><i class="fa fa-shopping-cart"></i></a>
+					         
 				            </div>
 			            </div>
 		            </div>
