@@ -20,8 +20,8 @@ namespace GUI.admin.quan_ly_ncc
                     Response.Redirect("../Default.aspx");
                 }
 
-                rpt_ncc.DataSource = bl.hienThincc();
-                rpt_ncc.DataBind();
+                //rpt_ncc.DataSource = bl.hienThincc();
+                //rpt_ncc.DataBind();
             }
         }
     }

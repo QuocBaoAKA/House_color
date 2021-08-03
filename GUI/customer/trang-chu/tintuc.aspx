@@ -87,14 +87,21 @@
         }
         .tintuc_content{
             width: 100%;
-            height: 200px;
-        }
+            height: 300px;
+            background-image: url(https://cdn.pixabay.com/photo/2016/04/07/17/49/aircraft-1314333_960_720.png);
+            
+       }
+
         .breadcrumb{
             background:#fff;
         }
         .tintuc_content h1{
             text-align: center;
             color: #0026ff;
+            padding: 30px;
+            font-size: 48px;
+            font-family: 'Playfair Display', serif;
+            color: #fff;
         }
         .tintuc_content p{
             text-align: center;
@@ -317,7 +324,7 @@ section{
 					</section>
 				</div>
 				<div id="our-picks">
-					<h2>Khuyến mãi</h2>
+					<h2 style="background: #e63946;">Khuyến mãi</h2>
 					<section class="news">
 						<div class="news-container">
 							<img src="/hinh/news_1624155819.png" />

@@ -192,7 +192,8 @@
         }
         .home_kp{
             width: 100%;
-            height: 120px;
+            height: 380px;
+            background-image: url(/hinh/undraw_city_life_gnpr.7b3f06a.svg);
         }
         .home_kp h1{
             font-size: 42px;
@@ -211,7 +212,7 @@
         .wrapper{
 	        width: 100%;
             height: 100%;
-	        margin: 150px auto;
+	        margin-top: 1rem;
         }
 
         .tabs ul{
@@ -223,36 +224,25 @@
         }
 
         .tabs ul li{
-	        width: 550px;
+	        width: 250px;
 	        padding: 15px;
 	        border-right: 1px solid #dddddd;
 	        text-align: center;
 	        color: #4800ff;
-	        text-transform: uppercase;
+	        font-family: 'STIX Two Text', serif;
 	        font-size: 18px;
 	        font-weight: 600;
+            border-radius: 15px;
 	        letter-spacing: 3px;
 	        cursor: pointer;
 	        transition: all 0.2s ease;
 	        position: relative;
             list-style: none;
+            margin: auto;
         }
         .tabs ul li:last-child{
 	        border-right: 0px;
         }
-
-        .tabs ul li:before{
-	        content: "";
-	        position: absolute;
-	        bottom: -1px;
-	        left: 0;
-	        width: 100%;
-	        height: 2px;
-	        background: #4800ff;
-	        opacity: 0;
-	        transition: all 0.2s ease;
-        }
-
         .tabs ul li:hover,
         .tabs ul li.active{
 	        background: #1B9CFC    ;
@@ -332,7 +322,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <nav aria-label="breadcrumb" style="margin-top: 3px; background: none;">
-      <ol class="breadcrumb">
+      <ol class="breadcrumb" style="background: none;">
         <li class="breadcrumb-item"><a href="../trang-chu/">Trang chủ</a></li>
 <%--        <li class="breadcrumb-item"><a href="#">Mẫu nhà đẹp</a></li>--%>
       <li class="breadcrumb-item active" aria-current="page">Mẫu nhà đẹp</li>
@@ -363,6 +353,13 @@
 
 	<div class="content">
 		<div class="tab_wrap" style="display: block;">
+            <!----slideshow----->
+                
+
+
+
+            <!--end---->
+
 			<div class="tab_content">
 			<h1 class="h1_bg">Mẫu phòng khách đẹp</h1>
           <div class="row_kp_1">

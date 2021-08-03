@@ -53,17 +53,19 @@
                     </asp:DropDownList>
                     <label class="mdb-main-label">Mã Loại Hàng</label>
                 </div>
-                <div class="col">
+              <%--  <div class="col">
                     <asp:DropDownList ID="DropDownList1" runat="server" class="mdb-select md-form colorful-select dropdown-ins mt-5" required>
                         <asp:ListItem Value="" disabled Selected>-- Chọn --</asp:ListItem>
                     </asp:DropDownList>
                     <label class="mdb-main-label">Mã Nhà cung cấp</label>
-                </div>
+                </div>--%>
             </div>  
 
-           <%-- <div class="md-form">
-                <asp:TextBox type="number" ID="txt_soLuong" runat="server" class="form-control" min="1" required></asp:TextBox>
-                <label for="txt_soLuong">Số lượng</label>
+          <%-- <div class="md-form">
+               <asp:DropDownList ID="DropDownList2" runat="server" class="mdb-select md-form colorful-select dropdown-ins mt-5" required>
+                    <asp:ListItem Value="" disabled Selected>-- Chọn --</asp:ListItem>
+                    </asp:DropDownList>
+                    <label class="mdb-main-label">Mã Nhà cung cấp</label>
             </div>--%>
 
             

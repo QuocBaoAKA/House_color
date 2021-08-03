@@ -29,10 +29,10 @@
               border: solid 1px rgba(255,255,255,.3);
               backgroud-clip: padding-box;
               backdrop-filter: blur(10px );
-            width: 500px;
-            height: 650px;
-            margin: auto;
-            margin-top: 4rem;
+                width: 500px;
+                height: 650px;
+                margin: auto;
+                margin-top: 4rem;box-shadow: inset 0 0 0 200px rgba(255,255,255,0.05);                  
         }
         #login-failed {
             display: none;
@@ -190,6 +190,7 @@
               color: #373941;
               text-align: center;
               margin-bottom: 35px;
+              font-family: 'Playfair Display', serif;
         }
         .btn-danger{
             width: 50px;
@@ -326,11 +327,11 @@
                     <label for="password" class="form-label">Mật khẩu</label><br />
                       <asp:TextBox ID="txt_mk" name="pass" runat="server" type="password" CssClass="dnfs" required="required"></asp:TextBox>                
              </div>
-        <span id="login-failed" class="animated shake text-center" style="color: white; font-size: 18px; background: red; width: 70%; margin: auto;">*Sai thông tin đăng nhập</span>  	
+            <span id="login-failed" class="animated shake text-center" style="color: white; font-size: 18px; background: red; width: 70%; margin: auto;">*Sai thông tin đăng nhập</span>  	
              <div class="button">
                   <asp:Button ID="btn_login" type="submit" runat="server" CssClass="btn_login" Text="Đăng Nhập" CausesValidation="false" OnClick="btn_login_Click1"/>
              </div>
-      
+            <p style="text-align: center;">Đăng nhập với:</p><br />
         <asp:LinkButton ID="btn_gg" runat="server" class="signup-social" OnClick="btn_gg_Click1"><i class="fab fa-google signup-social-icon"></i>
             <p class="signup-social-text_t">Sign up with Google</p>
         </asp:LinkButton>

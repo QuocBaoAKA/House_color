@@ -44,14 +44,22 @@ namespace GUI.admin.quan_ly_sp
                 ddl_hangSP.Items.Add(new ListItem(value.MaMau + " - " + value.TenMau, value.MaMau));
             }
         }
-        
+        //void hienThimancc()
+        //{
+        //    var mauncc = bllAdmin.hienthincc();
+        //    foreach (var value in mauncc)
+        //    {
+        //            DropDownList2.Items.Add(new ListItem(value.MaNCC + " - " + value.TenNCC, value.MaNCC));
+        //    }
+        //}
+
         protected void btn_them_Click(object sender, EventArgs e)
         {
             string masp = TextBox1.Text.Trim();
             string tenSP = txt_tenSP.Text.Trim();
             string maLoai = ddl_loaiSP.SelectedValue.ToString();
             string mamau = ddl_hangSP.SelectedValue.ToString();
-            string mancc
+            //string mancc = DropDownList2.SelectedValue.ToString();
             string moTa = txt_moTa.Text.Trim();
             float gia = float.Parse(txt_gia.Text.Trim());
             if (CheckFileType(ful_hinhAnh.FileName))
@@ -60,7 +68,7 @@ namespace GUI.admin.quan_ly_sp
                 string filePath = MapPath("/hinhanh/" + fileName);              
                 ful_hinhAnh.SaveAs(filePath);
 
-                if (bllAdmin.themSanPham(masp, tenSP, maLoai, mamau, gia, fileName, moTa, mancc))
+                if (bllAdmin.themSanPham(masp, tenSP, maLoai, mamau, gia, fileName, moTa))
                 {
                     Session["success"] = "Thêm sản phẩm thành công";
                     Response.Redirect("../quan-ly-sp/");

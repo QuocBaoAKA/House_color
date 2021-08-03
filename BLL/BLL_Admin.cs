@@ -226,14 +226,13 @@ namespace BLL
             return query.ToList();
         }
 
-        public bool themSanPham(string masp, string tenSP, string maLoai, string mamau, float gia, string hinhAnh, string moTa, string mancc)
+        public bool themSanPham(string masp, string tenSP, string maLoai, string mamau, float gia, string hinhAnh, string moTa)
         {
             tbl_SanPham sp = new tbl_SanPham();
             sp.MaSP = masp;
             sp.TenSP = tenSP;
             sp.MaLH = maLoai;
             sp.MaMau = mamau;
-            sp.MaNCC = mancc;
             sp.DonGia = gia;
             sp.HinhAnh = hinhAnh;
             sp.MoTa = moTa;
@@ -275,7 +274,7 @@ namespace BLL
             return db.tbl_SanPhams.Where(sp => sp.MaSP == maSP).ToList();
         }
 
-        public bool suaSanPham(string maSP, string tenSP, string maLoai, string mamau, float gia, string hinhAnh, string moTa, string mancc)
+        public bool suaSanPham(string maSP, string tenSP, string maLoai, string mamau, float gia, string hinhAnh, string moTa)
         {
             var timKiem = db.tbl_SanPhams.Where(sp => sp.MaSP == maSP).FirstOrDefault();
            
@@ -283,7 +282,6 @@ namespace BLL
             spSua.TenSP = tenSP;
             spSua.MaLH = maLoai;
             spSua.MaMau = mamau;
-            spSua.MaNCC = mancc;
             spSua.DonGia = gia;
             spSua.HinhAnh = hinhAnh;
             spSua.MoTa = moTa;
@@ -300,7 +298,7 @@ namespace BLL
         #endregion
         // -- Quản lý nha cung cap --
         #region Quản lý sản phẩm
-        public IEnumerable hienThincc()
+        public IEnumerable hienthincc()
         {
             var query = from sp in db.tbl_NhaCungCaps
                         select new

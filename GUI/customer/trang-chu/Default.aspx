@@ -2,16 +2,14 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <title>Trang Chủ</title>
     <style>
-      
-      .btn-grad {background-image: linear-gradient(to right, #00d2ff 0%, #3a7bd5  51%, #00d2ff  100%)}
          .btn-grad {
-             width: 200px;
+            width: 200px;
             margin: 10px;
             padding: 15px 30px;
             text-align: center;
             text-transform: uppercase;
             transition: 0.5s;
-            background-size: 200% auto;
+            background: #48cae4;
             color: white;            
             box-shadow: 0 0 20px #eee;
             border-radius: 10px;
@@ -285,7 +283,7 @@
         <div class="product_home">  
                 <img src="https://viethangroup.vn/wp-content/uploads/2020/03/thiet-ke-ngoai-that-doc-dao.jpg" />  
              <div class="product_text">
-             <h1>Sơn Ngoại Thất</h1>
+                <h1>Sơn Ngoại Thất</h1>
                 <a href="../trang-chu/sonngoaithat.aspx" class="btn_a">Xem Sản Phẩm</a> 
              </div>   
         </div>
